@@ -36,14 +36,14 @@
 	#sm_form > input[type="button"]{
 
 		margin: 0 ;
-		border: none !important;
-		color: #fff !important;
-		font-size: 18px !important;
-		margin-left: 1% !important;
+		border: none;
+		color: #fff;
+		font-size: 18px;
+		margin-left: 1%;
 		font-family: helvetica,sans-serif;
 
-		background-color: rgb(122,188,255) !important;
-		background: rgb(122,188,255) !important; /* Old browsers */
+		background-color: rgb(122,188,255);
+		background: rgb(122,188,255); /* Old browsers */
 		background: -moz-linear-gradient(top,  rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,188,255,1)), color-stop(44%,rgba(96,171,248,1)), color-stop(100%,rgba(64,150,238,1))); /* Chrome,Safari4+ */
 		background: -webkit-linear-gradient(top,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Chrome10+,Safari5.1+ */
@@ -74,19 +74,19 @@
 		font-size: 16px;
 	}
 	.sm_submit:hover{
-		background-color: #4b8bcc !important;
-		background: #4b8bcc !important;
+		background-color: #4b8bcc;
+		background: #4b8bcc;
 	}
 	.sm_submit,#sm_submit{
 		margin: 0 ;
-		padding:1.2% 4% 1.5% 4% !important;
-		border: none !important;
-		color: #fff !important;
-		font-size: 18px !important;
-		margin-left: -3% !important;
+		padding:1.2% 4% 1.5% 4%;
+		border: none;
+		color: #fff;
+		font-size: 18px;
+		margin-left: -3%;
 
-		background-color: rgb(122,188,255) !important;
-		background: rgb(122,188,255) !important; /* Old browsers */
+		background-color: rgb(122,188,255);
+		background: rgb(122,188,255); /* Old browsers */
 		background: -moz-linear-gradient(top,  rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,188,255,1)), color-stop(44%,rgba(96,171,248,1)), color-stop(100%,rgba(64,150,238,1))); /* Chrome,Safari4+ */
 		background: -webkit-linear-gradient(top,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Chrome10+,Safari5.1+ */

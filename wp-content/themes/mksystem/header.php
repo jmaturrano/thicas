@@ -22,8 +22,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 
-	<nav class="navbar navbar-default" role="navigation">
-		<div class="container">
+	<nav class="navbar navbar-default navbar-mksystem" role="navigation">
 			<div class="navbar-header">
 			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 			    <span class="sr-only"><?php _e( 'Toggle navigation', 'dazzling' ); ?></span>
@@ -54,8 +53,7 @@
 				<?php endif; // header image was removed (again) ?>
 
 			</div>
-				<?php dazzling_header_menu(); ?>
-		</div>
+				<?php mksystem_header_menu(); ?>
 	</nav><!-- .site-navigation -->
 
         <div class="top-section">

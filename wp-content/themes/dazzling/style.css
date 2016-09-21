@@ -193,7 +193,7 @@ textarea {
 /* Text meant only for screen readers */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
+  position: absolute ;
 }
 
 .screen-reader-text:hover,
@@ -202,7 +202,7 @@ textarea {
   background-color: #f1f1f1;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
+  clip: auto ;
   color: #21759b;
   display: block;
   font-size: 14px;
@@ -712,9 +712,9 @@ li.recentcomments {
 .bypostauthor {
 }
 #respond {
-  background-color: transparent !important;
-  box-shadow: none !important;
-  padding: 0px !important;
+  background-color: transparent ;
+  box-shadow: none ;
+  padding: 0px ;
 }
 #respond > p, #respond p.comment-notes, p.logged-in-as {
   margin-bottom: 10px;
@@ -723,8 +723,8 @@ p.logged-in-as {
   padding-bottom: 0px;
 }
 .comment-list {
-  margin-bottom: 40px !important;
-  margin-left: 0px !important;
+  margin-bottom: 40px ;
+  margin-left: 0px ;
   padding-left: 0;
 }
 .comment .comment-body {
@@ -740,7 +740,7 @@ p.logged-in-as {
   border-radius: 4px;
 }
 .comment-list .children {
-  margin-left: 0px!important;
+  margin-left: 0px;
   padding-left: 40px;
   border-left: 1px solid #E8E8E8;
   background-repeat: no-repeat;
@@ -904,10 +904,10 @@ p.logged-in-as {
 
 @media (max-width: 768px) {
   .pull-right {
-    float: none !important;
+    float: none ;
   }
   .pull-left {
-    float: none !important;
+    float: none ;
   }
   .site-info, .copyright {
       text-align: center;
@@ -960,7 +960,7 @@ p.logged-in-as {
 }
 #social li,
 #social ul {
-    border: 0!important;
+    border: 0;
     list-style: none;
     padding-left: 0
 }

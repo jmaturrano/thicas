@@ -9,8 +9,6 @@ function get_template_directory_child(){
   return $directory_child;
 }
 
-
-
 /**
  * Mk system slider
  */
@@ -72,35 +70,108 @@ function mksystem_call_for_action() {
   // }
 }
 
-function mksystem_categories_list_page(){
+function mksystem_section_categories_bloque1(){
   $categories_html = '';
   $category_products = mksystem_product_categories('catalog');
   if(count($category_products) > 0){
+    $i=0;
     foreach ($category_products as $category) {
-      
-      $thumb_url = ($category['thumb_url'] == '') ? get_template_directory_child().'/inc/img/categorias/default_400x400.jpg' : $category['thumb_url'];
+      if ( $i<2){
+        $thumb_url = ($category['thumb_url'] == '') ? get_template_directory_child().'/inc/img/categorias/default_400x400.jpg' : $category['thumb_url'];
 
-      $categories_html .= '<div class="col-md-3 col-sm-3 col-xs-6 text-center">';
-      $categories_html .= '<a href="'.$category['term_link'].'" title="'.$category['name'].'" class="thumbnail">';
-      $categories_html .= '<img src="'.$thumb_url.'">';
-      $categories_html .= '</a>';
-      $categories_html .= '<h4>'.$category['name'].'</h4>';
-      $categories_html .= '</div>';
+        if($i == 0){
+          $class= 'col-md-8 col-sm-6 col-xs-12';
+        }if ($i == 1) {
+          $class= 'col-md-4';
+        }else{
+          $class= 'col-md-8';
+        }
+        $categories_html .= '<div class="'.$class.' text-center">';
+        $categories_html .= '<a href="'.$category['term_link'].'" title="'.$category['name'].'" class="thumbnail">';
+        $categories_html .= '<img src="'.$thumb_url.'">';
 
-      if(count($category['childs']) > 0){
-        foreach ($category['childs'] as $subcategory) {
+        $categories_html .= '<div class="categorie-content">';
+        $categories_html .= '<h4>'.$category['name'].'</h4>';
+        $categories_html .= '<span>COMPRAR AHORA</span>';
+        $categories_html .= '</div>';
 
-          $thumb_url = ($subcategory['thumb_url'] == '') ? get_template_directory_child().'/inc/img/categorias/default_400x400.jpg' : $subcategory['thumb_url'];
-
-          $categories_html .= '<div class="col-md-3 col-sm-3 col-xs-6 text-center">';
-          $categories_html .= '<a href="'.$subcategory['term_link'].'" title="'.$subcategory['name'].'" class="thumbnail">';
-          $categories_html .= '<img src="'.$thumb_url.'">';
-          $categories_html .= '</a>';
-          $categories_html .= '<h4>'.$subcategory['name'].'</h4>';
-          $categories_html .= '</div>';
-        }//end foreach
+        $categories_html .= '</a>';
+        //$categories_html .= '<h4>'.$category['name'].'</h4>';
+        $categories_html .= '</div>';
       }//end if
+      $i++;
+    }//end foreach
+  }//end if
 
+  echo $categories_html;
+}
+
+function mksystem_section_categories_bloque2(){
+  $categories_html = '';
+  $category_products = mksystem_product_categories('catalog');
+  if(count($category_products) > 0){
+    $i=0;
+    foreach ($category_products as $category) {
+      if ( 2<=$i && $i<3){
+        $thumb_url = ($category['thumb_url'] == '') ? get_template_directory_child().'/inc/img/categorias/default_400x400.jpg' : $category['thumb_url'];
+
+        if($i=3){
+          $class= 'col-md-6 col-sm-6 col-xs-12';
+        }else{
+          $class= 'col-md-6';
+        }
+
+        $categories_html .= '<div class="'.$class.' text-center">';
+        $categories_html .= '<a href="'.$category['term_link'].'" title="'.$category['name'].'" class="thumbnail">';
+        $categories_html .= '<img src="'.$thumb_url.'">';
+
+        $categories_html .= '<div class="categorie-content">';
+        $categories_html .= '<h4>'.$category['name'].'</h4>';
+        $categories_html .= '<span>COMPRAR AHORA</span>';
+        $categories_html .= '</div>';
+
+        $categories_html .= '</a>';
+        //$categories_html .= '<h4>'.$category['name'].'</h4>';
+        $categories_html .= '</div>';
+      }//end if
+      $i++;
+    }//end foreach
+  }//end if
+
+  echo $categories_html;
+}
+function mksystem_section_categories_bloque3(){
+  $categories_html = '';
+  $category_products = mksystem_product_categories('catalog');
+  if(count($category_products) > 0){
+    $i=0;
+    foreach ($category_products as $category) {
+      if ( $i>2){
+        $thumb_url = ($category['thumb_url'] == '') ? get_template_directory_child().'/inc/img/categorias/default_400x400.jpg' : $category['thumb_url'];
+
+        if($i == 0){
+          $class= 'col-md-4 col-sm-6 col-xs-12';
+        }if ($i ==1 ){
+          $class= 'col-md-4';
+        }else{
+          $class= 'col-md-4';
+        }
+        $categories_html .= '<div class="'.$class.' text-center">';
+        $categories_html .= '<a href="'.$category['term_link'].'" title="'.$category['name'].'" class="thumbnail">';
+        $categories_html .= '<img src="'.$thumb_url.'">';
+
+        //$categories_html .= '<div class="categorie-content">';
+        //$categories_html .= '<h4>'.$category['name'].'</h4>';
+        //$categories_html .= '<span>COMPRAR AHORA</span>';
+        //$categories_html .= '</div>';
+
+        $categories_html .= '</a>';
+        $categories_html .= '<div class="categorie-name">';
+        $categories_html .= '<h4>'.$category['name'].'</h4>';
+        $categories_html .= '</div>';
+        $categories_html .= '</div>';
+      }//end if
+      $i++;
     }//end foreach
   }//end if
 
@@ -207,3 +278,20 @@ function mksystem_product_categories($thumb = ''){
   
   return $category_products;
 }
+
+/**
+ * header menu (should you choose to use one)
+ */
+function mksystem_header_menu() {
+  // display the WordPress Custom Menu if available
+  wp_nav_menu(array(
+    'menu'              => 'primary',
+    'theme_location'    => 'primary',
+    'depth'             => 2,
+    'container'         => 'div',
+    'container_class'   => 'container',
+    'menu_class'        => 'nav navbar-nav',
+    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+    'walker'            => new wp_bootstrap_navwalker()
+  ));
+} /* end header menu */
