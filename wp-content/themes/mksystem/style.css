@@ -95,8 +95,8 @@ span.categorie-content a:hover{
 }
 
 .categorie-content span{
-	border: 1px solid #000;
-	color: #000;
+	border: 1px solid #FFF;
+	color: #FFF;
 	padding: 10px 15px;  
 }
 .navbar-nav > li > a{
@@ -105,4 +105,33 @@ span.categorie-content a:hover{
 
 .categorie-name h4{
 	color:#000;
+	text-transform: uppercase; 
+}
+.thumbnail {
+	border: 0px;
+	padding: 0px;
+
+}
+
+.footer-content img{
+padding: 12px;
+}
+
+
+.copyright {
+	background: #000;
+
+}
+.site-info a {
+	color: #FFF;
+	font-size: 15px;
+    font-weight: 500;
+	text-transform: uppercase;
+}
+
+
+.copyright span{
+	border: 1px solid #FFF;
+	color: #FFF;
+	padding: 10px 15px;  
 }

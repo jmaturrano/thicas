@@ -295,3 +295,54 @@ function mksystem_header_menu() {
     'walker'            => new wp_bootstrap_navwalker()
   ));
 } /* end header menu */
+
+/**
+ * footer menu
+ */
+function mksystem_footer_menu() {
+  wp_nav_menu(array(
+    'container'       => '',                              // remove nav container
+    'container_class' => 'footer-links clearfix',   // class of container (should you choose to use it)
+    'menu'            => __( 'Footer Links', 'dazzling' ),   // nav name
+    'menu_class'      => 'nav footer-nav clearfix',      // adding custom nav class
+    'theme_location'  => 'footer-links',             // where it's located in the theme
+    'before'          => '',                                 // before the menu
+    'after'           => '',                                  // after the menu
+    'link_before'     => '',                            // before each link
+    'link_after'      => '',                             // after each link
+    'depth'           => 0,                                   // limit the depth of the nav
+    'fallback_cb'     => 'dazzling_footer_links_fallback'  // fallback function
+  ));
+} /* end header menu */
+
+function mksystem_secondary_menu_footer() {
+  // display the WordPress Custom Menu if available
+  wp_nav_menu(array(
+    'menu'              => 'secondary',
+    'theme_location'    => 'secondary',
+    'menu_class'        => 'nav footer-nav clearfix',
+    'depth'             => 2,
+    'container'         => '',
+    'container_class'   => ''
+  ));
+} /* end header menu */
+/**
+ * Get all categories for footer
+ */
+function mksystem_categories_list_footer(){
+  $categories_html = '';
+  $category_products = mksystem_product_categories();
+  if(count($category_products) > 0){
+    $items = 0;
+    $categories_html .= '<ul class="nav footer-nav clearfix">';
+    foreach ($category_products as $category) {
+      if($items <= 9){
+        $categories_html .= '<li class="menu-item"><a href="'.$category['term_link'].'">'.$category['name'].'</a></li>';
+      }//end if
+      $items++;
+    }//end foreach
+    $categories_html .= '</ul>';
+  }//end if
+
+  echo $categories_html;
+}
