@@ -289,8 +289,8 @@ function mksystem_header_menu() {
     'theme_location'    => 'primary',
     'depth'             => 2,
     'container'         => 'div',
-    'container_class'   => 'container',
-    'menu_class'        => 'nav navbar-nav',
+    'container_class'   => 'col-md-12 text-center',
+    'menu_class'        => 'nav navbar-nav menu-mksystem',
     'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
     'walker'            => new wp_bootstrap_navwalker()
   ));
@@ -345,4 +345,37 @@ function mksystem_categories_list_footer(){
   }//end if
 
   echo $categories_html;
+}
+
+
+
+function mksystem_social_links(){
+  $social_html    = '';
+  $facebook       = 'http://facebook.com';
+  $twitter        = 'http://twitter.com';
+  $instagram      = 'http://instagram.com';
+  $youtube        = 'http://youtube.com';
+  $vimeo          = 'http://vimeo.com';
+  $linkedin       = 'http://linkedin.com';
+
+
+  if ($facebook != '') {
+    $social_html  .= '<a target="_blank" class="" href="'.$facebook.'"><img src="'.get_template_directory_child().'/inc/img/social/facebook.jpg'.'"></a>';
+  }
+  if ($twitter != ''){
+    $social_html  .= '<a target="_blank" class="" href="'.$twitter.'""><img src="'.get_template_directory_child().'/inc/img/social/twitter.jpg'.'"></a>';
+  }
+  if ($instagram != '') {
+    $social_html  .= '<a target="_blank" class="" href="'.$instagram.'"><img src="'.get_template_directory_child().'/inc/img/social/instagram.jpg'.'"></a>';
+  }
+  if ($youtube != '') {
+    $social_html  .= '<a target="_blank" class="" href="'.$youtube.'"><img src="'.get_template_directory_child().'/inc/img/social/youtube.jpg'.'"></a>';
+  }
+  if ($vimeo != '') {
+    $social_html  .= '<a target="_blank" class="" href="'.$vimeo.'"><img src="'.get_template_directory_child().'/inc/img/social/vimeo.jpg'.'"></a>';
+  }
+  if ($linkedin) {
+    $social_html  .= '<a target="_blank" class="" href="'.$linkedin.'"><img src="'.get_template_directory_child().'/inc/img/social/linkedin.jpg'.'"></a>';
+  }
+  echo $social_html;
 }

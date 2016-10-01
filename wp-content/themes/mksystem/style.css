@@ -65,8 +65,10 @@ input[name="sm_name"]{
 }
 
 
-span.categorie-content a:hover{
+.thumbnail img:hover{
+	background-color: #eee;
 	opacity: 0.5;
+	text-decoration: none;
 }
 
 
@@ -135,3 +137,13 @@ padding: 12px;
 	color: #FFF;
 	padding: 10px 15px;  
 }
+.woo-menu-cart {
+display: none !important;
+}
+
+.menu-mksystem{
+	display: inline-block;
+    float: none !important;
+    vertical-align: middle;
+}
+

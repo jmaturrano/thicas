@@ -14,24 +14,7 @@
 
 <div class="footer-content text-center">
 		<div class="col-md-12" >
-			<a class="" href="http://localhost/mksystem/prjthicas/thicas/">
-				<img src="../img/sociales/redes5.jpg" >
-			</a>
-			<a class="" href="http://localhost/mksystem/prjthicas/thicas/">
-				<img src="../img/sociales/redes1.jpg">
-			</a>
-			<a class="" href="http://localhost/mksystem/prjthicas/thicas/">
-				<img src="../img/sociales/redes2.jpg">
-			</a>
-			<a class="" href="http://localhost/mksystem/prjthicas/thicas/">
-				<img src="../img/sociales/redes3.jpg">
-			</a>
-			<a class="" href="http://localhost/mksystem/prjthicas/thicas/">
-			<img src="../img/sociales/redes4.jpg">
-			</a>
-			<a class="" href="http://localhost/mksystem/prjthicas/thicas/">
-			<img src="../img/sociales/redes6.jpg">
-			</a>
+			<?php mksystem_social_links() ?>
 		</div>
 </div>
 

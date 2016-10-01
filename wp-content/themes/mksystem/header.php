@@ -53,7 +53,10 @@
 				<?php endif; // header image was removed (again) ?>
 
 			</div>
+			<div class="container">
 				<?php mksystem_header_menu(); ?>
+			</div>
+				
 	</nav><!-- .site-navigation -->
 
         <div class="top-section">
