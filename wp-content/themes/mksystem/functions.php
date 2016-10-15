@@ -299,20 +299,20 @@ function mksystem_header_menu() {
 /**
  * footer menu
  */
-function mksystem_footer_menu() {
-  wp_nav_menu(array(
-    'container'       => '',                              // remove nav container
-    'container_class' => 'footer-links clearfix',   // class of container (should you choose to use it)
-    'menu'            => __( 'Footer Links', 'dazzling' ),   // nav name
-    'menu_class'      => 'nav footer-nav clearfix',      // adding custom nav class
-    'theme_location'  => 'footer-links',             // where it's located in the theme
-    'before'          => '',                                 // before the menu
-    'after'           => '',                                  // after the menu
-    'link_before'     => '',                            // before each link
-    'link_after'      => '',                             // after each link
-    'depth'           => 0,                                   // limit the depth of the nav
-    'fallback_cb'     => 'dazzling_footer_links_fallback'  // fallback function
-  ));
+ function mksystem_footer_menu() {
+   wp_nav_menu(array(
+     'container'       => '',                              // remove nav container
+     'container_class' => 'footer-links clearfix',   // class of container (should you choose to use it)
+     'menu'            => __( 'Footer Links', 'dazzling' ),   // nav name
+     'menu_class'      => 'nav footer-nav clearfix',      // adding custom nav class
+     'theme_location'  => 'footer-links',             // where it's located in the theme
+     'before'          => '',                                 // before the menu
+     'after'           => '',                                  // after the menu
+     'link_before'     => '',                            // before each link
+     'link_after'      => '',                             // after each link
+     'depth'           => 0,                                   // limit the depth of the nav
+     'fallback_cb'     => 'dazzling_footer_links_fallback'  // fallback function
+   ));
 } /* end header menu */
 
 function mksystem_secondary_menu_footer() {
@@ -326,6 +326,17 @@ function mksystem_secondary_menu_footer() {
     'container_class'   => ''
   ));
 } /* end header menu */
+
+/**
+*registrando menu secundario
+*/
+register_nav_menus(array(
+  'secundary' => __('Menu Pie de página', 'mksystem')
+  ));
+
+
+
+
 /**
  * Get all categories for footer
  */
@@ -347,7 +358,9 @@ function mksystem_categories_list_footer(){
   echo $categories_html;
 }
 
-
+/**
+ * function to show the footer social-links
+ */
 
 function mksystem_social_links(){
   $social_html    = '';
@@ -379,3 +392,19 @@ function mksystem_social_links(){
   }
   echo $social_html;
 }
+
+/**
+ * function to show the footer info, copyright information
+ */
+function mksystem_footer_info() {
+?>
+  <div class="copy-right col-md-6" > &copy; <?php echo bloginfo('name');?> 
+  <?php echo esc_html__(" - Todos los derechos reservados");?> <?php echo date_i18n('Y'); ?>
+  </div>
+  <div class="mksystem-info col-md-6">
+    <?php echo esc_html__("Desarrollado por","mksystem");?> 
+    <a href="<?php echo esc_url("http://mksystemsoft.com","mksystem");?>" target="_blank"><?php echo esc_html__("MK System","mksystem");?></a> 
+  </div>
+  <?php
+}
+

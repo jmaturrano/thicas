@@ -1,0 +1,4 @@
+10-06-2016 @ 20:31:58 - Unable to download GeoIP Database: stream_socket_client(): php_network_getaddresses: getaddrinfo failed: Host desconocido. 
+stream_socket_client(): unable to connect to tcp://geolite.maxmind.com:80 (php_network_getaddresses: getaddrinfo failed: Host desconocido. )
+10-06-2016 @ 20:31:58 - Unable to download GeoIP Database: stream_socket_client(): php_network_getaddresses: getaddrinfo failed: Host desconocido. 
+stream_socket_client(): unable to connect to tcp://geolite.maxmind.com:80 (php_network_getaddresses: getaddrinfo failed: Host desconocido. )

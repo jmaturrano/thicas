@@ -20,9 +20,10 @@ Aqui empieza las modificaciones.
 	background: #000;
 }
 
-.navbar-mksystem .navbar-header{
+.navbar-mksystem .navbar-header {
 	background: #FFF;
 	width: 100%;
+	transition: all 500ms ease 0s;
 }
 
 .navbar-mksystem #logo a{
@@ -66,9 +67,7 @@ input[name="sm_name"]{
 
 
 .thumbnail img:hover{
-	background-color: #eee;
 	opacity: 0.5;
-	text-decoration: none;
 }
 
 
@@ -105,8 +104,8 @@ input[name="sm_name"]{
 	padding: 8px 15px;
 }
 
-.categorie-name h4{
-	color:#000;
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+	color:#FFF;
 	text-transform: uppercase; 
 }
 .thumbnail {
@@ -146,4 +145,50 @@ display: none !important;
     float: none !important;
     vertical-align: middle;
 }
+.site-info{
+    background: #000 none repeat scroll 0 0;
+    padding: 50px 0;
+}
 
+.site-info .h5 {
+	color: #fff !important;
+    text-transform: uppercase;
+}
+
+.btn-default {
+	background: transparent none repeat scroll 0 0 !important;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0;
+}
+
+.site-content .container{
+	text-align: center;
+}
+.btn-default, .label-default, .flex-caption h2, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a {
+	background-color: #000 !important;
+}
+.entry-title{
+	color: #000;
+    font-family: "Advent Pro",sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+}
+.page-header{
+	border-bottom: 0 solid #eee;
+}
+.wpcf7-form label{
+	color: #000;
+    font-family: "Advent Pro",sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+    text-transform: none;
+}
+.wpcf7-form{
+	border: 1px solid #ccc;
+    margin: 0 auto;
+    padding: 30px;
+    width: 60%;
+}
+.entry-meta{
+	display: none;
+}

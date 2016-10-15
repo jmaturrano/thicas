@@ -13,7 +13,7 @@
 </div><!-- close .site-content -->
 
 <div class="footer-content text-center">
-		<div class="col-md-12" >
+		<div class=" " >
 			<?php mksystem_social_links() ?>
 		</div>
 </div>
@@ -21,17 +21,20 @@
 
 
 					<div class="site-info">
-						<div class="copyright col-md-12">
-								<div class="col-md-3 col-sm-3 col-xs-4">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-6 col-sm-3 col-xs-4">
 								<?php mksystem_footer_menu(); ?>
 								</div>
-								<div class="col-md-5 col-sm-3 col-xs-4">
-								<?php mksystem_categories_list_footer(); ?>
+								<div class="col-md-3 col-sm-3 col-xs-4 text-center">
+								<h5> Trabaja con nosotros</h5>
+								<a href="#" class="btn btn-default" ><span class="glyphicon glyphicon-heart"> </span> Postula Aqui </a>
 								</div>
-								<div class="col-md-10 col-sm-3 col-xs-4">
-								<span> Postula aqui</span>
-								<span> Busca una tienda</span>
+								<div class="col-md-3 col-sm-3 col-xs-4 text-center">
+								<h5> Quieres Comprar </h5>
+								<a href="#" class="btn btn-default" ><span class="glyphicon glyphicon-map-marker"> </span> Busca una tienda </a>
 								</div>
+							</div>
 						</div>
 
 					</div><!-- .site-info -->
@@ -39,6 +42,13 @@
 
 
 </div><!-- #page -->
+
+
+					<div >
+						<div class="mksystem-copyrigth col-md-12 text-center">
+							<?php mksystem_footer_info(); ?>
+						</div>
+					</div><!-- .site-info -->
 
 <?php wp_footer(); ?>
 
