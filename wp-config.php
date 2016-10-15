@@ -1,6 +1,19 @@
-<?php
+﻿<?php
 $abspath	=	str_replace(array('\thicas', '/thicas'),'/wp-config',ABSPATH);
 include($abspath.'/server.php');
+
+
+
+/*
+$link = mysql_connect('localhost', 'erick', 'phpmyadmin');
+if (!$link) {
+die('Could not connect: ' . mysql_error());
+}
+echo 'Connected successfully';
+mysql_close($link);
+
+*/
+
 /** 
  * Configuración básica de WordPress.
  *
