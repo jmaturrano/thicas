@@ -4,6 +4,7 @@ include($abspath.'/server.php');
 
 
 
+<<<<<<< HEAD
 /*
 $link = mysql_connect('localhost', 'erick', 'phpmyadmin');
 if (!$link) {
@@ -13,6 +14,8 @@ echo 'Connected successfully';
 mysql_close($link);
 
 */
+=======
+>>>>>>> 1f18d3c85606c9a3e9a06e3f7be69f53a980fa67
 
 /** 
  * Configuración básica de WordPress.
