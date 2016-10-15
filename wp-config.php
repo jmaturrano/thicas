@@ -1,6 +1,10 @@
-<?php
+﻿<?php
 $abspath	=	str_replace(array('\thicas', '/thicas'),'/wp-config',ABSPATH);
 include($abspath.'/server.php');
+
+
+
+
 /** 
  * Configuración básica de WordPress.
  *
