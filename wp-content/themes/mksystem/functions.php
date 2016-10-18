@@ -366,7 +366,7 @@ function mksystem_social_links(){
   $social_html    = '';
   $facebook       = 'http://facebook.com';
   $twitter        = 'http://twitter.com';
-  $instagram      = 'http://instagram.com';
+  $instagram      = 'http://pinterest.com';
   $youtube        = 'http://youtube.com';
   $vimeo          = 'http://vimeo.com';
   $linkedin       = 'http://linkedin.com';
@@ -379,7 +379,7 @@ function mksystem_social_links(){
     $social_html  .= '<a target="_blank" class="" href="'.$twitter.'""><img src="'.get_template_directory_child().'/inc/img/social/twitter.jpg'.'"></a>';
   }
   if ($instagram != '') {
-    $social_html  .= '<a target="_blank" class="" href="'.$instagram.'"><img src="'.get_template_directory_child().'/inc/img/social/instagram.jpg'.'"></a>';
+    $social_html  .= '<a target="_blank" class="" href="'.$instagram.'"><img src="'.get_template_directory_child().'/inc/img/social/pinterest.jpg'.'"></a>';
   }
   if ($youtube != '') {
     $social_html  .= '<a target="_blank" class="" href="'.$youtube.'"><img src="'.get_template_directory_child().'/inc/img/social/youtube.jpg'.'"></a>';
