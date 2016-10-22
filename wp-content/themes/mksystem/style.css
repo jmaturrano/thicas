@@ -16,6 +16,37 @@ Use it to make something cool, have fun, and share what you've learned with othe
 Aqui empieza las modificaciones.
 ----------------------------------------------- */
 /* Hola soy Anthony */
+/* greek */
+@font-face {
+  font-family: 'Advent Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Advent Pro Regular'), local('AdventPro-Regular'), url(https://fonts.gstatic.com/s/adventpro/v4/rjFlM5pzkJXhqq9bH4mmJyEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Advent Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Advent Pro Regular'), local('AdventPro-Regular'), url(https://fonts.gstatic.com/s/adventpro/v4/Xfe7ShDKddJBJE_WqrWHYCEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Advent Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Advent Pro Regular'), local('AdventPro-Regular'), url(https://fonts.gstatic.com/s/adventpro/v4/rT9jpj7pBpZV6AmssbZKk_k_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+*{
+        font-family: "Advent Pro",sans-serif !important;
+        margin: 0px;
+        padding: 0;
+}
+
+
 .navbar.navbar-default.navbar-mksystem{
 	background: #000;
 }
@@ -70,14 +101,83 @@ input[name="sm_name"]{
 	opacity: 0.5;
 }
 
-
- p{
-	color: #000;
-    font-size: 20px;
-    font-weight: 400;
-    padding-left: 10px;
+.menu-item a{
     text-transform: uppercase;
 }
+
+ p{
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 10px;
+    //text-transform: uppercase;
+}
+
+.entry-content p{
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    padding-left: 14px;
+    text-transform: uppercase;
+}
+//fondo nosotros!
+.fondoComentario{
+    height: 381px;
+    width:  1349px;  
+    display: block;
+    transform: none;
+    /*transition: all 0s ease 0s;*/
+    /*outline: rgb(255,0,0) dashed 1px;*/
+    
+}
+//hr inicia
+.gSeparator35 {
+    margin: 35px 0;
+}
+.gSeparatorTrans {
+    background-color: transparent;
+}
+.gSeparator {
+    width: 100%;
+   
+    border: 0 !important;
+    height: 1px;
+   
+}
+
+#1{
+  position: absolute;
+  top: 50px; 
+  left: 50px;  
+}
+
+//hr termina
+.gFondoGrisClaro {
+    background-color: #f8f8f8;
+}
+.gSeparator10 {
+    margin: 10px 0;
+}
+
+.gTableNosotros {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    width: 1140px;
+    margin: 0 auto;
+}
+.gTableNosotros>.gTr1 .gCell1 {
+    display: table-cell;
+    vertical-align: middle;
+}
+.gTableNosotros>.gTr1 {
+    display: table-row;
+}
+
+//termina fondoNosotros
+
+
 
 #sm_form > input[type="submit"], #sm_form > input[type="button"]{
 	background: #000 !important;
@@ -107,6 +207,9 @@ input[name="sm_name"]{
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 	color:#FFF;
 	text-transform: uppercase; 
+        font-family: "Advent Pro",sans-serif;
+        font-weight: 400;
+        font-weight: normal;
 }
 .thumbnail {
 	border: 0px;
@@ -173,7 +276,7 @@ display: none !important;
 	background-color: #000 !important;
 }
 .entry-title{
-	color: #000;
+    color: #000;
     font-family: "Advent Pro",sans-serif;
     font-size: 3rem;
     font-weight: 400;
@@ -211,6 +314,10 @@ display: none !important;
 	padding: 10px 0 10px;
 }
 
+
+
 .btn.btn-default{
 	display: none;
 }
+
+

@@ -34,6 +34,46 @@ function mksystem_featured_slider() {
                 echo '<div class="flex-caption">';
                   echo '<a href="'. get_permalink() .'">';
                     if ( get_the_title() != '' ) echo '<h2 class="entry-title">'. get_the_title().'</h2>';
+                    if ( get_the_excerpt() != '' ) echo '<div class="exceimarpt">' . get_the_excerpt() .'</div>';
+                  echo '</a>';
+                echo '</div>';
+
+                endwhile;
+              endif;
+
+            } else {
+                echo "Slider is not properly configured";
+            }
+     
+            echo '</li>';
+        echo '</ul>';
+      echo ' </div>';
+     //}
+}
+
+
+function mksystem_featured_slider_icon() {
+    // if ( is_front_page() && of_get_option('dazzling_slider_checkbox') == 1 ) {
+      echo '<div class="flexslider">';
+        echo '<ul class="slides">';
+
+        $count = of_get_option('dazzling_slide_number');
+          $slidecat = of_get_option('dazzling_slide_categories');
+
+            if ( $count && $slidecat ) {
+            $query = new WP_Query( array( 'cat' => $slidecat, 'posts_per_page' => $count ) );
+//            print_r($query);
+            if ($query->have_posts()) :
+              while ($query->have_posts()) : $query->the_post();
+
+              echo '<li>';
+                if ( has_post_thumbnail() ) { // Check if the post has a featured image assigned to it.
+                  the_post_thumbnail();
+                }
+
+                echo '<div class="flex-caption">';
+                  echo '<a href="'. get_permalink() .'">';
+                    if ( get_the_title() != '' ) echo '<h2 class="entry-title">'. get_the_title().'</h2>';
                     if ( get_the_excerpt() != '' ) echo '<div class="excerpt">' . get_the_excerpt() .'</div>';
                   echo '</a>';
                 echo '</div>';
@@ -207,6 +247,7 @@ function mksystem_product_categories($thumb = ''){
   $all_categories = get_categories( $args );
   $category_products = array();
   $subcategory = array();
+  
   foreach ($all_categories as $cat) {
     if($cat->category_parent == 0) {
 
@@ -249,6 +290,7 @@ function mksystem_product_categories($thumb = ''){
 
     }//end if
   }//end foreach
+  
 
   if(count($subcategory) > 0){
     $i = 0;
@@ -279,9 +321,54 @@ function mksystem_product_categories($thumb = ''){
   return $category_products;
 }
 
-/**
- * header menu (should you choose to use one)
- */
+function mksystem_categories_list_subcategoria(){
+  $categories_html = '';
+  $category_products = mksystem_product_categories();
+  
+  if(count($category_products) > 0){
+    $items = 0;
+    $categories_html .= '<ul class="nav footer-nav clearfix">';
+    foreach ($category_products as $category) {
+	
+      if($items <= 9){
+        $categories_html .= '<li class="menu-item" style="display:block; align: left;"><a style="text-align:left;" href="'.$category['term_link'].'">'.$category['name'].'</a></li>';
+      }//end if
+	  
+      $items++;
+    }//end foreach
+    $categories_html .= '</ul>';
+  }//end if
+
+  echo $categories_html;
+}
+
+function mksystem_categories_list_subcategoria_subsub(){
+  $categories_html = '';
+  $category_products = mksystem_product_categories();
+  
+  if(count($category_products) > 0){
+    $items = 0;
+    $categories_html .= '<ul class="nav footer-nav clearfix">';
+    foreach ($category_products as $category) {
+	
+      if($items <= 9){
+        if($category['id'] == 41 || $category['id'] == 42){
+          $categories_html .= '<li class="menu-item" style="display:block; align: left;"><a style="text-align:left;" href="'.$category['term_link'].'">'.$category['name'].'</a></li>';
+        }
+         
+        
+        }//end if
+	  
+      $items++;
+    }//end foreach
+    $categories_html .= '</ul>';
+  }//end if
+
+  echo $categories_html;
+}
+
+      
+
 function mksystem_header_menu() {
   // display the WordPress Custom Menu if available
   wp_nav_menu(array(
@@ -407,4 +494,25 @@ function mksystem_footer_info() {
   </div>
   <?php
 }
+//titulo de la pagina nosotros
+function mksystem_titulo() {
+?>
+  <div class="copy col-md-12" ><?php echo bloginfo('name');?></div>
+<?php
+}
+
+
+
+
+
+function mksystem_imagenes_comentario1() {
+    
+// Ruta de la imagen destacada (miniatura y otros tamaños)
+global $post;
+$thumbID = get_post_thumbnail_id( $post->id="1" );
+$imgDestacada = wp_get_attachment_image_src( $thumbID, 'full' ); // Sustituir por thumbnail, medium, large o full
+echo $imgDestacada[0];
+	
+}
+    
 

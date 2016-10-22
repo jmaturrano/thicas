@@ -10,10 +10,21 @@
 <div class="top-section" style="display:none">
     <div class="container">
         <div class="row">
-            <?php mksystem_featured_slider(); ?>
+            <?php mksystem_featured_slider() ?>
         </div><!--.row-->
     </div><!--.container-->
 </div>
+<!--Estamos crando un sleder -->
+
+<!--<div class="top-section" style="display:none">-->
+    <div class="container">
+        <div class="row">
+            <?php mksystem_featured_slider_icon() ?>
+        </div><!--.row-->
+    </div><!--.container-->
+</div>
+
+
 
 <div>
     <div class="container">
