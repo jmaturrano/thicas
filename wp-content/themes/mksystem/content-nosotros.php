@@ -14,71 +14,87 @@
         <div class="row">
            <?php bloginfo( 'name' ); ?>
         </div>
-
-    
-    
+   
  <div class="gNosotrosBox">
-
-
         <hr class="gSeparator gSeparatorTrans gSeparator35">
-
-        <div class="gFondoGrisClaro gItemNosotros">
-            <div class="gTableNosotros">
-                <div class="gTr1">
-                    <div class="gCell1">
-                        <img class="" src="http://www.maloko.com.pe/wp-content/uploads/2015/12/maloko-mision-vision.jpg">
+        
+        <div class="gFondoGrisClaro content-block ">
+            <div class="row">   
+                    <?php if(get_theme_mod('nosotros_imagen1','') != ''): ?>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <img class="" src="<?= get_theme_mod('nosotros_imagen1',''); ?>">
                     </div>
-
-                    <div class="gCell1">
-                        <h2>Misión</h2>
+                    <?php endif; ?>
+                
+                    <?php if(get_theme_mod('nosotros_imagen1','') != ''): ?>
+                    <?php $class_block = 'col-md-6 col-sm-6'; ?>
+                    <?php else: ?>
+                    <?php $class_block = 'col-md-12 col-sm-12'; ?>
+                    <?php endif; ?>
+                
+                    <div class="<?= $class_block ?> col-xs-12">
+                        <?php if(get_theme_mod('nosotros_titulo1','') != ''): ?>
+                        <h2 style="color:black;"><?= get_theme_mod('nosotros_titulo1');?></h2>
                         <hr class="gSeparator gSeparatorTrans gSeparator10">
-                        <div class="gLineHeight25 gPadding0-10"><p>Somos una empresa apasionada por la moda, que busca las últimas tendencias mundiales, ofreciendo a nuestras clientas exclusividad y una agradable experiencia de compra, generando valor para sus accionistas y oportunidad de desarrollo para sus colaboradores.</p>
-</div>
+                        <?php endif; ?>
+                        <?php if(get_theme_mod('nosotros_texto1','') != ''): ?>
+                        <div class="gLineHeight25 gPadding0-10"><?= get_theme_mod('nosotros_texto1'); ?> </div>
+                        <?php endif; ?>
                     </div>
-                </div>
+            </div>
+        </div>
+        <div class="gFondoBlanco content-block">
+            <div class="row">
+                
+                    <?php if(get_theme_mod('nosotros_imagen1','') != ''): ?>
+                    <?php $class_block = 'col-md-6 col-sm-6'; ?>
+                    <?php else: ?>
+                    <?php $class_block = 'col-md-12 col-sm-12'; ?>
+                    <?php endif; ?>
+                
+                    <div class="<?= $class_block ?>  col-xs-12">
+                        <?php if(get_theme_mod('nosotros_titulo2','') != ''): ?>
+                        <h2 style="color: black;"><?= get_theme_mod('nosotros_titulo2');?></h2>
+                        <hr class="gSeparator gSeparatorTrans gSeparator10">
+                        <?php endif; ?>
+                        <?php if(get_theme_mod('nosotros_texto2','') != ''): ?>
+                        <div class="gLineHeight25 gPadding0-10"> <?= get_theme_mod('nosotros_texto2'); ?></div>
+                         <?php endif; ?>
+                    </div>
+                    <?php if(get_theme_mod('nosotros_imagen2','') != ''): ?>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <img class="" src="<?= get_theme_mod('nosotros_imagen2',''); ?>">
+                    </div>
+                    <?php endif; ?>
             </div>
         </div>
 
-        <div class="gFondoBlanco gItemNosotros">
-            <div class="gTableNosotros">
-                <div class="gTr1">
-                    <div class="gNone">
-                        <img class="" src="http://www.maloko.com.pe/wp-content/uploads/2015/12/maloko-vision.jpg">
+        <div class="gFondoGrisClaro content-block">
+            <div class="row">
+                   <?php if(get_theme_mod('nosotros_imagen3','') != ''): ?>
+                    <div class="col-md-6 col-sm-6 col-xs-12 ">
+                        <img class="" src="<?= get_theme_mod('nosotros_imagen3',''); ?>">
                     </div>
-
-                    <div class="gCell1">
-                        <h2>Visión</h2>
+                    <?php endif; ?>
+                
+                    <?php if(get_theme_mod('nosotros_imagen3','') != ''): ?>
+                    <?php $class_block = 'col-md-6 col-sm-6'; ?>
+                    <?php else: ?>
+                    <?php $class_block = 'col-md-12 col-sm-12'; ?>
+                    <?php endif; ?>
+                    <?php if(get_theme_mod('nosotros_titulo3','') != ''): ?>
+                
+                    <div class=" <?= $class_block ?> col-xs-12">
+                        <h2 style="color:black;"><?= get_theme_mod('nosotros_titulo3');?></h2>
                         <hr class="gSeparator gSeparatorTrans gSeparator10">
-                        <div class="gLineHeight25 gPadding0-10"><p>Ser la empresa referente en moda femenina y para niños en el mercado nacional.</p>
-</div>
+                         <?php endif; ?>
+                        <?php if(get_theme_mod('nosotros_texto3','') != ''): ?>
+                        <div class="gLineHeight25 gPadding0-10"><?= get_theme_mod('nosotros_texto3'); ?>  </div>
+                       <?php endif; ?>
                     </div>
-
-                    <div class="gCell1 gOcultarImgTable">
-                        <img class="" src="http://www.maloko.com.pe/wp-content/uploads/2015/12/maloko-vision.jpg">
-                    </div>
-                </div>
+                
             </div>
         </div>
-
-        <div class="gFondoGrisClaro gItemNosotros">
-            <div class="gTableNosotros">
-                <div class="gTr1">
-                    <div class="gCell1">
-                        <img class="" src="http://www.maloko.com.pe/wp-content/uploads/2015/12/maloko-resena.png">
-                    </div>
-
-                    <div class="gCell1">
-                        <h2>Reseña</h2>
-                        <hr class="gSeparator gSeparatorTrans gSeparator10">
-                        <div class="gLineHeight25 gPadding0-10"><p>La Corporación Maloko es una sólida marca peruana que nace en el año 2004 con el fin de resaltar la belleza femenina a través de los accesorios, posteriormente en el año 2009 complementa su línea de accesorios con prendas fashionistas dirigidas a la mujer ejecutiva, moderna y sofisticada. En el año 2013 la corporación encuentra un mercado insatisfecho en lo que a ropa para niños y niñas se refiere por lo que lanza su marca Maloko Kids dirigido a los padres que quieren vestir a sus pequeños hijos con las últimas tendencias de la moda infantil.<br>
-Actualmente la Corporación Maloko cuenta con una cadena de tiendas a nivel nacional ubicadas en los principales centros comerciales así como también en puntos independientes.</p>
-<p>&nbsp;</p>
-</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>  
     
     

@@ -121,6 +121,7 @@ input[name="sm_name"]{
     padding-left: 14px;
     text-transform: uppercase;
 }
+
 //fondo nosotros!
 .fondoComentario{
     height: 381px;
@@ -145,35 +146,23 @@ input[name="sm_name"]{
     height: 1px;
    
 }
-
-#1{
-  position: absolute;
-  top: 50px; 
-  left: 50px;  
+.content-block{
+    padding: 20px 0;
 }
 
 //hr termina
 .gFondoGrisClaro {
-    background-color: #f8f8f8;
+    background-color: grey;  
+}
+
+.gFondoBlanco {
+    background-color: white;
 }
 .gSeparator10 {
     margin: 10px 0;
 }
 
-.gTableNosotros {
-    width: 100%;
-    display: table;
-    table-layout: fixed;
-    width: 1140px;
-    margin: 0 auto;
-}
-.gTableNosotros>.gTr1 .gCell1 {
-    display: table-cell;
-    vertical-align: middle;
-}
-.gTableNosotros>.gTr1 {
-    display: table-row;
-}
+
 
 //termina fondoNosotros
 
@@ -221,6 +210,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 padding: 12px;
 max-width: 16%;
 }
+
+
 
 
 .copyright {

@@ -9,6 +9,131 @@ function get_template_directory_child(){
   return $directory_child;
 }
 
+/*
+*
+* customizer 
+*
+*/
+
+function mksystem_customizer_register( $wp_customize ) {
+/*
+  *
+  * Nosotros
+  *
+  */
+  $wp_customize->add_section(
+        'mksystem_nosotros',
+        array(
+            'title' => __('Página Nosotros', 'mksystem'),
+            'priority' => 100
+        )
+    );
+  
+  // titulo 1
+  $wp_customize->add_setting('nosotros_titulo1',array(
+    'default' => __('','mksystem')
+  ));
+  
+  $wp_customize->add_control('nosotros_titulo1',array(
+    'label' => __('Título 1','mksystem'),
+    'section' => 'mksystem_nosotros',
+    'setting' => 'nosotros_titulo1',
+    'type'    => 'text'
+  ));
+  
+  //text area 1
+   $wp_customize->add_setting('nosotros_texto1',array(
+    'default' => __('','mksystem')
+  ));
+  $wp_customize->add_control('nosotros_texto1',array(
+    'label' => __('Texto 1','mksystem'),
+    'section' => 'mksystem_nosotros',
+    'setting' => 'nosotros_texto1',
+    'type'    => 'textarea'
+  ));
+  //imagen 1
+  $wp_customize->add_setting('nosotros_imagen1',array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nosotros_imagen1' , array(
+    'label' => __('Imagen 1' , 'mksystem'),
+    'section' => 'mksystem_nosotros',
+    'settings' => 'nosotros_imagen1'
+  )));
+
+  // titulo 2
+  $wp_customize->add_setting('nosotros_titulo2',array(
+    'default' => __('','mksystem')
+  ));
+  
+  $wp_customize->add_control('nosotros_titulo2',array(
+    'label' => __('Título 2','mksystem'),
+    'section' => 'mksystem_nosotros',
+    'setting' => 'nosotros_titulo2',
+    'type'    => 'text'
+  ));
+  
+  //text area 2
+   $wp_customize->add_setting('nosotros_texto2',array(
+    'default' => __('','mksystem')
+  ));
+  $wp_customize->add_control('nosotros_texto2',array(
+    'label' => __('Texto 2','mksystem'),
+    'section' => 'mksystem_nosotros',
+    'setting' => 'nosotros_texto2',
+    'type'    => 'textarea'
+  ));
+  //imagen 2
+  $wp_customize->add_setting('nosotros_imagen2',array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nosotros_imagen2' , array(
+    'label' => __('Imagen 2' , 'mksystem'),
+    'section' => 'mksystem_nosotros',
+    'settings' => 'nosotros_imagen2'
+  )));
+
+  
+  // titulo 3
+  $wp_customize->add_setting('nosotros_titulo3',array(
+    'default' => __('','mksystem')
+  ));
+  
+  $wp_customize->add_control('nosotros_titulo3',array(
+    'label' => __('Título 3','mksystem'),
+    'section' => 'mksystem_nosotros',
+    'setting' => 'nosotros_titulo3',
+    'type'    => 'text'
+  ));
+  
+  //text area 3
+   $wp_customize->add_setting('nosotros_texto3',array(
+    'default' => __('','mksystem')
+  ));
+  $wp_customize->add_control('nosotros_texto3',array(
+    'label' => __('Texto 3','mksystem'),
+    'section' => 'mksystem_nosotros',
+    'setting' => 'nosotros_texto3',
+    'type'    => 'textarea'
+  ));
+  //imagen 3
+  $wp_customize->add_setting('nosotros_imagen3',array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nosotros_imagen3' , array(
+    'label' => __('Imagen 3' , 'mksystem'),
+    'section' => 'mksystem_nosotros',
+    'settings' => 'nosotros_imagen3'
+  )));
+
+  
+  
+}
+
+
+add_action('customize_register','mksystem_customizer_register');
+
+
 /**
  * Mk system slider
  */
@@ -504,15 +629,4 @@ function mksystem_titulo() {
 
 
 
-
-function mksystem_imagenes_comentario1() {
-    
-// Ruta de la imagen destacada (miniatura y otros tamaños)
-global $post;
-$thumbID = get_post_thumbnail_id( $post->id="1" );
-$imgDestacada = wp_get_attachment_image_src( $thumbID, 'full' ); // Sustituir por thumbnail, medium, large o full
-echo $imgDestacada[0];
-	
-}
-    
 
