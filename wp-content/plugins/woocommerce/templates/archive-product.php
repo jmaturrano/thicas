@@ -20,8 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-get_header( 'shop' ); ?>
+get_header( 'shop' ); 
 
+
+?>
+<!--include (mksystem(__DIR__) . '/functions.php');-->
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
 			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
@@ -30,6 +33,7 @@ get_header( 'shop' ); ?>
 
 <div class="row col-me-12 text-center">
 
+<<<<<<< HEAD
 		<div class="container-subcategory col-md-4">
 			<div>
 				<?php mksystem_categories_list_footer();  ?>
@@ -37,8 +41,22 @@ get_header( 'shop' ); ?>
 		</div>
 
 	<div class="col-md-8">
+=======
+    <div class="col-md-3">
+        <h4 style="color:black;">SubCategorias</h4>
+       <?php mksystem_featured_slider_icon()   ?>
+        
+        <!--mksystem_categories_list_subcategoria()-->
+    </div>
 
-		<?php
+>>>>>>> 0e08d08160659d2a55642f66f15c02ff9d4028ad
+
+        <div class="col-md-9">  Aquii van las imagenes XDDDDDDDDDDDD</div>
+        
+       		
+            
+            
+        <?php
 		/**
 		 * woocommerce_before_main_content hook.
 		 *

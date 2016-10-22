@@ -363,7 +363,7 @@ if ( ! function_exists( 'woocommerce_content' ) ) {
 
 			<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
-				<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+				<h1 class="page-title">hola </h1>
 
 			<?php endif; ?>
 
@@ -472,7 +472,7 @@ if ( ! function_exists( 'woocommerce_page_title' ) ) {
 
 		} elseif ( is_tax() ) {
 
-			$page_title = single_term_title( "", false );
+			$page_title = single_term_title( "", false);
 
 		} else {
 
@@ -558,7 +558,7 @@ if (  ! function_exists( 'woocommerce_template_loop_category_title' ) ) {
  * Insert the opening anchor tag for products in the loop.
  */
 function woocommerce_template_loop_product_link_open() {
-	echo '<a href="' . get_the_permalink() . '" class="woocommerce-LoopProduct-link">';
+	echo '<a href="' . get_the_permalink() . '" class="btn btn-default">';
 }
 /**
  * Insert the opening anchor tag for products in the loop.

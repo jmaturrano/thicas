@@ -4021,6 +4021,11 @@ class WP_Query {
 
 		return false;
 	}
+        
+        
+        
+        
+        
 
 	/**
 	 * Rewind the comments, resets the comment index and comment to first.
