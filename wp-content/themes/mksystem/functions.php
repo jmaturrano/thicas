@@ -172,7 +172,7 @@ function mksystem_section_categories_bloque3(){
         $categories_html .= '</div>';
       }//end if
       $i++;
-    }//end foreach
+    }//end foreach 
   }//end if
 
   echo $categories_html;
@@ -342,17 +342,22 @@ register_nav_menus(array(
  */
 function mksystem_categories_list_footer(){
   $categories_html = '';
-  $category_products = mksystem_product_categories();
+  $category_products = mksystem_product_categories('catalog');
   if(count($category_products) > 0){
     $items = 0;
-    $categories_html .= '<ul class="nav footer-nav clearfix">';
+    $categories_html .= '<li class="nav footer-nav clearfix">';
     foreach ($category_products as $category) {
-      if($items <= 9){
-        $categories_html .= '<li class="menu-item"><a href="'.$category['term_link'].'">'.$category['name'].'</a></li>';
+      if($items <= 2){
+           $categories_html .= '<ul class="menu-item"><a href="'.$category['term_link'].'">'.$category['name'].'</a></ul>';
+         }//end if
+      if(count($category['childs']) > 0){
+        foreach ($category['childs'] as $subcategory) {
+          $categories_html .= '<ul class="submenu-item"><a href="'.$subcategory['term_link'].'">'.$subcategory['name'].'</a></ul>';
+        }//end foreach
       }//end if
       $items++;
     }//end foreach
-    $categories_html .= '</ul>';
+    $categories_html .= '</li>';
   }//end if
 
   echo $categories_html;
@@ -393,6 +398,7 @@ function mksystem_social_links(){
   echo $social_html;
 }
 
+
 /**
  * function to show the footer info, copyright information
  */
@@ -405,6 +411,32 @@ function mksystem_footer_info() {
     <?php echo esc_html__("Desarrollado por","mksystem");?> 
     <a href="<?php echo esc_url("http://mksystemsoft.com","mksystem");?>" target="_blank"><?php echo esc_html__("MK System","mksystem");?></a> 
   </div>
+
+
   <?php
 }
+
+function mksystem_subcategories(){
+
+  $categories_html = '';
+  $category_products = mksystem_product_categories('catalog');
+  if(count($category_products) > 0){
+    $i=0;
+    foreach ($category_products as $category) {
+      $categories_html .= '<h4>'.$category['name'].'</h4>';
+      if(count($category['childs']) > 0){
+        foreach ($category['childs'] as $subcategory) {
+          $categories_html .= '<h4>'.$subcategory['name'].'</h4>';
+        }//end foreach
+      }//end if
+    }//end foreach
+    $i++;
+  //}//end if
+
+  echo $categories_html;
+}
+}
+
+
+
 

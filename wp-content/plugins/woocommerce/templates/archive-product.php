@@ -28,11 +28,15 @@ get_header( 'shop' ); ?>
 
 		<?php endif; ?>
 
-<div class="row col-me-12">
+<div class="row col-me-12 text-center">
 
-	<div class="col-md-3">SubCategorias</div>
+		<div class="container-subcategory col-md-4">
+			<div>
+				<?php mksystem_categories_list_footer();  ?>
+			</div>
+		</div>
 
-	<div class="col-md-9">
+	<div class="col-md-8">
 
 		<?php
 		/**
