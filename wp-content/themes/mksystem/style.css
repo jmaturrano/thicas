@@ -256,7 +256,7 @@ display: none !important;
 
 .btn-default {
 	background: transparent none repeat scroll 0 0 !important;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid;
     border-radius: 0;
 }
 
@@ -306,15 +306,7 @@ display: none !important;
 }
 
 
-
-.btn.btn-default{
-	display: none;
-}
-
-<<<<<<< HEAD
 .entry-content p{
 
 }
-=======
 
->>>>>>> 0e08d08160659d2a55642f66f15c02ff9d4028ad
