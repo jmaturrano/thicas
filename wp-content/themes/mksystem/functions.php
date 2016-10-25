@@ -9,12 +9,17 @@ function get_template_directory_child(){
   return $directory_child;
 }
 
+//function quitar_Widget(){
+//unregister_sidebar(‘sidebar-2’); 
+//}
+//
+//add_action(‘widgets_init’, ‘quitar_Widget’, 11);
+
 /*
 *
 * customizer 
 *
 */
-
 function mksystem_customizer_register( $wp_customize ) {
 /*
   *
@@ -126,11 +131,28 @@ function mksystem_customizer_register( $wp_customize ) {
     'settings' => 'nosotros_imagen3'
   )));
 
-  
-  
+  /*
+  *
+  * Principal
+  *
+  */
+  $wp_customize->add_section(
+        'mksystem_principal',
+        array(
+            'title' => __('Página Principal', 'mksystem'),
+            'description'=> __('Tamaño de imagen recomendado: 1900x900', 'mksystem'),
+            'priority' => 100
+        )
+    );
+  $wp_customize->add_setting('slider_mksystem_1',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_1' , array(
+    'label' => __('Imagen slider 1' , 'mksystem'),
+    'section' => 'mksystem_slider',
+    'settings' => 'slider_mksystem_1'
+  )));
 }
-
-
 add_action('customize_register','mksystem_customizer_register');
 
 
