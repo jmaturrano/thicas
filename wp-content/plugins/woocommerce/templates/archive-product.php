@@ -42,18 +42,6 @@ get_header( 'shop' );
 
 	<div class="col-md-8">
 
-    <div class="col-md-3">
-        <h4 style="color:black;">SubCategorias</h4>
-       <?php mksystem_featured_slider_icon()   ?>
-        
-        <!--mksystem_categories_list_subcategoria()-->
-    </div>
-
-
-
-        <div class="col-md-9">  Aquii van las imagenes XDDDDDDDDDDDD</div>
-        
-       		
             
             
         <?php
