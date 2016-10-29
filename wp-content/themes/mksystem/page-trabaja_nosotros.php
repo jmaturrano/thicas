@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Página Contactos
+ * Template Name: Trabaja con nosotros
  *
  * This is the template that displays full width page without sidebar
  *
@@ -13,7 +13,7 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'contactos' ); ?>
+				<?php get_template_part( 'content', 'trabaja_nosotros' ); ?>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template

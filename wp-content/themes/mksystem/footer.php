@@ -28,7 +28,7 @@
 								</div>
 								<div class="col-md-3 col-sm-3 col-xs-4 text-center">
 								<h5> Trabaja con nosotros</h5>
-								<a href="#" class="btn btn-default" ><span class="glyphicon glyphicon-heart"> </span> Postula Aqui </a>
+								<a href="#" class="btn btn-default" ><span class="icon-heart"> </span> Postula Aqui </a>
 								</div>
 								<div class="col-md-3 col-sm-3 col-xs-4 text-center">
 								<h5> Quieres Comprar </h5>

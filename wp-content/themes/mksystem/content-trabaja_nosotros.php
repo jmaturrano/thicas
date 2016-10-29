@@ -1,18 +1,17 @@
 <?php
 /**
- * The template used for displaying page content in page-nosotros.php
+ * The template used for displaying page content in page-trabaja_nosotros.php
  *
  * @package dazzling
  */
 ?>	
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header page-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 	<div class="entry-content col-md-12">
 	<div class="row2">
-           <?php bloginfo( 'name' ); ?>
+           
         </div>
     </div><!-- .entry-content -->
 
@@ -21,17 +20,11 @@
         
         <div class="gFondoGrisClaro content-block ">
             <div class="row">   
-                    <?php if(get_theme_mod('nosotros_imagen1','') != ''): ?>
+                   
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <img class="" src="<?= get_theme_mod('nosotros_imagen1',''); ?>">
+                        
                     </div>
-                    <?php endif; ?>
-                
-                    <?php if(get_theme_mod('nosotros_imagen1','') != ''): ?>
-                    <?php $class_block = 'col-md-6 col-sm-6'; ?>
-                    <?php else: ?>
-                    <?php $class_block = 'col-md-12 col-sm-12'; ?>
-                    <?php endif; ?>
+                   
                 
                     <div class="<?= $class_block ?> col-xs-12">
                         <?php if(get_theme_mod('nosotros_titulo1','') != ''): ?>

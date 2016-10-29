@@ -9,19 +9,33 @@ function get_template_directory_child(){
   return $directory_child;
 }
 
-//function quitar_Widget(){
-//unregister_sidebar(‘sidebar-2’); 
-//}
-//
-//add_action(‘widgets_init’, ‘quitar_Widget’, 11);
-
 /*
 *
 * customizer 
 *
 */
+
 function mksystem_customizer_register( $wp_customize ) {
-/*
+  
+    /* Paginas bootom */
+       $wp_customize->add_section('mksystem_footer',array(
+            'title' => __('Páginas footer', 'mksystem'),
+            'priority' => 100,
+       
+        )
+    );
+    $wp_customize->add_setting('slider_mksystem_pagina',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+    ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_pagina' , array(
+    'label' => __('Imagen 1' , 'mksystem'),
+    'section' => 'mksystem_footer',
+    'settings' => 'slider_mksystem_pagina'
+  )));
+  
+    
+    
+    /*
   *
   * Nosotros
   *
@@ -130,29 +144,421 @@ function mksystem_customizer_register( $wp_customize ) {
     'section' => 'mksystem_nosotros',
     'settings' => 'nosotros_imagen3'
   )));
-
-  /*
-  *
-  * Principal
-  *
-  */
-  $wp_customize->add_section(
-        'mksystem_principal',
-        array(
-            'title' => __('Página Principal', 'mksystem'),
-            'description'=> __('Tamaño de imagen recomendado: 1900x900', 'mksystem'),
-            'priority' => 100
+                 /* PAGINA PRINCIPAL */
+  
+  /* Obtener de pagina principal Panel */
+    $wp_customize->add_panel('mksystem_main_options', array(
+        'capability' => 'edit_theme_options',
+        'theme_supports' => '',
+        'title' => __('Página Principal', 'mksystem'),
+        'description' => __('Panel to update dazzling theme options', 'mksystem'), // Include html tags such as <p>.
+        'priority' => 10 // Mixed with top-level-section hierarchy.
+    ));
+     
+    /* Video 28/10 */
+     $wp_customize->add_section('mksystem_video',array(
+            'title' => __('Video', 'mksystem'),
+            'description'=> __('Coloque la url de su video', 'mksystem'),
+            'priority' => 100,
+            'panel' => 'mksystem_main_options'
         )
     );
-  $wp_customize->add_setting('slider_mksystem_1',array(
+    $wp_customize->add_setting('slider_mksystem_video',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+    ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_video' , array(
+    'label' => __('Imagen 1' , 'mksystem'),
+    'section' => 'mksystem_video',
+    'settings' => 'slider_mksystem_video'
+  )));
+    
+    
+    
+        //****************** slider BLOQUE 1 //28
+
+     
+    $wp_customize->add_section('mksystem_slider1',array(
+            'title' => __('Slider 1 options', 'mksystem'),
+            'description'=> __('Tamaño de imagen recomendado: 1900x900', 'mksystem'),
+            'priority' => 100,
+            'panel' => 'mksystem_main_options'
+        )
+    );
+    $wp_customize->add_setting('slider_mksystem_1_a',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+    ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_1_a' , array(
+    'label' => __('Imagen 1' , 'mksystem'),
+    'section' => 'mksystem_slider1',
+    'settings' => 'slider_mksystem_1_a'
+  )));
+
+  $wp_customize->add_setting('slider_mksystem_2_a',array(
     'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
   ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_2_a' , array(
+    'label' => __('Imagen 2' , 'mksystem'),
+    'section' => 'mksystem_slider1',
+    'settings' => 'slider_mksystem_2_a'
+  )));
+
+  $wp_customize->add_setting('slider_mksystem_3_a',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_3_a' , array(
+    'label' => __('Imagen 3' , 'mksystem'),
+    'section' => 'mksystem_slider1',
+    'settings' => 'slider_mksystem_3_a'
+  )));
+
+  $wp_customize->add_setting('slider_mksystem_4_a',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_4_a' , array(
+    'label' => __('Imagen 4' , 'mksystem'),
+    'section' => 'mksystem_slider1',
+    'settings' => 'slider_mksystem_4_a'
+  )));
+
+  $wp_customize->add_setting('slider_mksystem_5_a',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_5_a' , array(
+    'label' => __('Imagen 5' , 'mksystem'),
+    'section' => 'mksystem_slider1',
+    'settings' => 'slider_mksystem_5_a'
+  )));
+
+  $wp_customize->add_setting('slider_mksystem_6_a',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_6_a' , array(
+    'label' => __('Imagen 6' , 'mksystem'),
+    'section' => 'mksystem_slider1',
+    'settings' => 'slider_mksystem_6_a'
+  )));
+  // TERMINA EL BLOQUE 1
+
+    /*
+  //****************** slider BLOQUE 2 //28
+     */
+    $wp_customize->add_section('mksystem_slider',array(
+            'title' => __('Slider 2 options', 'mksystem'),
+            'description'=> __('Tamaño de imagen recomendado: 1900x900', 'mksystem'),
+            'priority' => 100,
+            'panel' => 'mksystem_main_options'
+        )
+    );
+    $wp_customize->add_setting('slider_mksystem_1',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+    ));
   $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_1' , array(
-    'label' => __('Imagen slider 1' , 'mksystem'),
+    'label' => __('Imagen 1' , 'mksystem'),
     'section' => 'mksystem_slider',
     'settings' => 'slider_mksystem_1'
   )));
+
+  $wp_customize->add_setting('slider_mksystem_2',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_2' , array(
+    'label' => __('Imagen 2' , 'mksystem'),
+    'section' => 'mksystem_slider',
+    'settings' => 'slider_mksystem_2'
+  )));
+
+  $wp_customize->add_setting('slider_mksystem_3',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_3' , array(
+    'label' => __('Imagen 3' , 'mksystem'),
+    'section' => 'mksystem_slider',
+    'settings' => 'slider_mksystem_3'
+  )));
+
+  $wp_customize->add_setting('slider_mksystem_4',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_4' , array(
+    'label' => __('Imagen 4' , 'mksystem'),
+    'section' => 'mksystem_slider',
+    'settings' => 'slider_mksystem_4'
+  )));
+
+  $wp_customize->add_setting('slider_mksystem_5',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_5' , array(
+    'label' => __('Imagen 5' , 'mksystem'),
+    'section' => 'mksystem_slider',
+    'settings' => 'slider_mksystem_5'
+  )));
+
+  $wp_customize->add_setting('slider_mksystem_6',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_6' , array(
+    'label' => __('Imagen 6' , 'mksystem'),
+    'section' => 'mksystem_slider',
+    'settings' => 'slider_mksystem_6'
+  )));
+  /* TERMINA EL BLOQUE 3*/ //28
+        //****************** slider BLOQUE 3
+     
+    $wp_customize->add_section('mksystem_slider4',array(
+            'title' => __('Slider 3 options', 'mksystem'),
+            'description'=> __('Tamaño de imagen recomendado: 1900x900', 'mksystem'),
+            'priority' => 100,
+            'panel' => 'mksystem_main_options'
+        )
+    );
+    $wp_customize->add_setting('slider_mksystem_1_b',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+    ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_1_b' , array(
+    'label' => __('Imagen 1' , 'mksystem'),
+    'section' => 'mksystem_slider4',
+    'settings' => 'slider_mksystem_1_b'
+  )));
+
+  $wp_customize->add_setting('slider_mksystem_2_b',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_2_b' , array(
+    'label' => __('Imagen 2' , 'mksystem'),
+    'section' => 'mksystem_slider4',
+    'settings' => 'slider_mksystem_2_b'
+  )));
+
+  $wp_customize->add_setting('slider_mksystem_3_b',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_3_b' , array(
+    'label' => __('Imagen 3' , 'mksystem'),
+    'section' => 'mksystem_slider4',
+    'settings' => 'slider_mksystem_3_b'
+  )));
+
+  $wp_customize->add_setting('slider_mksystem_4_b',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_4_b' , array(
+    'label' => __('Imagen 4' , 'mksystem'),
+    'section' => 'mksystem_slider4',
+    'settings' => 'slider_mksystem_4_b'
+  )));
+
+  $wp_customize->add_setting('slider_mksystem_5_b',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_5_b' , array(
+    'label' => __('Imagen 5' , 'mksystem'),
+    'section' => 'mksystem_slider4',
+    'settings' => 'slider_mksystem_5_b'
+  )));
+
+  $wp_customize->add_setting('slider_mksystem_6_b',array(
+    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_6_b' , array(
+    'label' => __('Imagen 6' , 'mksystem'),
+    'section' => 'mksystem_slider4',
+    'settings' => 'slider_mksystem_6_b'
+  )));
+  // TERMINA EL BLOQUE 3
+  /*
+  *
+   * ******************* Social 
+  */
+  $wp_customize->add_section('mksystem_social',array(
+            'title' => __('Social options', 'mksystem'),
+            'description'=> __('Sube tus paginas sociales', 'mksystem'),
+            'priority' => 100,
+            'panel' => 'mksystem_main_options'
+        )
+    );
+  
+  $wp_customize->add_setting('social_phone',array(
+    'default' => __('123-45678','mksystem')
+ 
+  ));
+  $wp_customize->add_control('social_phone',array(
+    'label' => __('Teléfono','mksystem'),
+    'section' => 'mksystem_social',
+    'setting' => 'social_phone',
+    'type'    => 'text'
+  ));
+  $wp_customize->add_setting('social_facebook',array(
+    'default' => __('http://facebook.com','mksystem')
+  ));
+  $wp_customize->add_control('social_facebook',array(
+    'label' => __('Facebook','mksystem'),
+    'section' => 'mksystem_social',
+    'setting' => 'social_facebook',
+    'type'    => 'text'
+  ));
+  /* Colocar acceso de imagenes para : social*/
+   $wp_customize->add_setting('nosotros_imagen_f',array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nosotros_imagen_f' , array(
+    'label' => __('Imagen Facebook' , 'mksystem'),
+    'section' => 'mksystem_social',
+    'settings' => 'nosotros_imagen_f'
+  )));
+    /* terminna */
+
+  $wp_customize->add_setting('social_twitter',array(
+    'default' => __('http://twitter.com','mksystem')
+  ));
+  $wp_customize->add_control('social_twitter',array(
+    'label' => __('Twitter','mksystem'),
+    'section' => 'mksystem_social',
+    'setting' => 'social_twitter',
+    'type'    => 'text'
+  ));
+  /* Colocar acceso de imagenes para : social*/
+   $wp_customize->add_setting('nosotros_imagen_t',array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nosotros_imagen_t' , array(
+    'label' => __('Imagen Twitter' , 'mksystem'),
+    'section' => 'mksystem_social',
+    'settings' => 'nosotros_imagen_t'
+  )));
+    /* terminna */
+
+  $wp_customize->add_setting('social_instagram',array(
+    'default' => __('http://instagram.com','mksystem')
+  ));
+  $wp_customize->add_control('social_instagram',array(
+    'label' => __('Instagram','mksystem'),
+    'section' => 'mksystem_social',
+    'setting' => 'social_instagram',
+    'type'    => 'text'
+  ));
+
+    /* Colocar acceso de imagenes para : social*/
+   $wp_customize->add_setting('nosotros_imagen_i',array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nosotros_imagen_i' , array(
+    'label' => __('Imagen Instagram' , 'mksystem'),
+    'section' => 'mksystem_social',
+    'settings' => 'nosotros_imagen_i'
+  )));
+    /* terminna */
+  $wp_customize->add_setting('social_youtube',array(
+    'default' => __('http://youtube.com','mksystem')
+  ));
+  $wp_customize->add_control('social_youtube',array(
+    'label' => __('Youtube','mksystem'),
+    'section' => 'mksystem_social',
+    'setting' => 'social_youtube',
+    'type'    => 'text'
+  ));
+  
+  /* Colocar acceso de imagenes para : social*/
+   $wp_customize->add_setting('nosotros_imagen_y',array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nosotros_imagen_y' , array(
+    'label' => __('Imagen Youtube' , 'mksystem'),
+    'section' => 'mksystem_social',
+    'settings' => 'nosotros_imagen_y'
+  )));
+    /* terminna */
+
+  $wp_customize->add_setting('social_vimeo',array(
+    'default' => __('http://vimeo.com','mksystem')
+  ));
+  $wp_customize->add_control('social_vimeo',array(
+    'label' => __('Vimeo','mksystem'),
+    'section' => 'mksystem_social',
+    'setting' => 'social_vimeo',
+    'type'    => 'text'
+  ));
+/* Colocar acceso de imagenes para : social*/
+   $wp_customize->add_setting('nosotros_imagen_v',array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nosotros_imagen_v' , array(
+    'label' => __('Imagen Vimeo' , 'mksystem'),
+    'section' => 'mksystem_social',
+    'settings' => 'nosotros_imagen_v'
+  )));
+    /* terminna */
+  
+  $wp_customize->add_setting('social_mail',array(
+    'default' => __('ejemplo@email.com','mksystem')
+  ));
+  $wp_customize->add_control('social_mail',array(
+    'label' => __('Email','mksystem'),
+    'section' => 'mksystem_social',
+    'setting' => 'social_mail',
+    'type'    => 'text'
+  ));
+
+  /* Colocar acceso de imagenes para : social*/
+   $wp_customize->add_setting('nosotros_imagen_m',array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nosotros_imagen_m' , array(
+    'label' => __('Imagen Mail' , 'mksystem'),
+    'section' => 'mksystem_social',
+    'settings' => 'nosotros_imagen_m'
+  )));
+    /* terminna */
+  
+  $wp_customize->add_setting('check_bandera',array(
+      'default' => true
+  ));
+  $wp_customize->add_control( 'check_bandera', array(
+       'settings' => 'check_bandera',
+       'section'   => 'mksystem_social',
+       'label'     => __('Ver bandera','mksystem'),
+       'type'      => 'checkbox'
+  ));
+  
+  
+  $wp_customize->add_section(
+        'mksystem_contacto',
+        array(
+            'title' => __('Página Contactos', 'mksystem'),
+            'description'=> __('Sus contactos', 'mksystem'),
+            'priority' => 100
+        )
+    );
+    
+      $wp_customize->add_setting('check_contactform',array(
+      'default' => true
+  ));
+  $wp_customize->add_control( 'check_contactform', array(
+       'settings' => 'check_contactform',
+       'section'   => 'mksystem_contacto',
+       'label'     => __('Ver Formulario contacto','mksystem'),
+       'type'      => 'checkbox'
+  ));
+                    /* color de tema */
+   $wp_customize->add_section('mksystem_color',array(
+            'title' => __('Color', 'mksystem'),
+            'priority' => 100,
+            'panel' => 'mksystem_main_options'
+        )
+    );                 
+   $wp_customize->add_setting('color_mksystem_theme',array(
+    'default' => '#7cafd6',
+    'transport' => 'refresh'
+  ));
+  $wp_customize->add_control(
+    new WP_Customize_Color_Control( $wp_customize, 'color_mksystem_theme', array(
+    'label'        => __( 'Color del tema <style>#accordion-section-setup, #accordion-section-general, #accordion-panel-banner_settings, #accordion-section-fp-social, #accordion-section-fp-action1, #accordion-section-fp-featured, #accordion-section-fp-about, #accordion-section-fp-action2, #accordion-section-fp-team, #accordion-section-fp-team,#customize-control-background_color, #widgets-right>div.wp-full-overlay-sidebar-content>a.button.button-primary.button-nimbus, #accordion-section-fp-news,#accordion-section-fp-contact, #accordion-section-blog-settings, #accordion-panel-widgets, #accordion-section-static_front_page{display:none !important;}</style>', 'mksystem' ),
+    'section'    => 'mksystem_color',
+    'settings'   => 'color_mksystem_theme',
+  )));
 }
+
+
 add_action('customize_register','mksystem_customizer_register');
 
 
@@ -198,45 +604,6 @@ function mksystem_featured_slider() {
      //}
 }
 
-
-function mksystem_featured_slider_icon() {
-    // if ( is_front_page() && of_get_option('dazzling_slider_checkbox') == 1 ) {
-      echo '<div class="flexslider">';
-        echo '<ul class="slides">';
-
-        $count = of_get_option('dazzling_slide_number');
-          $slidecat = of_get_option('dazzling_slide_categories');
-
-            if ( $count && $slidecat ) {
-            $query = new WP_Query( array( 'cat' => $slidecat, 'posts_per_page' => $count ) );
-//            print_r($query);
-            if ($query->have_posts()) :
-              while ($query->have_posts()) : $query->the_post();
-
-              echo '<li>';
-                if ( has_post_thumbnail() ) { // Check if the post has a featured image assigned to it.
-                  the_post_thumbnail();
-                }
-
-                echo '<div class="flex-caption">';
-                  echo '<a href="'. get_permalink() .'">';
-                    if ( get_the_title() != '' ) echo '<h2 class="entry-title">'. get_the_title().'</h2>';
-                    if ( get_the_excerpt() != '' ) echo '<div class="excerpt">' . get_the_excerpt() .'</div>';
-                  echo '</a>';
-                echo '</div>';
-
-                endwhile;
-              endif;
-
-            } else {
-                echo "Slider is not properly configured";
-            }
-
-            echo '</li>';
-        echo '</ul>';
-      echo ' </div>';
-    // }
-}
 
 /**
  * Call for action button & text area suscribir
@@ -679,6 +1046,17 @@ function mksystem_subcategories(){
 
   echo $categories_html;
 }
+
+function dazzling_sanitize_slidecat( $input ) {
+    global $options_categories;
+    if ( array_key_exists( $input, $options_categories ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+
 }
 
 

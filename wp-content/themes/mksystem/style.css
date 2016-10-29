@@ -40,8 +40,9 @@ Aqui empieza las modificaciones.
   src: local('Advent Pro Regular'), local('AdventPro-Regular'), url(https://fonts.gstatic.com/s/adventpro/v4/rT9jpj7pBpZV6AmssbZKk_k_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+
 *{
-        font-family: "Advent Pro",sans-serif !important;
+        font-family: "Advent Pro" !important;
         margin: 0px;
         padding: 0;
 }
@@ -194,12 +195,14 @@ input[name="sm_name"]{
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
-	color:#FFF;
+	color: black;
 	text-transform: uppercase; 
         font-family: "Advent Pro",sans-serif;
         font-weight: 400;
         font-weight: normal;
 }
+
+
 .thumbnail {
 	border: 0px;
 	padding: 0px;
@@ -251,21 +254,48 @@ display: none !important;
 }
 
 .categorie-name h4{
-	color: #000 !important;
+	color: redB !important;
 }
 
 .btn-default {
-	background: transparent none repeat scroll 0 0 !important;
-    border: 1px solid rgb(255, 255, 255);
+    background: transparent none repeat scroll 0 0 !important;
+    border: 1px solid;
     border-radius: 0;
 }
+
 
 .site-content .container{
 	text-align: center;
 }
 .btn-default, .label-default, .flex-caption h2, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a {
 	background-color: #000 !important;
+       
 }
+
+/* Codigo de color de promociones */
+.btn-default, .btn{
+    background-color: #FFF !important;
+    border: none;
+}
+
+.woocommerce-Price-amount{
+    color: #000;
+    text-decoration: underline !important;
+}
+
+.add_to_cart_btn {
+    
+    color: #000 !important;
+    border-color: #000;
+/*    text-decoration: underline !important;*/
+    border: 1px solid #000;
+    border-radius: 20px !important;
+    
+ } 
+ btn btn-default, .h3{
+     background-color: red;
+ }
+/* Termina */
 .entry-title{
     color: #000;
     font-family: "Advent Pro",sans-serif;
@@ -307,14 +337,4 @@ display: none !important;
 
 
 
-.btn.btn-default{
-	display: none;
-}
 
-<<<<<<< HEAD
-.entry-content p{
-
-}
-=======
-
->>>>>>> 0e08d08160659d2a55642f66f15c02ff9d4028ad
