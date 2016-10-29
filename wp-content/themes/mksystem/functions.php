@@ -16,32 +16,34 @@ function get_template_directory_child(){
 */
 
 function mksystem_customizer_register( $wp_customize ) {
-<<<<<<< HEAD
   
-    /* Paginas bootom */
-       $wp_customize->add_section('mksystem_footer',array(
-            'title' => __('Páginas footer', 'mksystem'),
+  	/*
+	*
+	* Seleccionar pagina de un boton
+	*
+	*/
+   $wp_customize->add_section('mksystem_footer',array(
+            'title' => __('Página Footer', 'mksystem'),
             'priority' => 100,
        
         )
     );
-    $wp_customize->add_setting('slider_mksystem_pagina',array(
-    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
-    ));
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_pagina' , array(
-    'label' => __('Imagen 1' , 'mksystem'),
-    'section' => 'mksystem_footer',
-    'settings' => 'slider_mksystem_pagina'
-  )));
-  
+    $wp_customize->add_setting( 'paginas' , array(
+            'default'           => ''
+    ) );
+
+    $wp_customize->add_control( 'paginas' , array(
+            'label'    => __( 'Seleccione la pagina que desea', '' ),
+            'section'  => 'mksystem_footer',
+            'type'     => 'dropdown-pages'
+    ) );
     
     
     /*
   *
-=======
+
 /*
-  *f
->>>>>>> e96f6d7c2ef88e21fca37e3d91c810a38e047cf0
+  *
   * Nosotros
   *
   */

@@ -14,7 +14,7 @@
                         
                        <div data-ride="carousel" class="carousel slide carousel-fade" id="slideshow">
 
-<<<<<<< HEAD
+
                         <!-- Indicators -->
                         <div class="carousel-indicators-block">
                             <!-- <div class="container"> -->
@@ -40,9 +40,7 @@
                                 <!-- </div> -->
                             <!-- </div> -->
                         </div>
-=======
 
->>>>>>> e96f6d7c2ef88e21fca37e3d91c810a38e047cf0
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
@@ -302,7 +300,7 @@
 <div>
     <div class="container2">
         <div class="row2">
-            <?= get_theme_mod('social_youtube','')?>
+            <?= get_theme_mod('paginas','')?>
             <div class="entry-content col-md-6">
                         
                        <div data-ride="carousel1" class="carousel slide carousel-fade" id="slideshow3">

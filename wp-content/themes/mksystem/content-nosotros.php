@@ -9,11 +9,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header page-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
-<<<<<<< HEAD
+
 	</header><!-- .entry-header -->
 	<div class="entry-content col-md-12">
 	<div class="row2">
-=======
+
 
 	</div><!-- .entry-content -->
 	<?php edit_post_link( __( 'Edit', 'dazzling' ), '<footer class="entry-meta"><i class="fa fa-pencil-square-o"></i><span class="edit-link">', '</span></footer>' ); ?>
@@ -21,7 +21,7 @@
 	</header>
     
         <div class="row">
->>>>>>> e96f6d7c2ef88e21fca37e3d91c810a38e047cf0
+
            <?php bloginfo( 'name' ); ?>
         </div>
     </div><!-- .entry-content -->
