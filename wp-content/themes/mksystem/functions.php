@@ -1,7 +1,7 @@
 <?php
 
 
-//ERamirez
+
 
 function get_template_directory_child(){
   $directory_template = get_template_directory_uri();
@@ -16,6 +16,7 @@ function get_template_directory_child(){
 */
 
 function mksystem_customizer_register( $wp_customize ) {
+<<<<<<< HEAD
   
     /* Paginas bootom */
        $wp_customize->add_section('mksystem_footer',array(
@@ -37,6 +38,10 @@ function mksystem_customizer_register( $wp_customize ) {
     
     /*
   *
+=======
+/*
+  *f
+>>>>>>> e96f6d7c2ef88e21fca37e3d91c810a38e047cf0
   * Nosotros
   *
   */
@@ -1037,7 +1042,7 @@ function mksystem_subcategories(){
       $categories_html .= '<h4>'.$category['name'].'</h4>';
       if(count($category['childs']) > 0){
         foreach ($category['childs'] as $subcategory) {
-          $categories_html .= '<h4>'.$subcategory['name'].'</h4>';
+          $categories_html .= '<h4>'.$subcategormksystem_featured_slider_icony['name'].'</h4>';
         }//end foreach
       }//end if
     }//end foreach

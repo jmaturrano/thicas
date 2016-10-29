@@ -14,6 +14,7 @@
                         
                        <div data-ride="carousel" class="carousel slide carousel-fade" id="slideshow">
 
+<<<<<<< HEAD
                         <!-- Indicators -->
                         <div class="carousel-indicators-block">
                             <!-- <div class="container"> -->
@@ -39,6 +40,9 @@
                                 <!-- </div> -->
                             <!-- </div> -->
                         </div>
+=======
+
+>>>>>>> e96f6d7c2ef88e21fca37e3d91c810a38e047cf0
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">

@@ -258,7 +258,11 @@ display: none !important;
 }
 
 .btn-default {
+<<<<<<< HEAD
     background: transparent none repeat scroll 0 0 !important;
+=======
+	background: transparent none repeat scroll 0 0 !important;
+>>>>>>> e96f6d7c2ef88e21fca37e3d91c810a38e047cf0
     border: 1px solid;
     border-radius: 0;
 }
@@ -336,5 +340,11 @@ display: none !important;
 }
 
 
+<<<<<<< HEAD
 
+=======
+.entry-content p{
+
+}
+>>>>>>> e96f6d7c2ef88e21fca37e3d91c810a38e047cf0
 
