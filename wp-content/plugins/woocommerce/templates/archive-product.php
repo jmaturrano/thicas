@@ -42,18 +42,6 @@ get_header( 'shop' );
 
 	<div class="col-md-8">
 
-    <div class="col-md-3">
-        <h4 style="color:black;">SubCategorias</h4>
-       <?php mksystem_featured_slider_icon()   ?>
-        
-        <!--mksystem_categories_list_subcategoria()-->
-    </div>
-
-
-
-    
-        
-       		
             
             
         <?php
@@ -79,7 +67,7 @@ get_header( 'shop' );
 		?>
 
 		<?php if ( have_posts() ) : ?>
-
+            
 			<?php
 				/**
 				 * woocommerce_before_shop_loop hook.
@@ -116,7 +104,7 @@ get_header( 'shop' );
 			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 
 		<?php endif; ?>
-
+            
 	<?php
 		/**
 		 * woocommerce_after_main_content hook.
@@ -134,6 +122,7 @@ get_header( 'shop' );
 		 */
 		do_action( 'woocommerce_sidebar' );
 	?>
+        
 </div>
 </div>
 
