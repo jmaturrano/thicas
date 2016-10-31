@@ -35,7 +35,11 @@ function dazzling_customizer( $wp_customize ) {
     $wp_customize->add_panel('dazzling_main_options', array(
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
+
         'title' => __('dazzling Options', 'dazzling'),
+
+        'title' => __('Mksystem Options', 'dazzling'),
+
         'description' => __('Panel to update dazzling theme options', 'dazzling'), // Include html tags such as <p>.
         'priority' => 10 // Mixed with top-level-section hierarchy.
     ));

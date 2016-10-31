@@ -1,8 +1,4 @@
 <?php
-
-
-
-
 function get_template_directory_child(){
   $directory_template = get_template_directory_uri();
   $directory_child = str_replace('dazzling', '', $directory_template).'mksystem';
@@ -28,16 +24,27 @@ function mksystem_customizer_register( $wp_customize ) {
        
         )
     );
-    $wp_customize->add_setting( 'paginas' , array(
+   /* pagina trabaja con nostros */
+    $wp_customize->add_setting( 'trabaja_nosotros' , array(
             'default'           => ''
     ) );
 
-    $wp_customize->add_control( 'paginas' , array(
-            'label'    => __( 'Seleccione la pagina que desea', '' ),
+    $wp_customize->add_control( 'trabaja_nosotros' , array(
+            'label'    => __( 'Seleccione la pagina "Trabaja con nostros"', '' ),
             'section'  => 'mksystem_footer',
             'type'     => 'dropdown-pages'
     ) );
-    
+    /* pagina ubicanos */
+     $wp_customize->add_setting( 'ubicanos' , array(
+            'default'           => ''
+    ) );
+
+    $wp_customize->add_control( 'ubicanos' , array(
+            'label'    => __( 'Seleccione la pagina "Quieres comprar"', '' ),
+            'section'  => 'mksystem_footer',
+            'type'     => 'dropdown-pages'
+    ) );
+
 /*remove customizer*/
   $wp_customize->remove_panel('widgets');
 /*remove customizer display:none*/
@@ -52,8 +59,10 @@ function mksystem_customizer_register( $wp_customize ) {
     'section'    => 'dazzling_header_options',
     'settings'   => 'color_mksystem_theme',
     )));
-    
- /*
+
+/*
+  *
+
   * Nosotros
   *
   */

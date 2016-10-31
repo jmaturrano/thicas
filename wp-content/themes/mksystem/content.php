@@ -20,7 +20,7 @@
 				/* translators: used between list items, there is a space after the comma */
 				$categories_list = get_the_category_list( __( ', ', 'dazzling' ) );
 				if ( $categories_list && dazzling_categorized_blog() ) :
-	?>
+                ?>
 			<span class="cat-links"><i class="fa fa-folder-open-o"></i>
 				<?php printf( __( ' %1$s', 'dazzling' ), $categories_list ); ?>
 			</span>

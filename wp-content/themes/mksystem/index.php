@@ -298,6 +298,7 @@
     </div><!--.container-->
 </div>
 
+
 <div> 
     <div class="container2">
         <div class="row2">
@@ -426,7 +427,6 @@
 </div><!--.container-->
 
 </div>
-       
+        
 
-         
 <?php get_footer(); ?>

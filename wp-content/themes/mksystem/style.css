@@ -40,9 +40,8 @@ Aqui empieza las modificaciones.
   src: local('Advent Pro Regular'), local('AdventPro-Regular'), url(https://fonts.gstatic.com/s/adventpro/v4/rT9jpj7pBpZV6AmssbZKk_k_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-
 *{
-        font-family: "Advent Pro" !important;
+        font-family: "Advent Pro",sans-serif !important;
         margin: 0px;
         padding: 0;
 }
@@ -56,6 +55,7 @@ Aqui empieza las modificaciones.
 	background: #FFF;
 	width: 100%;
 	transition: all 500ms ease 0s;
+    padding: 6px 0px 0px 0px;
 }
 
 .navbar-mksystem #logo a{
@@ -70,10 +70,19 @@ Aqui empieza las modificaciones.
  .navbar.navbar-default{
     border-bottom: 0px;
  }
+
+ /*fuentes letras menu principal*/
+ .navbar-default .navbar-nav > li > a{
+    color: #fff;
+    font-size: 15px;
+    line-height: 21px;
+ }
  .nav .navbar-nav{
  	padding-right: 10%;
  }
-
+.btn-default, .label-default, .flex-caption h2, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a{
+    background-color: #333333 !important;
+}
 .cfa{
     background: #FFFFFF;
     padding: 0px;
@@ -195,14 +204,12 @@ input[name="sm_name"]{
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
-	color: black;
+	color:#FFF;
 	text-transform: uppercase; 
         font-family: "Advent Pro",sans-serif;
         font-weight: 400;
         font-weight: normal;
 }
-
-
 .thumbnail {
 	border: 0px;
 	padding: 0px;
@@ -226,6 +233,9 @@ max-width: 16%;
 	font-size: 15px;
     font-weight: 500;
 	text-transform: uppercase;
+}
+.site-info a:hover{
+    color: #fff;
 }
 
 
@@ -254,52 +264,28 @@ display: none !important;
 }
 
 .categorie-name h4{
-	color: redB !important;
+	color: #000 !important;
 }
 
-.btn-default {
-<<<<<<< HEAD
-    background: transparent none repeat scroll 0 0 !important;
-=======
-	background: transparent none repeat scroll 0 0 !important;
->>>>>>> e96f6d7c2ef88e21fca37e3d91c810a38e047cf0
+#sm_form > input[type="submit"], #sm_form > input[type="button"]{
+	background: #000 !important;
     border: 1px solid;
     border-radius: 0;
 }
 
-
 .site-content .container{
 	text-align: center;
+
 }
-.btn-default, .label-default, .flex-caption h2, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a {
-	background-color: #000 !important;
-       
+/*botones index, productos*/
+.btn-default{
+	background-color: #FFF !important;
+    border:none;
 }
 
-/* Codigo de color de promociones */
-.btn-default, .btn{
-    background-color: #FFF !important;
-    border: none;
-}
-
-.woocommerce-Price-amount{
+.woocommerce ul.products li.product h3{
     color: #000;
-    text-decoration: underline !important;
 }
-
-.add_to_cart_btn {
-    
-    color: #000 !important;
-    border-color: #000;
-/*    text-decoration: underline !important;*/
-    border: 1px solid #000;
-    border-radius: 20px !important;
-    
- } 
- btn btn-default, .h3{
-     background-color: red;
- }
-/* Termina */
 .entry-title{
     color: #000;
     font-family: "Advent Pro",sans-serif;
@@ -340,11 +326,6 @@ display: none !important;
 }
 
 
-
-
-
-
-
 /* Codigo de color de promociones */
 .post-154 .product{
     background-color: #FFF;
@@ -380,5 +361,3 @@ display: none !important;
     border: 1px solid #FFF;
     border-radius: 0px;
 /* Termina */
-
-
