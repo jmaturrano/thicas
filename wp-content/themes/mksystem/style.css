@@ -361,3 +361,8 @@ display: none !important;
     border: 1px solid #FFF;
     border-radius: 0px;
 /* Termina */
+ }
+ 
+.youmover{
+    position:relative;  
+}

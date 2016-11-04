@@ -184,21 +184,29 @@ function mksystem_customizer_register( $wp_customize ) {
     /* Video 28/10 */
      $wp_customize->add_section('mksystem_video',array(
             'title' => __('Video', 'mksystem'),
-            'description'=> __('Coloque la url de su video', 'mksystem'),
+            'description'=> __('Video', 'mksystem'),
             'priority' => 100,
             'panel' => 'mksystem_main_options'
         )
     );
-    $wp_customize->add_setting('slider_mksystem_video',array(
-    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
-    ));
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_video' , array(
-    'label' => __('Imagen 1' , 'mksystem'),
+      $wp_customize->add_setting('video',array(
+    'default' => __('http://youtube.com','mksystem')
+  ));
+  $wp_customize->add_control('video',array(
+    'label' => __('Inserte la URL del codigo de insercion','mksystem'),
     'section' => 'mksystem_video',
-    'settings' => 'slider_mksystem_video'
-  )));
-    
-    
+    'setting' => 'video',
+    'type'    => 'text'
+  ));
+     $wp_customize->add_setting('video_texto',array(
+    'default' => __('','mksystem')
+  ));
+  $wp_customize->add_control('video_texto',array(
+    'label' => __('Texto','mksystem'),
+    'section' => 'mksystem_video',
+    'setting' => 'video_texto',
+    'type'    => 'textarea'
+  ));
     
         //****************** slider BLOQUE 1 //28
 
@@ -398,22 +406,24 @@ function mksystem_customizer_register( $wp_customize ) {
   */
   $wp_customize->add_section('mksystem_social',array(
             'title' => __('Social options', 'mksystem'),
-            'description'=> __('Sube tus paginas sociales', 'mksystem'),
+            'description'=> __('Sube tus paginas sociales, se recomienda la imagen tenga un tamaño de 400*400 formato: .png', 'mksystem'),
             'priority' => 100,
             'panel' => 'mksystem_main_options'
         )
     );
-  
-  $wp_customize->add_setting('social_phone',array(
-    'default' => __('123-45678','mksystem')
- 
-  ));
-  $wp_customize->add_control('social_phone',array(
-    'label' => __('Teléfono','mksystem'),
-    'section' => 'mksystem_social',
-    'setting' => 'social_phone',
-    'type'    => 'text'
-  ));
+  /* Para colocar numero de telefono */
+//  $wp_customize->add_setting('social_phone',array(
+//    'default' => __('123-45678','mksystem')
+// 
+//  ));
+//  $wp_customize->add_control('social_phone',array(
+//    'label' => __('Teléfono','mksystem'),
+//    'section' => 'mksystem_social',
+//    'setting' => 'social_phone',
+//    'type'    => 'text'
+//  ));
+   
+  /* Colocar acceso de imagenes para : social*/
   $wp_customize->add_setting('social_facebook',array(
     'default' => __('http://facebook.com','mksystem')
   ));
@@ -423,14 +433,14 @@ function mksystem_customizer_register( $wp_customize ) {
     'setting' => 'social_facebook',
     'type'    => 'text'
   ));
-  /* Colocar acceso de imagenes para : social*/
-   $wp_customize->add_setting('nosotros_imagen_f',array(
+
+   $wp_customize->add_setting('imagen_facebook',array(
     'default' => ''
   ));
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nosotros_imagen_f' , array(
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'imagen_facebook' , array(
     'label' => __('Imagen Facebook' , 'mksystem'),
     'section' => 'mksystem_social',
-    'settings' => 'nosotros_imagen_f'
+    'settings' => 'imagen_facebook'
   )));
     /* terminna */
 
@@ -444,34 +454,34 @@ function mksystem_customizer_register( $wp_customize ) {
     'type'    => 'text'
   ));
   /* Colocar acceso de imagenes para : social*/
-   $wp_customize->add_setting('nosotros_imagen_t',array(
+   $wp_customize->add_setting('imagen_twitter',array(
     'default' => ''
   ));
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nosotros_imagen_t' , array(
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'imagen_twitter' , array(
     'label' => __('Imagen Twitter' , 'mksystem'),
     'section' => 'mksystem_social',
-    'settings' => 'nosotros_imagen_t'
+    'settings' => 'imagen_twitter'
   )));
     /* terminna */
 
-  $wp_customize->add_setting('social_instagram',array(
-    'default' => __('http://instagram.com','mksystem')
+  $wp_customize->add_setting('social_pinterest',array(
+    'default' => __('https://pinterest.com','mksystem')
   ));
-  $wp_customize->add_control('social_instagram',array(
-    'label' => __('Instagram','mksystem'),
+  $wp_customize->add_control('social_pinterest',array(
+    'label' => __('Pinterest','mksystem'),
     'section' => 'mksystem_social',
-    'setting' => 'social_instagram',
+    'setting' => 'social_pinterest',
     'type'    => 'text'
   ));
 
     /* Colocar acceso de imagenes para : social*/
-   $wp_customize->add_setting('nosotros_imagen_i',array(
+   $wp_customize->add_setting('imagen_pinterest',array(
     'default' => ''
   ));
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nosotros_imagen_i' , array(
-    'label' => __('Imagen Instagram' , 'mksystem'),
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'imagen_pinterest' , array(
+    'label' => __('Imagen pinterest' , 'mksystem'),
     'section' => 'mksystem_social',
-    'settings' => 'nosotros_imagen_i'
+    'settings' => 'imagen_pinterest'
   )));
     /* terminna */
   $wp_customize->add_setting('social_youtube',array(
@@ -485,13 +495,13 @@ function mksystem_customizer_register( $wp_customize ) {
   ));
   
   /* Colocar acceso de imagenes para : social*/
-   $wp_customize->add_setting('nosotros_imagen_y',array(
+   $wp_customize->add_setting('imagen_youtube',array(
     'default' => ''
   ));
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nosotros_imagen_y' , array(
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'imagen_youtube' , array(
     'label' => __('Imagen Youtube' , 'mksystem'),
     'section' => 'mksystem_social',
-    'settings' => 'nosotros_imagen_y'
+    'settings' => 'imagen_youtube'
   )));
     /* terminna */
 
@@ -505,34 +515,34 @@ function mksystem_customizer_register( $wp_customize ) {
     'type'    => 'text'
   ));
 /* Colocar acceso de imagenes para : social*/
-   $wp_customize->add_setting('nosotros_imagen_v',array(
+   $wp_customize->add_setting('imagen_vimeo',array(
     'default' => ''
   ));
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nosotros_imagen_v' , array(
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'imagen_vimeo' , array(
     'label' => __('Imagen Vimeo' , 'mksystem'),
     'section' => 'mksystem_social',
-    'settings' => 'nosotros_imagen_v'
+    'settings' => 'imagen_vimeo'
   )));
     /* terminna */
   
-  $wp_customize->add_setting('social_mail',array(
-    'default' => __('ejemplo@email.com','mksystem')
+  $wp_customize->add_setting('social_linkedin',array(
+    'default' => __('http://linkedin.com','mksystem')
   ));
-  $wp_customize->add_control('social_mail',array(
-    'label' => __('Email','mksystem'),
+  $wp_customize->add_control('social_linkedin',array(
+    'label' => __('Linkedin','mksystem'),
     'section' => 'mksystem_social',
-    'setting' => 'social_mail',
+    'setting' => 'social_linkedin',
     'type'    => 'text'
   ));
 
   /* Colocar acceso de imagenes para : social*/
-   $wp_customize->add_setting('nosotros_imagen_m',array(
+   $wp_customize->add_setting('imagen_linkedin',array(
     'default' => ''
   ));
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nosotros_imagen_m' , array(
-    'label' => __('Imagen Mail' , 'mksystem'),
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'imagen_linkedin' , array(
+    'label' => __('Imagen linkedin' , 'mksystem'),
     'section' => 'mksystem_social',
-    'settings' => 'nosotros_imagen_m'
+    'settings' => 'imagen_linkedin'
   )));
     /* terminna */
   
@@ -586,6 +596,7 @@ function mksystem_customizer_register( $wp_customize ) {
 
 
 add_action('customize_register','mksystem_customizer_register');
+
 
 
 /**
@@ -1083,8 +1094,5 @@ function dazzling_sanitize_slidecat( $input ) {
 }
 
 
+
 }
-
-
-
-
