@@ -366,3 +366,33 @@ display: none !important;
 .youmover{
     position:relative;  
 }
+
+.favorito{
+   color: black; 
+   text-align: center; 
+   font-family: Advent Pro;
+    
+    
+}
+// favoritos
+.gHeight3_barra {
+    height: 3px;
+}
+
+.gSeparator_barra {
+    background-color: #000;
+    border: 0 none !important;
+    height: 3px;
+    margin: 5px 515px;
+    width: 100px;
+}
+//afecta al logo para bajar
+.gInlineBlock_barra {
+    display: inline-block;
+    vertical-align: top;
+}
+//termina
+
+.slider2{
+    width: 435px;
+}

@@ -8,14 +8,10 @@
 ?>
 <div class="top-section" >
     <div class="container">
-        <div class="row">
-            
-            <div class="entry-content col-md-12">
-                        
+        <div class="row">        
+            <div class="entry-content col-md-12">        
                        <div data-ride="carousel" class="carousel slide carousel-fade" id="slideshow">
-
-
-                        <!-- Indicators -->
+                       
                         <div class="carousel-indicators-block">
                             <!-- <div class="container"> -->
                                 <!-- <div class="row"> -->
@@ -43,13 +39,13 @@
 
 
                         <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
+                        <div class="carousel-inner" role="listbox" >
                             <div class="item active">
-                                <div class="carousel-background">
+<!--                                <div class="carousel-background">
                                     <div class="carousel-marco">
                                       <p>&nbsp;</p>
                                     </div>
-                                </div>
+                                </div>-->
                                 <?php if(get_theme_mod('slider_mksystem_1_a','')!=''){ ?>
                                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                         <img src="<?php echo get_theme_mod('slider_mksystem_1_a'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
@@ -61,11 +57,11 @@
 
                             <?php if(get_theme_mod('slider_mksystem_2_a','')!=''){ ?>
                             <div class="item">
-                                <div class="carousel-background">
+<!--                                <div class="carousel-background">
                                     <div class="carousel-marco">
                                       <p>&nbsp;</p>
                                     </div>
-                                </div>
+                                </div>-->
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_2_a'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
@@ -74,11 +70,11 @@
 
                             <?php if(get_theme_mod('slider_mksystem_3_a','')!=''){ ?>
                             <div class="item">
-                                <div class="carousel-background">
+<!--                                <div class="carousel-background">
                                     <div class="carousel-marco">
                                       <p>&nbsp;</p>
                                     </div>
-                                </div>
+                                </div>-->
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_3_a'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
@@ -87,11 +83,11 @@
 
                             <?php if(get_theme_mod('slider_mksystem_4_a','')!=''){ ?>
                             <div class="item">
-                                <div class="carousel-background">
+<!--                                <div class="carousel-background">
                                     <div class="carousel-marco">
                                       <p>&nbsp;</p>
                                     </div>
-                                </div>
+                                </div>-->
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_4_a'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
@@ -100,11 +96,11 @@
 
                             <?php if(get_theme_mod('slider_mksystem_5_a','')!=''){ ?>
                             <div class="item">
-                                <div class="carousel-background">
+<!--                                <div class="carousel-background">
                                     <div class="carousel-marco">
                                       <p>&nbsp;</p>
                                     </div>
-                                </div>
+                                </div>-->
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_5_a'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
@@ -113,11 +109,11 @@
 
                             <?php if(get_theme_mod('slider_mksystem_6_a','')!=''){ ?>
                             <div class="item">
-                                <div class="carousel-background">
+<!--                                <div class="carousel-background">
                                     <div class="carousel-marco">
                                       <p>&nbsp;</p>
                                     </div>
-                                </div>
+                                </div>-->
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_6_a'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
@@ -126,7 +122,7 @@
                         </div><!--carousel-inner-->
 
 <!--                         Left and right controls -->
-                        <a class="left carousel-control anual" href="#slideshow" role="button" data-slide="prev">
+                        <a class="left carousel-control " href="#slideshow" role="button" data-slide="prev">
                             <span class="fa fa-angle-left glyphicon-chevron-left" aria-hidden="true"></span>
                             <!--<span class="sr-only">Previous</span>-->
                         </a>
@@ -160,12 +156,8 @@
     <div class="container">
         <div class="row">
             <?php mksystem_section_categories_bloque2(); ?>
-                        <!-- Indicators -->
-                        
                         <div class="entry-content col-md-6">
-                        
                        <div data-ride="carousel" class="carousel slide carousel-fade" id="slideshow2">
-
                         <!-- Indicators -->
                         <div class="carousel-indicators-block">
                             <!-- <div class="container"> -->
@@ -193,13 +185,13 @@
                         </div>
 
                         <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
+                        <div class="carousel-inner slider2" role="listbox" style="width: 465px; height: 377px; margin: -20px auto;">
                             <div class="item active">
-                                <div class="carousel-background">
+<!--                                <div class="carousel-background">
                                     <div class="carousel-marco">
                                       <p>&nbsp;</p>
                                     </div>
-                                </div>
+                                </div>-->
                                 <?php if(get_theme_mod('slider_mksystem_1','')!=''){ ?>
                                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                         <img src="<?php echo get_theme_mod('slider_mksystem_1'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
@@ -211,11 +203,11 @@
 
                             <?php if(get_theme_mod('slider_mksystem_2','')!=''){ ?>
                             <div class="item">
-                                <div class="carousel-background">
+<!--                                <div class="carousel-background">
                                     <div class="carousel-marco">
                                       <p>&nbsp;</p>
                                     </div>
-                                </div>
+                                </div>-->
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_2'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
@@ -224,11 +216,11 @@
 
                             <?php if(get_theme_mod('slider_mksystem_3','')!=''){ ?>
                             <div class="item">
-                                <div class="carousel-background">
+<!--                                <div class="carousel-background">
                                     <div class="carousel-marco">
                                       <p>&nbsp;</p>
                                     </div>
-                                </div>
+                                </div>-->
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_3'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
@@ -237,11 +229,11 @@
 
                             <?php if(get_theme_mod('slider_mksystem_4','')!=''){ ?>
                             <div class="item">
-                                <div class="carousel-background">
+<!--                                <div class="carousel-background">
                                     <div class="carousel-marco">
                                       <p>&nbsp;</p>
                                     </div>
-                                </div>
+                                </div>-->
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_4'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
@@ -250,11 +242,11 @@
 
                             <?php if(get_theme_mod('slider_mksystem_5','')!=''){ ?>
                             <div class="item">
-                                <div class="carousel-background">
+<!--                                <div class="carousel-background">
                                     <div class="carousel-marco">
                                       <p>&nbsp;</p>
                                     </div>
-                                </div>
+                                </div>-->
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_5'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
@@ -263,11 +255,11 @@
 
                             <?php if(get_theme_mod('slider_mksystem_6','')!=''){ ?>
                             <div class="item">
-                                <div class="carousel-background">
+<!--                                <div class="carousel-background">
                                     <div class="carousel-marco">
                                       <p>&nbsp;</p>
                                     </div>
-                                </div>
+                                </div>-->
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_6'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
@@ -293,7 +285,11 @@
 <div>
     <div class="container2">
         <div class="row2">
-            <?php mksystem_section_categories_bloque3(); ?>
+            
+            <h4 class="favorito"> Favoritos de Thicas </h4>
+            <hr class="gSeparator_barra gInlineBlock_barra gHeight3_barra gClaseTextoModelo">
+            <p class="favorito">Encuentra tu prenda preferida aquí.</p>
+            <?php mksystem_section_categories_bloque3(); ?> 
         </div><!--.row-->
     </div><!--.container-->
 </div>
@@ -308,6 +304,7 @@
             <!--video colocado--> 
             <?php if(get_theme_mod('video','') != ''): ?>
                     <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h2 style="color: black; font-family: Advent Pro;"><?= get_theme_mod('video_titulo','') ;?></h2>
                         <iframe width="560" height="315" src="<?= get_theme_mod('video','')?>" frameborder="0" allowfullscreen></iframe>
                         <img class="youmover" src="http://localhost:8080/prj_thicas/thicas/wp-content/uploads/2016/10/you.png" /> 
                         <h4 style="color: black"> <?= get_theme_mod('video_texto',''); ?></h4>
@@ -340,12 +337,12 @@
                <!-- </div> -->
                     </div>
 
-<div class="carousel-inner" role="listbox">
+<div class="carousel-inner" role="listbox" style="width: 435px; height: 355px; margin: auto;">
     <div class="item active">
         <div class="carousel-background">
-            <div class="carousel-marco">
+<!--            <div class="carousel-marco">
               <p>&nbsp;</p>
-            </div>
+            </div>-->
         </div>                                
             <?php if(get_theme_mod('slider_mksystem_1_b','')!=''){ ?>
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -358,11 +355,11 @@
 
         <?php if(get_theme_mod('slider_mksystem_2_b','')!=''){ ?>
         <div class="item">
-            <div class="carousel-background">
+<!--            <div class="carousel-background">
                 <div class="carousel-marco">
                   <p>&nbsp;</p>
                 </div>
-            </div>
+            </div>-->
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <img src="<?php echo get_theme_mod('slider_mksystem_2_b'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
             </a>
@@ -371,11 +368,11 @@
 
         <?php if(get_theme_mod('slider_mksystem_3_b','')!=''){ ?>
         <div class="item">
-            <div class="carousel-background">
+<!--            <div class="carousel-background">
                 <div class="carousel-marco">
                   <p>&nbsp;</p>
                 </div>
-            </div>
+            </div>-->
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <img src="<?php echo get_theme_mod('slider_mksystem_3_b'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
             </a>
@@ -384,11 +381,11 @@
 
         <?php if(get_theme_mod('slider_mksystem_4_b','')!=''){ ?>
         <div class="item">
-            <div class="carousel-background">
+<!--            <div class="carousel-background">
                 <div class="carousel-marco">
                   <p>&nbsp;</p>
                 </div>
-            </div>
+            </div>-->
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <img src="<?php echo get_theme_mod('slider_mksystem_4_b'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
             </a>
@@ -397,11 +394,11 @@
 
         <?php if(get_theme_mod('slider_mksystem_5_b','')!=''){ ?>
         <div class="item">
-            <div class="carousel-background">
+<!--            <div class="carousel-background">
                 <div class="carousel-marco">
                   <p>&nbsp;</p>
                 </div>
-            </div>
+            </div>-->
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <img src="<?php echo get_theme_mod('slider_mksystem_5_b'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
             </a>
@@ -410,11 +407,11 @@
 
         <?php if(get_theme_mod('slider_mksystem_6_b','')!=''){ ?>
         <div class="item">
-            <div class="carousel-background">
+<!--            <div class="carousel-background">
                 <div class="carousel-marco">
                   <p>&nbsp;</p>
                 </div>
-            </div>
+            </div>-->
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <img src="<?php echo get_theme_mod('slider_mksystem_6_b'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
             </a>

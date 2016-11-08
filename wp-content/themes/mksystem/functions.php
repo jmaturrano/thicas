@@ -189,6 +189,16 @@ function mksystem_customizer_register( $wp_customize ) {
             'panel' => 'mksystem_main_options'
         )
     );
+     $wp_customize->add_setting('video_titulo',array(
+    'default' => __('','mksystem')
+  ));
+  
+  $wp_customize->add_control('video_titulo',array(
+    'label' => __('Título del video:','mksystem'),
+    'section' => 'mksystem_video',
+    'setting' => 'video_titulo',
+    'type'    => 'text'
+  ));
       $wp_customize->add_setting('video',array(
     'default' => __('http://youtube.com','mksystem')
   ));
