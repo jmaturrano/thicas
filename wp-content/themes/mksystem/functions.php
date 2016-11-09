@@ -45,9 +45,7 @@ function mksystem_customizer_register( $wp_customize ) {
             'type'     => 'dropdown-pages'
     ) );
 
-/*remove customizer*/
-  $wp_customize->remove_panel('widgets');
-/*remove customizer display:none*/
+
 
     $wp_customize->add_setting('color_mksystem_theme',array(
     'default' => '#FFD800',
@@ -59,6 +57,21 @@ function mksystem_customizer_register( $wp_customize ) {
     'section'    => 'dazzling_header_options',
     'settings'   => 'color_mksystem_theme',
     )));
+    
+    /*remove customizer OJO : NO FUNCIONA*/
+    $wp_customize->remove_panel('widgets');
+  /*eliminar customizer */ 
+    $wp_customize->remove_section( 'mytheme_new_section_name' );
+    $wp_customize->remove_section( 'dazzling_action_options' );
+    $wp_customize->remove_section( 'dazzling_typography_options' );
+    $wp_customize->remove_section( 'dazzling_header_options' );
+    $wp_customize->remove_section( 'dazzling_footer_options' );
+    $wp_customize->remove_section( 'dazzling_social_options' );
+    $wp_customize->remove_section( 'dazzling_other_options' );
+    $wp_customize->remove_section( 'dazzling_layout_options' );
+    $wp_customize->remove_section( 'dazzling_important_links' );
+  /*final*/
+/*remove customizer display:none*/
 
 /*
   *

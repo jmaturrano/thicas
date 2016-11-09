@@ -7,13 +7,15 @@
  * @package dazzling
  */
 ?>
-
+          
         </div><!-- close .row -->
     </div><!-- close .container -->
 </div><!-- close .site-content -->
 
-<div class="footer-content text-center">
+<div class="row">
+        <div class="footer-content text-center">
 		<div class="">
+                    
                     <a href="<?= get_theme_mod('social_facebook','');?>" ><img class="" src="<?= get_theme_mod('imagen_facebook',''); ?>"></a>
                     <a href="<?= get_theme_mod('social_twitter','');?>" ><img class="" src="<?= get_theme_mod('imagen_twitter',''); ?>"></a>
                     <a href="<?= get_theme_mod('social_pinterest','');?>" ><img class="" src="<?= get_theme_mod('imagen_pinterest',''); ?>"></a>
@@ -21,7 +23,7 @@
                     <a href="<?= get_theme_mod('social_vimeo','');?>" ><img class="" src="<?= get_theme_mod('imagen_vimeo',''); ?>"></a>
                     <a href="<?= get_theme_mod('social_linkedin','');?>" ><img class="" src="<?= get_theme_mod('imagen_linkedin',''); ?>"></a>
                 </div>
-              
+        </div>  
 </div>
 
 <div class="site-info">
@@ -54,7 +56,7 @@
 
                         }else{$url= "#";}
                         ?>
-                        <a href="<?= $url;?>" ><span class="glyphicon glyphicon-map-marker"> </span> Busca una tienda </a>
+                   <a href="<?= $url;?>" class="btn btn-default" ><span class="glyphicon glyphicon-map-marker"> </span> Busca una tienda </a>
                     </div>
                 </div>
             <div>

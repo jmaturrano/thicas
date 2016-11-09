@@ -35,11 +35,7 @@ function dazzling_customizer( $wp_customize ) {
     $wp_customize->add_panel('dazzling_main_options', array(
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-
-        'title' => __('dazzling Options', 'dazzling'),
-
-        'title' => __('Mksystem Options', 'dazzling'),
-
+        'title' => __('Dazzling Options', 'dazzling'),
         'description' => __('Panel to update dazzling theme options', 'dazzling'), // Include html tags such as <p>.
         'priority' => 10 // Mixed with top-level-section hierarchy.
     ));
@@ -62,7 +58,23 @@ function dazzling_customizer( $wp_customize ) {
                     'type'      => 'checkbox',
             ) );
 
-$wp_customize->add_setting('dazzling[dazzling_slide_number]', array(
+            // Pull all the categories into an array
+            global $options_categories;
+            $wp_customize->add_setting('dazzling[dazzling_slide_categories]', array(
+                'default' => '',
+                'type' => 'option',
+                'capability' => 'edit_theme_options',
+                'sanitize_callback' => 'dazzling_sanitize_slidecat'
+            ));
+            $wp_customize->add_control('dazzling[dazzling_slide_categories]', array(
+                'label' => __('Slider Category', 'dazzling'),
+                'section' => 'dazzling_slider_options',
+                'type'    => 'select',
+                'description' => __('Select a category for the featured post slider', 'dazzling'),
+                'choices'    => $options_categories
+            ));
+
+            $wp_customize->add_setting('dazzling[dazzling_slide_number]', array(
                 'default' => 3,
                 'type' => 'option',
                 'sanitize_callback' => 'dazzling_sanitize_number'
@@ -79,22 +91,6 @@ $wp_customize->add_setting('dazzling[dazzling_slide_number]', array(
             'priority' => 31,
             'panel' => 'dazzling_main_options'
         ));
-                    // Pull all the categories into an array
-            global $options_categories;
-            $wp_customize->add_setting('dazzling[dazzling_slide_categories]', array(
-                'default' => '',
-                'type' => 'option',
-                'capability' => 'edit_theme_options',
-                'sanitize_callback' => 'dazzling_sanitize_slidecat'
-            ));
-            $wp_customize->add_control('dazzling[dazzling_slide_categories]', array(
-                'label' => __('Slider Category', 'dazzling'),
-                'section' => 'dazzling_slider_options',
-                'type'    => 'select',
-                'description' => __('Select a category for the featured post slider', 'dazzling'),
-                'choices'    => $options_categories
-            ));       
-            
             // Layout options
             global $site_layout;
             $wp_customize->add_setting('dazzling[site_layout]', array(

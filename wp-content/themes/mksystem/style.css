@@ -378,7 +378,7 @@ display: none !important;
 .gHeight3_barra {
     height: 3px;
 }
-
+//afecta al logo para bajar
 .gSeparator_barra {
     background-color: #000;
     border: 0 none !important;
@@ -386,13 +386,83 @@ display: none !important;
     margin: 5px 515px;
     width: 100px;
 }
-//afecta al logo para bajar
+
 .gInlineBlock_barra {
     display: inline-block;
     vertical-align: top;
 }
-//termina
+.gSeparatorTrans {
+    background-color: transparent;
+}
+//fin
+/*inicio cuadro de youtube*/
 
+.gBorderColorNegro {
+    border-color: #000 !important;
+}
+.gBorder1 {
+    border: 1px solid #ddd;
+}
+.gHeight300 {
+    height: 300px;
+}
+.gWidth100p {
+    width: 100%;
+}
+// youtube
+.gLeft10 {
+    left: 10px;
+}
+.gTop10 {
+    top: 10px;
+}
+.gTop10 {
+    top: 10px;
+}
+.gHeight100p { // usa tambien el slider
+    height: 100%;
+}
+
+/*fin*/
 .slider2{
     width: 435px;
 }
+
+//para colocar al menu
+
+.gMenuBox {
+    height: 35px;
+    position: relative;
+}
+.gMarginTop13 {
+    margin-top: 13px;
+}
+//icon
+.gInlineBlock {
+    display: inline-table;
+    vertical-align: top;
+}
+.gLeft0 {
+    left: 0px;
+}
+.gWidth200 {
+    width: 200px;
+}
+.gPaddingTop10 {
+    padding-top: 10px;
+}
+.gPaddingTop15 {
+    padding-top: 15px;
+}
+.gAnimate {
+    transition: all 500ms ease 0s;
+}
+.gPositionFixed {
+    position: fixed;
+}
+.gFondoBlanco {
+    background-color: #fff;
+}.gZindex999 {
+    z-index: 999;
+}//fin
+//fin
