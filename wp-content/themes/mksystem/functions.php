@@ -622,6 +622,70 @@ add_action('customize_register','mksystem_customizer_register');
 
 
 
+
+
+
+
+/**
+ * Mk system header scripts
+ *
+ */
+function mksystem_header_scripts() {
+?>
+  <script>
+    var header = jQuery(".navbar-mksystem");
+    jQuery(document).scroll(function(e) {
+        if(jQuery(this).scrollTop() > jQuery("#menu-menu-principal").height()) {
+            header.addClass('navbar-fixed');
+        } else {
+            header.removeClass("navbar-fixed");
+        }
+    });
+
+  </script>
+<?php
+}
+add_action('wp_footer','mksystem_header_scripts', 100);
+
+
+/**
+ * Mk system header styles
+ *
+ */
+function mksystem_header_styles() {
+?>
+  <style>
+    <?php if( get_header_image() != '' ) : ?>
+    #loader-logo{
+      background: transparent url("<?php header_image(); ?>") no-repeat scroll 50% 40% / 150px 55px;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      z-index: 100000;
+    }
+    <?php endif; // header image was removed ?>
+    .navbar-mksystem.navbar-fixed{
+      height: 120px;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+    .navbar-fixed #logo a img{
+      height: 75px;
+      width: auto;
+    }
+    .animate{
+      transition: all 500ms ease 0s;
+    }
+  </style>
+<?php
+}
+add_action( 'wp_enqueue_scripts', 'mksystem_header_styles' );
+
+
+
+
+
 /**
  * Mk system slider
  */
@@ -672,12 +736,12 @@ function mksystem_call_for_action() {
   // if ( is_front_page() && of_get_option('w2f_cfa_text')!=''){
     echo '<div class="cfa">';
       echo '<div class="container">';
-        echo '<div class="col-md-3">';
+        echo '<div class="col-md-2">';
           echo '</div>';
-            echo '<div class="col-md-6">';
+            echo '<div class="col-md-8">';
               echo do_shortcode('[ssm_form id="40"]');
               echo '</div>';
-            echo '<div class="col-md-3">';
+            echo '<div class="col-md-2">';
           echo '</div>';
       echo '</div>';
     echo '</div>';

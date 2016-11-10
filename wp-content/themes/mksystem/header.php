@@ -20,9 +20,13 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<div id="loader-logo"></div>
+<div id="wptime-plugin-preloader"></div>
+
 <div id="page" class="hfeed site ">
 
-	<nav class="navbar navbar-default navbar-mksystem  gPositionFixed gFondoBlanco gTop0 gZindex999 gWidth100p gLeft0 " role="navigation">
+	<nav class="navbar navbar-default navbar-mksystem" role="navigation">
 			<div class="navbar-header ">
 			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 			    <span class="sr-only"><?php _e( 'Toggle navigation', 'dazzling' ); ?></span>
@@ -34,7 +38,9 @@
 				<?php if( get_header_image() != '' ) : ?>
 
                             <div id="logo" >
-                                <a  href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>"  height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
+                                <a class="text-center" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                	<img class="animate" src="<?php header_image(); ?>"  height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php bloginfo( 'name' ); ?>"/>
+                                </a>
 					</div><!-- end of #logo -->
 
 				<?php endif; // header image was removed ?>

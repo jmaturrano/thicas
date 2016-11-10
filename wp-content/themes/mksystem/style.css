@@ -466,3 +466,11 @@ display: none !important;
     z-index: 999;
 }//fin
 //fin
+
+
+
+/*Formulario de suscripción*/
+#sm_content > p{
+    font-size: 22px;
+    text-transform: uppercase;
+}

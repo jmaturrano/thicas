@@ -12,18 +12,17 @@
     </div><!-- close .container -->
 </div><!-- close .site-content -->
 
-<div class="row">
-        <div class="footer-content text-center">
-		<div class="">
-                    
-                    <a href="<?= get_theme_mod('social_facebook','');?>" ><img class="" src="<?= get_theme_mod('imagen_facebook',''); ?>"></a>
-                    <a href="<?= get_theme_mod('social_twitter','');?>" ><img class="" src="<?= get_theme_mod('imagen_twitter',''); ?>"></a>
-                    <a href="<?= get_theme_mod('social_pinterest','');?>" ><img class="" src="<?= get_theme_mod('imagen_pinterest',''); ?>"></a>
-                     <a href="<?= get_theme_mod('social_youtube','');?>" ><img class="" src="<?= get_theme_mod('imagen_youtube',''); ?>"></a>
-                    <a href="<?= get_theme_mod('social_vimeo','');?>" ><img class="" src="<?= get_theme_mod('imagen_vimeo',''); ?>"></a>
-                    <a href="<?= get_theme_mod('social_linkedin','');?>" ><img class="" src="<?= get_theme_mod('imagen_linkedin',''); ?>"></a>
-                </div>
-        </div>  
+<div class="">
+    <div class="footer-content text-center">
+    	<div class="">
+            <a href="<?= get_theme_mod('social_facebook','');?>" ><img class="" src="<?= get_theme_mod('imagen_facebook',''); ?>"></a>
+            <a href="<?= get_theme_mod('social_twitter','');?>" ><img class="" src="<?= get_theme_mod('imagen_twitter',''); ?>"></a>
+            <a href="<?= get_theme_mod('social_pinterest','');?>" ><img class="" src="<?= get_theme_mod('imagen_pinterest',''); ?>"></a>
+            <a href="<?= get_theme_mod('social_youtube','');?>" ><img class="" src="<?= get_theme_mod('imagen_youtube',''); ?>"></a>
+            <a href="<?= get_theme_mod('social_vimeo','');?>" ><img class="" src="<?= get_theme_mod('imagen_vimeo',''); ?>"></a>
+            <a href="<?= get_theme_mod('social_linkedin','');?>" ><img class="" src="<?= get_theme_mod('imagen_linkedin',''); ?>"></a>
+        </div>
+    </div>  
 </div>
 
 <div class="site-info">
