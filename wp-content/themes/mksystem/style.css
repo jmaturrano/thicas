@@ -174,7 +174,7 @@ input[name="sm_name"]{
 
 
 
-//termina fondoNosotros
+/*//termina fondoNosotros*/
 
 
 
@@ -186,18 +186,28 @@ input[name="sm_name"]{
 	bottom: 45%;
 	position: absolute;
 	width: 100%;
+    z-index: 10;
 }
 .categorie-content h4{
-	color: #FFF; 
-	font-size: 35px; 
-	font-weight: 600;
+	color: #fff; 
+	font-size: 5rem;
+	font-weight: bold;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 	text-transform: uppercase;
 }
-
 .categorie-content span{
-	border: 1px solid #FFF;
-	color: #FFF;
-	padding: 10px 15px;  
+	border: 1px solid #fff;
+	color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+	padding: 10px 15px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    transition: all 500ms ease 0s;
+}
+.image-relative:hover .categorie-content span{
+    background: #fff;
+    color: #000;
+    text-shadow: initial;
 }
 .navbar-nav > li > a{
 	padding: 8px 15px;
@@ -489,4 +499,20 @@ display: none !important;
 .sm_submit, #sm_submit{
     font-size: 22px !important;
     padding: 8px 25px !important;
+}
+
+/*collections*/
+.image-relative{
+    position: relative;
+}
+.background-collection{
+    background: #000;
+    height: 100%;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.image-relative:hover .background-collection{
+    opacity: 0.4;
 }

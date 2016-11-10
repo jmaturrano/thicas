@@ -765,13 +765,15 @@ function mksystem_section_categories_bloque1(){
           $class= 'col-md-8';
         }
         $categories_html .= '<div class="'.$class.' text-center">';
-        $categories_html .= '<a href="'.$category['term_link'].'" title="'.$category['name'].'" class="thumbnail">';
+        $categories_html .= '<a href="'.$category['term_link'].'" title="'.$category['name'].'" class="thumbnail image-relative">';
         $categories_html .= '<img src="'.$thumb_url.'">';
 
         $categories_html .= '<div class="categorie-content">';
         $categories_html .= '<h4>'.$category['name'].'</h4>';
         $categories_html .= '<span>COMPRAR AHORA</span>';
         $categories_html .= '</div>';
+
+        $categories_html .= '<div class="background-collection"></div>';
 
         $categories_html .= '</a>';
         //$categories_html .= '<h4>'.$category['name'].'</h4>';
@@ -800,13 +802,15 @@ function mksystem_section_categories_bloque2(){
         }
 
         $categories_html .= '<div class="'.$class.' text-center">';
-        $categories_html .= '<a href="'.$category['term_link'].'" title="'.$category['name'].'" class="thumbnail">';
+        $categories_html .= '<a href="'.$category['term_link'].'" title="'.$category['name'].'" class="thumbnail image-relative">';
         $categories_html .= '<img src="'.$thumb_url.'">';
 
         $categories_html .= '<div class="categorie-content">';
         $categories_html .= '<h4>'.$category['name'].'</h4>';
         $categories_html .= '<span>COMPRAR AHORA</span>';
         $categories_html .= '</div>';
+
+        $categories_html .= '<div class="background-collection"></div>';
 
         $categories_html .= '</a>';
         //$categories_html .= '<h4>'.$category['name'].'</h4>';
