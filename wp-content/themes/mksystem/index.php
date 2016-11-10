@@ -33,7 +33,7 @@
     <div class="container">
         <div class="row">
             <?php mksystem_section_categories_bloque2(); ?>
-                        <div class="entry-content col-md-6">
+                    <div class="entry-content col-md-6">
                        <div data-ride="carousel" class="carousel slide carousel-fade" id="slideshow2">
                         <!-- Indicators -->
                         <div class="carousel-indicators-block">
@@ -145,11 +145,11 @@
                         </div><!--carousel-inner-->
                         <!-- Left and right controls -->
                         <a class="left carousel-control" href="#slideshow2" role="button" data-slide="prev">
-                            <span class="fa fa-angle-left glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="icon-slider-left" aria-hidden="true"> &lt;</span>
                             <!--<span class="sr-only">Previous</span>-->
                         </a>
                         <a class="right carousel-control" href="#slideshow2" role="button" data-slide="next">
-                            <span class="fa fa-angle-right glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="icon-slider-rigth" aria-hidden="true"> &gt;</span>
                             <!--<span class="sr-only">Next</span>-->
                         </a>
                 </div><!--.carousel.slide-->

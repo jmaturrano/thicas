@@ -632,6 +632,7 @@ add_action('customize_register','mksystem_customizer_register');
  */
 function mksystem_header_scripts() {
 ?>
+  <script src="https://use.fontawesome.com/33b81c8391.js"></script>
   <script>
     var header = jQuery(".navbar-mksystem");
     jQuery(document).scroll(function(e) {

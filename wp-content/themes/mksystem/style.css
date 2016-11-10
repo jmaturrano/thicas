@@ -516,3 +516,33 @@ display: none !important;
 .image-relative:hover .background-collection{
     opacity: 0.4;
 }
+
+/*slider collections*/
+.icon-slider-left, 
+.icon-slider-rigth{
+    background: #000;
+    font-size: 45px;
+    height: 55px;
+    line-height: 55px;
+    width: 30px;
+}
+.carousel-control .icon-slider-left{
+    left: 50%;
+}
+.carousel-control .icon-slider-left, 
+.carousel-control .icon-slider-rigth{
+    bottom: 15px;
+    display: inline-block;
+    position: absolute;
+    z-index: 5;
+}
+.carousel-control .icon-slider-rigth{
+    right: 50%;
+}
+#slideshow2 .carousel-indicators{
+    display: none;
+}
+#slideshow2 .carousel-control.left, 
+#slideshow2 .carousel-control.right{
+    background-image: none;
+}
