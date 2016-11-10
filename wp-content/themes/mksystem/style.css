@@ -374,11 +374,11 @@ display: none !important;
     
     
 }
-// favoritos
+/*favoritos*/
 .gHeight3_barra {
     height: 3px;
 }
-//afecta al logo para bajar
+/*afecta al logo para bajar*/
 .gSeparator_barra {
     background-color: #000;
     border: 0 none !important;
@@ -394,7 +394,8 @@ display: none !important;
 .gSeparatorTrans {
     background-color: transparent;
 }
-//fin
+
+
 /*inicio cuadro de youtube*/
 
 .gBorderColorNegro {
@@ -419,7 +420,7 @@ display: none !important;
 .gTop10 {
     top: 10px;
 }
-.gHeight100p { // usa tambien el slider
+.gHeight100p { /*usa tambien el slider*/
     height: 100%;
 }
 
@@ -428,7 +429,7 @@ display: none !important;
     width: 435px;
 }
 
-//para colocar al menu
+/*para colocar al menu*/
 
 .gMenuBox {
     height: 35px;
@@ -437,7 +438,7 @@ display: none !important;
 .gMarginTop13 {
     margin-top: 13px;
 }
-//icon
+/*icon*/
 .gInlineBlock {
     display: inline-table;
     vertical-align: top;
@@ -464,13 +465,28 @@ display: none !important;
     background-color: #fff;
 }.gZindex999 {
     z-index: 999;
-}//fin
-//fin
+}
+/*//fin*/
 
 
 
 /*Formulario de suscripción*/
 #sm_content > p{
-    font-size: 22px;
-    text-transform: uppercase;
+    font-size: 22px !important;
+    text-transform: uppercase !important;
+}
+#sm_form > input[type="text"], #sm_form > input[type="email"]{
+    font-size: 22px !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 4px 15px !important;
+    text-align: center;
+    vertical-align: top;
+}
+#sm_form{
+    margin-bottom: 40px;
+}
+.sm_submit, #sm_submit{
+    font-size: 22px !important;
+    padding: 8px 25px !important;
 }
