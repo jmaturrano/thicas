@@ -182,14 +182,16 @@
             <?php if(get_theme_mod('video','') != ''): ?>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         
-                        <h2 style="color: black; font-family: Advent Pro;"><?= get_theme_mod('video_titulo','') ;?></h2>
-                        <hr class="gSeparator gSeparatorTrans">
-                        <div class="gIframe gWidth100p gHeight300 gBorder1 gBorderColorNegro">
+                        <h1 style="color: black; font-family: Advent Pro;"><?= get_theme_mod('video_titulo','') ;?></h1>
+                        <hr class="gSeparator gSeparatorTrans" style="display: none;">
+                        <div class="iframe-border gIframe gWidth100p gHeight300 gBorder1 gBorderColorNegro">
                             <iframe class="gHeight100p gWidth100p gPositionRelative gTop10 gLeft10" width="560" height="315"  src="<?= get_theme_mod('video','')?>" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <hr class="gSeparator gSeparatorTrans">
-                        <img class="youmover" src="http://thicas.mksystemgroup.com/wp-content/uploads/2016/09/you.png" /> 
-                        <h4 style="color: black"> <?= get_theme_mod('video_texto',''); ?></h4>
+                        <div class="text-video-subfooter">
+                            <img class="youmover" src="<?= get_template_directory_child().'/inc/img/social/youtube_47x47.png'; ?>" /> 
+                            <h4 style="color: black"> <?= get_theme_mod('video_texto',''); ?></h4>
+                        </div>
                 </div>
         </div>
             <?php endif; ?>
@@ -303,6 +305,7 @@
                 </div><!--carousel-inner-->
 
 <!--                         Left and right controls -->
+<!--
               <a class="left carousel-control" href="#slideshow3" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left " aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -311,6 +314,15 @@
                 <span class="glyphicon glyphicon-chevron-right fa-angle-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
               </a>
+-->
+            <a class="left carousel-control" href="#slideshow3" role="button" data-slide="prev">
+                <span class="icon-slider-left" aria-hidden="true"> &lt;</span>
+                <!--<span class="sr-only">Previous</span>-->
+            </a>
+            <a class="right carousel-control" href="#slideshow3" role="button" data-slide="next">
+                <span class="icon-slider-rigth" aria-hidden="true"> &gt;</span>
+                <!--<span class="sr-only">Next</span>-->
+            </a>
                 
                     </div><!--.carousel.slide-->
         

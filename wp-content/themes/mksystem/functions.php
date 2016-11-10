@@ -666,7 +666,7 @@ function mksystem_header_styles() {
     }
     <?php endif; // header image was removed ?>
     .navbar-mksystem.navbar-fixed{
-      height: 120px;
+      height: 118px;
       position: fixed;
       width: 100%;
       z-index: 1000;
@@ -837,16 +837,17 @@ function mksystem_section_categories_bloque3(){
         }if ($i ==1 ){
           $class= 'col-md-4';
         }else{
-          $class= 'col-md-4';
+          $class= 'col-md-4 bg-transparent'.(($i === 4) ? ' margin-top-collection ' : '');
         }
         $categories_html .= '<div class="'.$class.' text-center">';
-        $categories_html .= '<a href="'.$category['term_link'].'" title="'.$category['name'].'" class="thumbnail">';
+        $categories_html .= '<a href="'.$category['term_link'].'" title="'.$category['name'].'" class="thumbnail image-relative">';
         $categories_html .= '<img src="'.$thumb_url.'">';
 
         //$categories_html .= '<div class="categorie-content">';
         //$categories_html .= '<h4>'.$category['name'].'</h4>';
         //$categories_html .= '<span>COMPRAR AHORA</span>';
         //$categories_html .= '</div>';
+        $categories_html .= '<div class="background-collection"></div>';
 
         $categories_html .= '</a>';
         $categories_html .= '<div class="categorie-name">';
