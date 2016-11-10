@@ -189,8 +189,8 @@
                         </div>
                         <hr class="gSeparator gSeparatorTrans">
                         <div class="text-video-subfooter">
-                            <img class="youmover" src="<?= get_template_directory_child().'/inc/img/social/youtube_47x47.png'; ?>" /> 
                             <h4 style="color: black"> <?= get_theme_mod('video_texto',''); ?></h4>
+                            <img class="youmover" src="<?= get_template_directory_child().'/inc/img/social/youtube_47x47.png'; ?>" /> 
                         </div>
                 </div>
         </div>
