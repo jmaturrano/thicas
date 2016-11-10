@@ -36,7 +36,7 @@
             $header_file_url = admin_url("theme-editor.php?file=header.php&theme=$theme_name", "http");
         }
 
-        $preloader_element = esc_html('now after <body> insert preloader html element <div id="wptime-plugin-preloader"></div>');
+        $preloader_element = esc_html('now after <body> insert preloader html element <div id="wptime-plugin-preloader"> </div>');
         ?>
             <div class="wrap">
                 <h2>Preloader Settings</h2>

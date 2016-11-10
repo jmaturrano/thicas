@@ -183,14 +183,15 @@
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         
                         <h1 style="color: black; font-family: Advent Pro;"><?= get_theme_mod('video_titulo','') ;?></h1>
-                        <hr class="gSeparator gSeparatorTrans" style="display: none;">
+                        <!--<hr class="gSeparator gSeparatorTrans" style="display: none;">-->
                         <div class="iframe-border gIframe gWidth100p gHeight300 gBorder1 gBorderColorNegro">
                             <iframe class="gHeight100p gWidth100p gPositionRelative gTop10 gLeft10" width="560" height="315"  src="<?= get_theme_mod('video','')?>" frameborder="0" allowfullscreen></iframe>
                         </div>
                         <hr class="gSeparator gSeparatorTrans">
                         <div class="text-video-subfooter">
                             <h4 style="color: black"> <?= get_theme_mod('video_texto',''); ?></h4>
-                            <img class="youmover" src="<?= get_template_directory_child().'/inc/img/social/youtube_47x47.png'; ?>" /> 
+                            <!--ojo usar para indicar una imagen-->
+                            <img class="youmover" src="<?= get_template_directory_child().'/inc/img/social/youtube_47x47.png'; ?>" />
                         </div>
                 </div>
         </div>

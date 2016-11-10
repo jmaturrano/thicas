@@ -62,7 +62,7 @@ Aqui empieza las modificaciones.
 	display: block;
 	margin: 0 auto;
 	width: 300px;
-}
+}//fin
 .flex-caption{
 	display: none;
 }
@@ -153,7 +153,7 @@ input[name="sm_name"]{
     width: 100%;
    
     border: 0 !important;
-    height: 1px;
+    height: 0px;
    
 }
 .content-block{
@@ -522,6 +522,22 @@ display: none !important;
 .bg-transparent .background-collection{
     opacity: 0;
 }
+//botones 
+.background-btnfooter{
+    background: #000;
+    height: 100%;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.image-relative:hover .background-btnfooter{
+    opacity: 0.4;
+}
+.bg-transparent .background-btnfooter{
+    opacity: 0;
+}
+
 /*slider collections*/
 .icon-slider-left, 
 .icon-slider-rigth{
@@ -544,7 +560,7 @@ display: none !important;
 .carousel-control .icon-slider-rigth{
     right: 50%;
 }
-#slideshow2 .carousel-indicators, 
+#slideshow2 .carousel-indicators, // PREGUNTAR A JULIO!! 
 #slideshow3 .carousel-indicators{
     display: none;
 }
@@ -565,7 +581,24 @@ display: none !important;
     vertical-align: top;
     width: 80%;
 }
-.text-video-subfooter img{
+.text-video-subfooter img{ //iconno de youtube, para editar imagenes
     display: inline-block;
     vertical-align: top;
 }
+
+.boton_footer1{
+    background: white;
+    opacity: 0.1;
+    top: 0;
+    
+}
+
+.btn_heart-footer{ //iconno de corazon, para editar imagenes
+    display: inline-block;
+    vertical-align: top;
+}
+.btn_local-footer{ //iconno de local, para editar imagenes
+    display: inline-block;
+    vertical-align: top;
+}
+

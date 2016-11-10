@@ -21,8 +21,9 @@
 
 <body <?php body_class(); ?>>
 
-<div id="loader-logo"></div>
-<div id="wptime-plugin-preloader"></div>
+<!--<div id="loader-logo"></div>-->
+
+<div id="wptime-plugin-preloader"><img  src="<?= get_template_directory_child().'/inc/img/social/logo.png'; ?>" /></div>
 
 <div id="page" class="hfeed site ">
 
@@ -47,7 +48,7 @@
 
 				<?php if( !get_header_image() ) : ?>
 
-					<div id="logo">
+					<div >
 						<span class="site-title"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
 					</div><!-- end of #logo -->
             <?php $description = get_bloginfo( 'description', 'display' );
