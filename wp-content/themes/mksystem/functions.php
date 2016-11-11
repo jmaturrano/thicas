@@ -613,17 +613,7 @@ function mksystem_customizer_register( $wp_customize ) {
     'settings' => 'imagen_linkedin'
   )));
     /* terminna */
-  
-  $wp_customize->add_setting('check_bandera',array(
-      'default' => true
-  ));
-  $wp_customize->add_control( 'check_bandera', array(
-       'settings' => 'check_bandera',
-       'section'   => 'mksystem_social',
-       'label'     => __('Ver bandera','mksystem'),
-       'type'      => 'checkbox'
-  ));
-  
+
   
   $wp_customize->add_section(
         'mksystem_contacto',
@@ -896,9 +886,14 @@ function mksystem_section_categories_bloque3(){
         $categories_html .= '<div class="background-collection"></div>';
 
         $categories_html .= '</a>';
+
+        if($i != 4){
         $categories_html .= '<div class="categorie-name">';
         $categories_html .= '<h4>'.$category['name'].'</h4>';
+        $categories_html .= '<div class="subline-title"></div>';
+        $categories_html .= '<span>'.$category['description'].'</span>';
         $categories_html .= '</div>';
+        }
         $categories_html .= '</div>';
       }//end if
       $i++;
@@ -1146,12 +1141,12 @@ function mksystem_categories_list_footer(){
 
 function mksystem_social_links(){
   $social_html    = '';
-  $facebook       = 'http://facebook.com';
-  $twitter        = 'http://twitter.com';
-  $instagram      = 'http://pinterest.com';
-  $youtube        = 'http://youtube.com';
-  $vimeo          = 'http://vimeo.com';
-  $linkedin       = 'http://linkedin.com';
+  $facebook       = get_theme_mod('social_facebook');
+  $twitter        = get_theme_mod('social_twitter');
+  $pinterest      = get_theme_mod('social_pinterest');
+  $youtube        = get_theme_mod('social_youtube');
+  $vimeo          = get_theme_mod('social_vimeo');
+  $linkedin       = get_theme_mod('social_linkedin');
 
 
   if ($facebook != '') {
@@ -1160,8 +1155,8 @@ function mksystem_social_links(){
   if ($twitter != ''){
     $social_html  .= '<a target="_blank" class="" href="'.$twitter.'""><img src="'.get_template_directory_child().'/inc/img/social/twitter.jpg'.'"></a>';
   }
-  if ($instagram != '') {
-    $social_html  .= '<a target="_blank" class="" href="'.$instagram.'"><img src="'.get_template_directory_child().'/inc/img/social/pinterest.jpg'.'"></a>';
+  if ($pinterest != '') {
+    $social_html  .= '<a target="_blank" class="" href="'.$pinterest.'"><img src="'.get_template_directory_child().'/inc/img/social/pinterest.jpg'.'"></a>';
   }
   if ($youtube != '') {
     $social_html  .= '<a target="_blank" class="" href="'.$youtube.'"><img src="'.get_template_directory_child().'/inc/img/social/youtube.jpg'.'"></a>';

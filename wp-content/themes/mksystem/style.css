@@ -522,7 +522,7 @@ display: none !important;
 .bg-transparent .background-collection{
     opacity: 0;
 }
-//botones 
+/*//botones */
 .background-btnfooter{
     background: #000;
     height: 100%;
@@ -560,7 +560,7 @@ display: none !important;
 .carousel-control .icon-slider-rigth{
     right: 50%;
 }
-#slideshow2 .carousel-indicators, // PREGUNTAR A JULIO!! 
+#slideshow2 .carousel-indicators, /*PREGUNTAR A JULIO!! */
 #slideshow3 .carousel-indicators{
     display: none;
 }
@@ -581,7 +581,7 @@ display: none !important;
     vertical-align: top;
     width: 80%;
 }
-.text-video-subfooter img{ //iconno de youtube, para editar imagenes
+.text-video-subfooter img{ /*iconno de youtube, para editar imagenes*/
     display: inline-block;
     vertical-align: top;
 }
@@ -593,12 +593,17 @@ display: none !important;
     
 }
 
-.btn_heart-footer{ //iconno de corazon, para editar imagenes
+.btn_heart-footer{ /*iconno de corazon, para editar imagenes*/
     display: inline-block;
     vertical-align: top;
 }
-.btn_local-footer{ //iconno de local, para editar imagenes
+.btn_local-footer{ /*iconno de local, para editar imagenes*/
     display: inline-block;
     vertical-align: top;
 }
 
+.subline-title{
+    border-top: 3px solid #000;
+    margin: 0 auto;
+    width: 50px;
+}
