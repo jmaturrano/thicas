@@ -21,9 +21,8 @@
 
 <body <?php body_class(); ?>>
 
-<!--<div id="loader-logo"></div>-->
-
-<div id="wptime-plugin-preloader"><img  src="<?= get_template_directory_child().'/inc/img/social/logo.png'; ?>" /></div>
+<div id="loader-logo"></div>
+<div id="wptime-plugin-preloader"></div>
 
 <div id="page" class="hfeed site ">
 

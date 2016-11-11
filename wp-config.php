@@ -1,10 +1,5 @@
-﻿<?php
-$abspath	=	str_replace(array('\thicas', '/thicas'),'/wp-config',ABSPATH);
+﻿<?php $abspath = str_replace(array('\thicas', '/thicas'),'/wp-config',ABSPATH);
 include($abspath.'/server.php');
-
-
-
-
 /** 
  * Configuración básica de WordPress.
  *
@@ -19,28 +14,19 @@ include($abspath.'/server.php');
  *
  * @package WordPress
  */
-
 // ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
 /** El nombre de tu base de datos de WordPress */
 define('DB_NAME', $server['database']['thicas']);
-
 /** Tu nombre de usuario de MySQL */
 define('DB_USER', $server['main']['user']);
-
 /** Tu contraseña de MySQL */
 define('DB_PASSWORD', $server['main']['pass']);
-
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
 define('DB_HOST', $server['main']['host']);
-
 /** Codificación de caracteres para la base de datos. */
 define('DB_CHARSET', 'utf8mb4');
-
 /** Cotejamiento de la base de datos. No lo modifiques si tienes dudas. */
 define('DB_COLLATE', '');
-
-
-
 /** Lenguaje de wordpress **/
 define('WPLANG', 'es_PE');
 /** Revisiones de POSTS **/
@@ -58,9 +44,6 @@ define('DISALLOW_FILE_EDIT', true);
 //define('DISALLOW_FILE_MODS', true);
 /** No usar las versiones minificadas **/
 define('CONCATENATE_SCRIPTS', false);
-
-
-
 /**#@+
  * Claves únicas de autentificación.
  *
@@ -78,9 +61,7 @@ define('AUTH_SALT', '1roaJCNQm3-H~LM9`nBJ!n5T795<5@LoQRC9 )<u+|Yu=j{XjZ,NA$TdMh6
 define('SECURE_AUTH_SALT', 'MSta)y1J*J}ni~U_+0YIS#UdG%|ah&P0dLVM>C/<_*iV;j~0]TCMFEmC5j,Vu{c`');
 define('LOGGED_IN_SALT', 'Ef/MqPfU;f<Qu;)-^Ag/J^$Uz6JPYY4w/#G`&~M.an{48lxclk^+KTc& 7pk,%X!');
 define('NONCE_SALT', '7sCL.5Kxa0mT&%OFDRqWWl9Amp%.d9C/MFaa=>#^wN#lQqw!67G>0^R6]|*K{u&=');
-
 /**#@-*/
-
 /**
  * Prefijo de la base de datos de WordPress.
  *
@@ -88,8 +69,6 @@ define('NONCE_SALT', '7sCL.5Kxa0mT&%OFDRqWWl9Amp%.d9C/MFaa=>#^wN#lQqw!67G>0^R6]|
  * Emplea solo números, letras y guión bajo.
  */
 $table_prefix  = 'wp_';
-
-
 /**
  * Para desarrolladores: modo debug de WordPress.
  *
@@ -98,13 +77,9 @@ $table_prefix  = 'wp_';
  * en sus entornos de desarrollo.
  */
 define('WP_DEBUG', false);
-
 /* ¡Eso es todo, deja de editar! Feliz blogging */
-
 /** WordPress absolute path to the Wordpress directory. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
-
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
-
