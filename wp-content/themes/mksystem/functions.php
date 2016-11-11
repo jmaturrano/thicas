@@ -183,8 +183,8 @@ function mksystem_customizer_register( $wp_customize ) {
     'section' => 'mksystem_nosotros',
     'settings' => 'nosotros_imagen3'
   )));
-                 /* PAGINA PRINCIPAL */
-  
+
+/* PAGINA PRINCIPAL */
   /* Obtener de pagina principal Panel */
     $wp_customize->add_panel('mksystem_main_options', array(
         'capability' => 'edit_theme_options',
@@ -230,6 +230,51 @@ function mksystem_customizer_register( $wp_customize ) {
     'setting' => 'video_texto',
     'type'    => 'textarea'
   ));
+
+
+
+
+
+  $wp_customize->add_section('mksystem_slider_options', array(
+      'title' => 'Slider options',
+      'priority' => 31,
+      'panel' => 'mksystem_main_options'
+  ));
+      $wp_customize->add_setting( 'mksystem_slider_checkbox', array(
+              'default' => true
+      ) );
+      $wp_customize->add_control( 'mksystem_slider_checkbox', array(
+              'label' => 'Habilitar slider principal',
+              'section' => 'mksystem_slider_options',
+              'priority'  => 5,
+              'type'      => 'checkbox',
+              'setting' => 'mksystem_slider_checkbox'
+      ) );
+
+      // Pull all the categories into an array
+      global $options_categories;
+      $wp_customize->add_setting('mksystem_slide_categories', array(
+          'default' => ''
+      ));
+      $wp_customize->add_control('mksystem_slide_categories', array(
+          'label' => 'Slider Categoría',
+          'section' => 'mksystem_slider_options',
+          'type'    => 'select',
+          'description' => 'Seleccione una categoría para el slider principal',
+          'choices'    => $options_categories,
+          'setting' => 'mksystem_slide_categories'
+      ));
+
+      $wp_customize->add_setting('mksystem_slide_number', array(
+          'default' => 3
+      ));
+      $wp_customize->add_control('mksystem_slide_number', array(
+          'label' => 'Número de items',
+          'section' => 'mksystem_slider_options',
+          'description' => 'Ingrese el número de items en el slider',
+          'type' => 'text',
+          'setting' => 'mksystem_slide_number'
+      ));
     
         //****************** slider BLOQUE 1 //28
 
@@ -691,12 +736,12 @@ add_action( 'wp_enqueue_scripts', 'mksystem_header_styles' );
  * Mk system slider
  */
 function mksystem_featured_slider() {
-    // if ( is_front_page() && of_get_option('dazzling_slider_checkbox') == 1 ) {
+    if ( get_theme_mod('mksystem_slider_checkbox') == TRUE ) {
       echo '<div class="flexslider">';
         echo '<ul class="slides">';
 
-          $count = of_get_option('dazzling_slide_number');
-          $slidecat = of_get_option('dazzling_slide_categories');
+          $count = get_theme_mod('mksystem_slide_number');
+          $slidecat = get_theme_mod('mksystem_slide_categories');
 
             if ( $count && $slidecat ) {
             $query = new WP_Query( array( 'cat' => $slidecat, 'posts_per_page' => $count ) );
@@ -709,24 +754,25 @@ function mksystem_featured_slider() {
                   the_post_thumbnail();
                 }
 
+                /*
                 echo '<div class="flex-caption">';
                   echo '<a href="'. get_permalink() .'">';
                     if ( get_the_title() != '' ) echo '<h2 class="entry-title">'. get_the_title().'</h2>';
                     if ( get_the_excerpt() != '' ) echo '<div class="exceimarpt">' . get_the_excerpt() .'</div>';
                   echo '</a>';
                 echo '</div>';
-
+                */
                 endwhile;
               endif;
 
             } else {
-                echo "Slider is not properly configured";
+                echo "Slider no configurado";
             }
      
             echo '</li>';
         echo '</ul>';
       echo ' </div>';
-     //}
+     }
 }
 
 

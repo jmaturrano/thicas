@@ -66,8 +66,8 @@
 	</nav><!-- .site-navigation -->
 
         <div class="top-section">
-		<?php dazzling_featured_slider(); ?>
-		<?php dazzling_call_for_action(); ?>
+		<?php mksystem_featured_slider(); ?>
+		<?php //dazzling_call_for_action(); ?>
         </div>
         <div id="content" class="site-content container">
 
