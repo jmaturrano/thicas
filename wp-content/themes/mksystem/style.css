@@ -364,6 +364,7 @@ display: none !important;
     background: #000 !important;
     border: 1px solid #FFF;
     border-radius: 0px;
+    letter-spacing: 2px;
  }
 /*boton nosotros*/
  .wpcf7-form .btn-default{
@@ -606,4 +607,15 @@ display: none !important;
     border-top: 3px solid #000;
     margin: 0 auto;
     width: 50px;
+}
+.btn-animate-black{
+    transition: all 500ms ease 0s;
+}
+.btn-animate-black:hover{
+    background: #fff !important;
+    color: #000 !important;
+}
+.mksystem-copyrigth{
+    padding-bottom: 20px;
+    padding-top: 20px;
 }

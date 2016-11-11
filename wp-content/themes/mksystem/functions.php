@@ -1181,7 +1181,7 @@ function mksystem_footer_info() {
   </div>
   <div class="mksystem-info col-md-6">
     <?php echo esc_html__("Desarrollado por","mksystem");?> 
-    <a href="<?php echo esc_url("http://mksystemsoft.com","devitweb");?>" target="_blank"><?php echo esc_html__("DevIT - Web & Desarrollo","devitweb");?></a> 
+    <a href="<?php echo esc_url("http://mksystemsoft.com","devitweb");?>" target="_blank"><?php echo esc_html__("DevIT - Web & Multimedia","devitweb");?></a> 
   </div>
 
 
