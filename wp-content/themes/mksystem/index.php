@@ -6,14 +6,30 @@
 
     get_header();
 ?>
-<div class="top-section" >
-    <div class="container">
-        <div class="row">        
-           
-        </div><!--.row-->
-    </div><!--.container-->
+
+
+<div class="top-section">
+        <?php mksystem_featured_slider(); ?>
 </div>
-<!--Estamos crando un sleder -->
+<div id="content" class="site-content container">
+
+    <div class="container main-content-area"><?php
+
+        global $post;
+        if( get_post_meta($post->ID, 'site_layout', true) ){
+                $layout_class = get_post_meta($post->ID, 'site_layout', true);
+        }
+        else{
+                $layout_class = of_get_option( 'site_layout' );
+        }
+        if( is_home() && is_sticky( $post->ID ) ){
+                $layout_class = of_get_option( 'site_layout' );
+        }
+        ?>
+        <div class="row <?php echo $layout_class; ?>">
+
+
+<!--Formulario de suscripcion -->
 <div>
     <div class="container">
         <div class="row">
