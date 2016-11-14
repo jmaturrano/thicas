@@ -32,7 +32,7 @@
     
         <div class="<?= $class_block ?> col-xs-12">
             <?php if(get_theme_mod('nosotros_titulo1','') != ''): ?>
-            <h2 style="color:black;"><?= get_theme_mod('nosotros_titulo1');?></h2>
+            <h2 style="color:black;" class="text-center"><?= get_theme_mod('nosotros_titulo1');?></h2>
             <hr class="gSeparator gSeparatorTrans gSeparator10">
             <?php endif; ?>
             <?php if(get_theme_mod('nosotros_texto1','') != ''): ?>
@@ -52,7 +52,7 @@
     
         <div class="<?= $class_block ?>  col-xs-12">
             <?php if(get_theme_mod('nosotros_titulo2','') != ''): ?>
-            <h2 style="color: black;"><?= get_theme_mod('nosotros_titulo2');?></h2>
+            <h2 style="color: black;" class="text-center" ><?= get_theme_mod('nosotros_titulo2');?></h2>
             <hr class="gSeparator gSeparatorTrans gSeparator10">
             <?php endif; ?>
             <?php if(get_theme_mod('nosotros_texto2','') != ''): ?>
@@ -83,7 +83,7 @@
         <?php if(get_theme_mod('nosotros_titulo3','') != ''): ?>
     
         <div class=" <?= $class_block ?> col-xs-12">
-            <h2 style="color:black;"><?= get_theme_mod('nosotros_titulo3');?></h2>
+            <h2 style="color:black;" class="text-center" ><?= get_theme_mod('nosotros_titulo3');?></h2>
             <hr class="gSeparator gSeparatorTrans gSeparator10">
              <?php endif; ?>
             <?php if(get_theme_mod('nosotros_texto3','') != ''): ?>

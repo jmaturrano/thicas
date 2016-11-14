@@ -27,7 +27,7 @@ get_header( 'shop' );
 <!--include (mksystem(__DIR__) . '/functions.php');-->
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
-			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+			<h1 class="page-title text-center"><?php woocommerce_page_title(); ?></h1>
 
 		<?php endif; ?>
 
@@ -40,7 +40,7 @@ get_header( 'shop' );
 			</div>
 		</div>
 
-	<div class="col-md-8">
+	<div class="col-md-8 text-center">
 
             
             
