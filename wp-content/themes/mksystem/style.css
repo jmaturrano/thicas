@@ -1240,3 +1240,13 @@ display: none !important;
 
 }
 
+.maps-rigth{
+    float: right;
+    box-shadow: 5px 5px 10px #999999;
+    width: 60%;
+}
+.gBoxMapa {
+    box-shadow: 5px 5px 10px #999999;
+    height: 450px;
+    width: 60%;
+}
