@@ -13,11 +13,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <meta charset="UTF-8"> 
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/estilos.css" rel="stylesheet">
 
+ <?php additional_custom_styles(); ?>
     <?php wp_head(); ?>
+
+
 </head>
 
 <body <?php body_class(); ?>>    
@@ -29,7 +29,7 @@
 	<nav class="navbar navbar-default navbar-mksystem" role="navigation">
 			<div class="navbar-header ">
 			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-			    <span class="sr-only"><?php _e( 'Toggle navigation', 'dazzling' ); ?></span>
+			    <span class="sr-only"><?php _e( 'Toggle navigation', 'mksystem' ); ?></span>
 			    <span class="icon-bar"></span>
 			    <span class="icon-bar"></span>
 			    <span class="icon-bar"></span>

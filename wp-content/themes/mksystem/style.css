@@ -798,13 +798,7 @@ display: none !important;
 
 
 
-.gInlineBlock_barra {
 
-    display: inline-block;
-
-    vertical-align: top;
-
-}
 
 .gSeparatorTrans {
 
@@ -902,13 +896,7 @@ display: none !important;
 
 /*icon*/
 
-.gInlineBlock {
 
-    display: inline-table;
-
-    vertical-align: top;
-
-}
 
 .gLeft0 {
 
@@ -1239,14 +1227,51 @@ display: none !important;
     padding-top: 20px;
 
 }
-
-.maps-rigth{
-    float: right;
-    box-shadow: 5px 5px 10px #999999;
-    width: 60%;
+.gPositionRelative {
+    position: relative;
+}
+.gMarginLeft4p {
+    margin-left: 4%;
+}
+.gInlineBlock {
+    display: inline-block;
+    vertical-align: 45px;
 }
 .gBoxMapa {
     box-shadow: 5px 5px 10px #999999;
-    height: 450px;
-    width: 60%;
+    height: 350px;
+    width: 71%;
 }
+.borde-tienda{
+    box-shadow: 5px 5px 10px #999999;
+    width: 25%;
+}
+
+
+/* style pag local */
+.gUppercase {
+    text-transform: uppercase;
+}
+.gTitular {
+    font-family: "Advent Pro",sans-serif;
+}
+.gDetallesLocalBox {
+    font-size: 19px;
+}
+.lefttext{
+    text-align: left;
+}
+
+.gFontWeight700 {
+    font-weight: 700;
+}
+.bajarlocal{
+    font-size: 50px;
+}
+.barra hr{
+     width: 100%;
+    border: 0 !important;
+    height: 6px;
+}
+
+

@@ -7,7 +7,8 @@
  * @package dazzling
  */
 ?>
- 
+
+
         </div><!-- close .row -->
     </div><!-- close .container -->
 </div><!-- close .site-content -->
@@ -47,7 +48,7 @@
                 }else{$url= "#";}
                 ?>
                  <!--<a href="<?= $url;?>" class="btn btn-default " ><span class="icon-heart"></span> Postula Aqui </a>--> 
-                 <a href="<?= $url;?>" class="btn btn-default btn-animate-black" style="font-weight: bold;" ><span class="glyphicon glyphicon-heart"></span> Postula Aqui </a>
+                 <a href="<?= $url;?>" class="btn btn-default btn-animate-black" style="font-weight: bold;" ><span class="glyphicon glyphicon-cloud">♥</span> Postula Aqui </a>
                  
                 <!--<a href="<?= $url;?>" class="btn btn-default btn-animate-black" style="font-weight: bold;" >
                 <img class="youmover btn_heart-footer" src="<?= get_template_directory_child().'/inc/img/social/btn_heart 17x15.png'; ?>" /> Postula Aqui 
