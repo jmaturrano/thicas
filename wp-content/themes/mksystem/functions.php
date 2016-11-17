@@ -1033,7 +1033,7 @@ function mksystem_header_menu() {
     'theme_location'    => 'primary',
     'depth'             => 2,
     'container'         => 'div',
-    'container_class'   => 'col-md-12 text-center',
+    'container_class'   => 'col-md-12 text-center collapse-nav-menu collapse',
     'menu_class'        => 'nav navbar-nav menu-mksystem',
     'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
     'walker'            => new wp_bootstrap_navwalker()

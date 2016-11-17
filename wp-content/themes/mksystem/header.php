@@ -28,7 +28,7 @@
 
 	<nav class="navbar navbar-default navbar-mksystem" role="navigation">
 			<div class="navbar-header ">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapse-nav-menu">
 			    <span class="sr-only"><?php _e( 'Toggle navigation', 'mksystem' ); ?></span>
 			    <span class="icon-bar"></span>
 			    <span class="icon-bar"></span>
@@ -57,7 +57,6 @@
             endif; ?>
 
 				<?php endif; // header image was removed (again) ?>
-
 			</div>
 			<div class="container">
 				<?php mksystem_header_menu(); ?>
