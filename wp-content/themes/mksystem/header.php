@@ -11,16 +11,16 @@
     <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<?php wp_head(); ?>
+<meta charset="UTF-8"> 
+
+ <?php additional_custom_styles(); ?>
+    <?php wp_head(); ?>
+
 
 </head>
 
-<body <?php body_class(); ?>>
-
+<body <?php body_class(); ?>>    
 <div id="loader-logo"></div>
 <div id="wptime-plugin-preloader"></div>
 
@@ -29,7 +29,7 @@
 	<nav class="navbar navbar-default navbar-mksystem" role="navigation">
 			<div class="navbar-header ">
 			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-			    <span class="sr-only"><?php _e( 'Toggle navigation', 'dazzling' ); ?></span>
+			    <span class="sr-only"><?php _e( 'Toggle navigation', 'mksystem' ); ?></span>
 			    <span class="icon-bar"></span>
 			    <span class="icon-bar"></span>
 			    <span class="icon-bar"></span>
@@ -65,23 +65,4 @@
 				
 	</nav><!-- .site-navigation -->
 
-        <div class="top-section">
-		<?php mksystem_featured_slider(); ?>
-		<?php //dazzling_call_for_action(); ?>
-        </div>
-        <div id="content" class="site-content container">
 
-            <div class="container main-content-area"><?php
-
-                global $post;
-                if( get_post_meta($post->ID, 'site_layout', true) ){
-                        $layout_class = get_post_meta($post->ID, 'site_layout', true);
-                }
-                else{
-                        $layout_class = of_get_option( 'site_layout' );
-                }
-                if( is_home() && is_sticky( $post->ID ) ){
-                        $layout_class = of_get_option( 'site_layout' );
-                }
-                ?>
-                <div class="row <?php echo $layout_class; ?>">

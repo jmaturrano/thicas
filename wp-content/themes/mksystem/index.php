@@ -6,14 +6,30 @@
 
     get_header();
 ?>
-<div class="top-section" >
-    <div class="container">
-        <div class="row">        
-           
-        </div><!--.row-->
-    </div><!--.container-->
+
+
+<div class="top-section">
+        <?php mksystem_featured_slider(); ?>
 </div>
-<!--Estamos crando un sleder -->
+<div id="content" class="site-content container">
+
+    <div class="container main-content-area"><?php
+
+        global $post;
+        if( get_post_meta($post->ID, 'site_layout', true) ){
+                $layout_class = get_post_meta($post->ID, 'site_layout', true);
+        }
+        else{
+                $layout_class = of_get_option( 'site_layout' );
+        }
+        if( is_home() && is_sticky( $post->ID ) ){
+                $layout_class = of_get_option( 'site_layout' );
+        }
+        ?>
+        <div class="row <?php echo $layout_class; ?>">
+
+
+<!--Formulario de suscripcion -->
 <div>
     <div class="container">
         <div class="row">
@@ -41,7 +57,7 @@
                                 <!-- <div class="row"> -->
                                     <ol class="carousel-indicators text-right">
                                         <li data-target="#slideshow" data-slide-to="0" class="active"></li>
-                                        <?php if(get_theme_mod('slider_mksystem_2','')!=''){ ?>
+                                        <?php if(get_theme_mod('slider_mksystem_2','')!=''){ ?>                                        
                                             <li data-target="#slideshow2" data-slide-to="1"></li>
                                         <?php } ?>
                                         <?php if(get_theme_mod('slider_mksystem_3','')!=''){ ?>
@@ -70,7 +86,7 @@
                                     </div>
                                 </div>-->
                                 <?php if(get_theme_mod('slider_mksystem_1','')!=''){ ?>
-                                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                    <a href="<?php echo esc_url( home_url( '/product-category/catalogo/prendas' ) ); ?>">
                                         <img src="<?php echo get_theme_mod('slider_mksystem_1'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                     </a>
                                 <?php } else { ?>
@@ -85,7 +101,7 @@
                                       <p>&nbsp;</p>
                                     </div>
                                 </div>-->
-                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                <a href="<?php echo esc_url( home_url( '/product-category/catalogo/prendas' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_2'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
                             </div>
@@ -98,7 +114,7 @@
                                       <p>&nbsp;</p>
                                     </div>
                                 </div>-->
-                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                <a href="<?php echo esc_url( home_url( '/product-category/catalogo/prendas' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_3'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
                             </div>
@@ -111,7 +127,7 @@
                                       <p>&nbsp;</p>
                                     </div>
                                 </div>-->
-                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                <a href="<?php echo esc_url( home_url( '/product-category/catalogo/prendas' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_4'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
                             </div>
@@ -124,7 +140,7 @@
                                       <p>&nbsp;</p>
                                     </div>
                                 </div>-->
-                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                <a href="<?php echo esc_url( home_url( '/product-category/catalogo/prendas' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_5'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
                             </div>
@@ -137,7 +153,7 @@
                                       <p>&nbsp;</p>
                                     </div>
                                 </div>-->
-                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                <a href="<?php echo esc_url( home_url( '/product-category/catalogo/prendas' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_6'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
                             </div>
@@ -165,7 +181,7 @@
             
             <h4 class="favorito"> Favoritos de Thicas </h4>
             <hr class="gSeparator_barra gInlineBlock_barra gHeight3_barra gClaseTextoModelo">
-            <span class="favorito">Encuentra tu prenda preferida aquí.</span>
+            <span class="favorito text-center">Encuentra tu prenda preferida aquí.</span>
             <?php mksystem_section_categories_bloque3(); ?> 
         </div><!--.row-->
     </div><!--.container-->
@@ -231,9 +247,9 @@
             </div>-->
         </div>                                
             <?php if(get_theme_mod('slider_mksystem_1_b','')!=''){ ?>
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <!--<a href="<?php echo esc_url( home_url( '/' ) ); ?>">-->
                     <img src="<?php echo get_theme_mod('slider_mksystem_1_b'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
-                </a>
+                <!--</a>-->
             <?php } else { ?>
                 <img src="<?php echo get_template_directory_child(); ?>/inc/img/predeterminada.jpg" />
             <?php } ?>
@@ -246,9 +262,9 @@
                   <p>&nbsp;</p>
                 </div>
             </div>-->
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <!--<a href="<?php // echo esc_url( home_url( '/' ) ); ?>">-->
                 <img src="<?php echo get_theme_mod('slider_mksystem_2_b'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
-            </a>
+            <!--</a>-->
         </div>
         <?php } ?>
 
@@ -259,9 +275,9 @@
                   <p>&nbsp;</p>
                 </div>
             </div>-->
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <!--<a href="<?php // echo esc_url( home_url( '/' ) ); ?>">-->
                 <img src="<?php echo get_theme_mod('slider_mksystem_3_b'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
-            </a>
+            <!--</a>-->
         </div>
         <?php } ?>
 
@@ -272,9 +288,9 @@
                   <p>&nbsp;</p>
                 </div>
             </div>-->
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <!--<a href="<?php // echo esc_url( home_url( '/' ) ); ?>">-->
                 <img src="<?php echo get_theme_mod('slider_mksystem_4_b'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
-            </a>
+            <!--</a>-->
         </div>
         <?php } ?>
 
@@ -285,9 +301,9 @@
                   <p>&nbsp;</p>
                 </div>
             </div>-->
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <!--<a href="<?php // echo esc_url( home_url( '/' ) ); ?>">-->
                 <img src="<?php echo get_theme_mod('slider_mksystem_5_b'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
-            </a>
+            <!--</a>-->
         </div>
         <?php } ?>
 
@@ -298,9 +314,9 @@
                   <p>&nbsp;</p>
                 </div>
             </div>-->
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <!--<a href="<?php // echo esc_url( home_url( '/' ) ); ?>">-->
                 <img src="<?php echo get_theme_mod('slider_mksystem_6_b'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
-            </a>
+            <!--</a>-->
         </div>
         <?php } ?>
                 </div><!--carousel-inner-->

@@ -13,11 +13,11 @@ function get_template_directory_child(){
 
 function mksystem_customizer_register( $wp_customize ) {
   
-  	/*
-	*
-	* Seleccionar pagina de un boton
-	*
-	*/
+    /*
+  *
+  * Seleccionar pagina de un boton
+  *
+  */
    $wp_customize->add_section('mksystem_footer',array(
             'title' => __('Página Footer', 'mksystem'),
             'priority' => 100,
@@ -44,35 +44,69 @@ function mksystem_customizer_register( $wp_customize ) {
             'section'  => 'mksystem_footer',
             'type'     => 'dropdown-pages'
     ) );
-
-
-
-    $wp_customize->add_setting('color_mksystem_theme',array(
-    'default' => '#FFD800',
-    'transport' => 'refresh'
-    ));
-    $wp_customize->add_control(
-    new WP_Customize_Color_Control( $wp_customize, 'color_mksystem_theme', array(
-    'label'        => __( 'Color del tema <style> #accordion-section-dazzling_important_links, #accordion-panel-dazzling_main_options,#accordion-section-static_front_page{display:none !important;}</style>', 'mksystem' ),
-    'section'    => 'dazzling_header_options',
-    'settings'   => 'color_mksystem_theme',
-    )));
+    /*
+     * LOCAL
+     *       */
     
-    /*remove customizer OJO : NO FUNCIONA*/
-    $wp_customize->remove_panel('widgets');
-  /*eliminar customizer */ 
-    $wp_customize->remove_section( 'mytheme_new_section_name' );
-    $wp_customize->remove_section( 'dazzling_action_options' );
-    $wp_customize->remove_section( 'dazzling_typography_options' );
-    $wp_customize->remove_section( 'dazzling_header_options' );
-    $wp_customize->remove_section( 'dazzling_footer_options' );
-    $wp_customize->remove_section( 'dazzling_social_options' );
-    $wp_customize->remove_section( 'dazzling_other_options' );
-    $wp_customize->remove_section( 'dazzling_layout_options' );
-    $wp_customize->remove_section( 'dazzling_important_links' );
-  /*final*/
-/*remove customizer display:none*/
-
+    $wp_customize->add_section(
+        'mksystem_local',
+        array(
+            'title' => __('Pagina Locales', 'mksystem'),
+            'priority' => 100
+        )
+    );
+    $wp_customize->add_setting('local_titulo',array(
+    'default' => __('','mksystem')
+  ));
+  
+    $wp_customize->add_control('local_titulo',array(
+    'label' => __('Título de la tienda','mksystem'),
+    'section' => 'mksystem_local',
+    'setting' => 'local_titulo',
+    'type'    => 'text'
+  ));
+    
+    $wp_customize->add_setting('local_direccion',array(
+    'default' => __('','mksystem')
+  ));
+  
+    $wp_customize->add_control('local_direccion',array(
+    'label' => __('Ingrese aquí su dirección','mksystem'),
+    'section' => 'mksystem_local',
+    'setting' => 'local_direccion',
+    'type'    => 'text'
+  ));
+    $wp_customize->add_setting('local_telefono',array(
+    'default' => __('','mksystem')
+  ));
+  
+    $wp_customize->add_control('local_telefono',array(
+    'label' => __('Ingrese aquí su número de telefono','mksystem'),
+    'section' => 'mksystem_local',
+    'setting' => 'local_telefono',
+    'type'    => 'text'
+  ));
+    $wp_customize->add_setting('local_correo',array(
+    'default' => __('','mksystem')
+  ));
+  
+    $wp_customize->add_control('local_correo',array(
+    'label' => __('Ingrese aquí su correo','mksystem'),
+    'section' => 'mksystem_local',
+    'setting' => 'local_correo',
+    'type'    => 'text'
+  ));
+    $wp_customize->add_setting('local_horario',array(
+    'default' => __('','mksystem')
+  ));
+  
+    $wp_customize->add_control('local_horario',array(
+    'label' => __('Ingrese aquí su horario','mksystem'),
+    'section' => 'mksystem_local',
+    'setting' => 'local_horario',
+    'type'    => 'text'
+  ));
+    
 /*
   *
 
@@ -82,7 +116,7 @@ function mksystem_customizer_register( $wp_customize ) {
   $wp_customize->add_section(
         'mksystem_nosotros',
         array(
-            'title' => __('Página Nosotros', 'mksystem'),
+            'title' => __('Pagina Nosotros', 'mksystem'),
             'priority' => 100
         )
     );
@@ -125,7 +159,7 @@ function mksystem_customizer_register( $wp_customize ) {
   ));
   
   $wp_customize->add_control('nosotros_titulo2',array(
-    'label' => __('Título 2','mksystem'),
+    'label' => __('T�tulo 2','mksystem'),
     'section' => 'mksystem_nosotros',
     'setting' => 'nosotros_titulo2',
     'type'    => 'text'
@@ -136,7 +170,8 @@ function mksystem_customizer_register( $wp_customize ) {
     'default' => __('','mksystem')
   ));
   $wp_customize->add_control('nosotros_texto2',array(
-    'label' => __('Texto 2','mksystem'),
+//    'label' => __('Texto 2','mksystem'),
+    'label' => __('Imagen 1' , 'mksystem'),
     'section' => 'mksystem_nosotros',
     'setting' => 'nosotros_texto2',
     'type'    => 'textarea'
@@ -158,7 +193,7 @@ function mksystem_customizer_register( $wp_customize ) {
   ));
   
   $wp_customize->add_control('nosotros_titulo3',array(
-    'label' => __('Título 3','mksystem'),
+    'label' => __('T�tulo 3','mksystem'),
     'section' => 'mksystem_nosotros',
     'setting' => 'nosotros_titulo3',
     'type'    => 'text'
@@ -189,7 +224,7 @@ function mksystem_customizer_register( $wp_customize ) {
     $wp_customize->add_panel('mksystem_main_options', array(
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Página Principal', 'mksystem'),
+        'title' => __('Pagina Principal', 'mksystem'),
         'description' => __('Panel to update dazzling theme options', 'mksystem'), // Include html tags such as <p>.
         'priority' => 10 // Mixed with top-level-section hierarchy.
     ));
@@ -207,7 +242,7 @@ function mksystem_customizer_register( $wp_customize ) {
   ));
   
   $wp_customize->add_control('video_titulo',array(
-    'label' => __('Título del video:','mksystem'),
+    'label' => __('T�tulo del video','mksystem'),
     'section' => 'mksystem_video',
     'setting' => 'video_titulo',
     'type'    => 'text'
@@ -243,8 +278,10 @@ function mksystem_customizer_register( $wp_customize ) {
       $wp_customize->add_setting( 'mksystem_slider_checkbox', array(
               'default' => true
       ) );
+      
+    
       $wp_customize->add_control( 'mksystem_slider_checkbox', array(
-              'label' => 'Habilitar slider principal',
+              'label' => __('Habilitar slider principal', 'mksystem'),
               'section' => 'mksystem_slider_options',
               'priority'  => 5,
               'type'      => 'checkbox',
@@ -257,10 +294,10 @@ function mksystem_customizer_register( $wp_customize ) {
           'default' => ''
       ));
       $wp_customize->add_control('mksystem_slide_categories', array(
-          'label' => 'Slider Categoría',
+          'label' => 'Slider Categoria',
           'section' => 'mksystem_slider_options',
           'type'    => 'select',
-          'description' => 'Seleccione una categoría para el slider principal',
+          'description' => 'Seleccione una categoria para el slider principal',
           'choices'    => $options_categories,
           'setting' => 'mksystem_slide_categories'
       ));
@@ -269,77 +306,12 @@ function mksystem_customizer_register( $wp_customize ) {
           'default' => 3
       ));
       $wp_customize->add_control('mksystem_slide_number', array(
-          'label' => 'Número de items',
+          'label' => 'Nusadsamero de items',
           'section' => 'mksystem_slider_options',
-          'description' => 'Ingrese el número de items en el slider',
+          'description' => 'Ingrese el numero de items en el slider',
           'type' => 'text',
           'setting' => 'mksystem_slide_number'
       ));
-    
-        //****************** slider BLOQUE 1 //28
-
-     
-    $wp_customize->add_section('mksystem_slider1',array(
-            'title' => __('Slider 1 options', 'mksystem'),
-            'description'=> __('Tamaño de imagen recomendado: 1900x900', 'mksystem'),
-            'priority' => 100,
-            'panel' => 'mksystem_main_options'
-        )
-    );
-    $wp_customize->add_setting('slider_mksystem_1_a',array(
-    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
-    ));
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_1_a' , array(
-    'label' => __('Imagen 1' , 'mksystem'),
-    'section' => 'mksystem_slider1',
-    'settings' => 'slider_mksystem_1_a'
-  )));
-
-  $wp_customize->add_setting('slider_mksystem_2_a',array(
-    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
-  ));
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_2_a' , array(
-    'label' => __('Imagen 2' , 'mksystem'),
-    'section' => 'mksystem_slider1',
-    'settings' => 'slider_mksystem_2_a'
-  )));
-
-  $wp_customize->add_setting('slider_mksystem_3_a',array(
-    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
-  ));
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_3_a' , array(
-    'label' => __('Imagen 3' , 'mksystem'),
-    'section' => 'mksystem_slider1',
-    'settings' => 'slider_mksystem_3_a'
-  )));
-
-  $wp_customize->add_setting('slider_mksystem_4_a',array(
-    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
-  ));
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_4_a' , array(
-    'label' => __('Imagen 4' , 'mksystem'),
-    'section' => 'mksystem_slider1',
-    'settings' => 'slider_mksystem_4_a'
-  )));
-
-  $wp_customize->add_setting('slider_mksystem_5_a',array(
-    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
-  ));
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_5_a' , array(
-    'label' => __('Imagen 5' , 'mksystem'),
-    'section' => 'mksystem_slider1',
-    'settings' => 'slider_mksystem_5_a'
-  )));
-
-  $wp_customize->add_setting('slider_mksystem_6_a',array(
-    'default' => get_template_directory_child().'/wp-content/uploads/2016/09/slider2.jpg'
-  ));
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'slider_mksystem_6_a' , array(
-    'label' => __('Imagen 6' , 'mksystem'),
-    'section' => 'mksystem_slider1',
-    'settings' => 'slider_mksystem_6_a'
-  )));
-  // TERMINA EL BLOQUE 1
 
     /*
   //****************** slider BLOQUE 2 //28
@@ -646,7 +618,7 @@ function mksystem_customizer_register( $wp_customize ) {
   ));
   $wp_customize->add_control(
     new WP_Customize_Color_Control( $wp_customize, 'color_mksystem_theme', array(
-    'label'        => __( 'Color del tema <style>#accordion-section-setup, #accordion-section-general, #accordion-panel-banner_settings, #accordion-section-fp-social, #accordion-section-fp-action1, #accordion-section-fp-featured, #accordion-section-fp-about, #accordion-section-fp-action2, #accordion-section-fp-team, #accordion-section-fp-team,#customize-control-background_color, #widgets-right>div.wp-full-overlay-sidebar-content>a.button.button-primary.button-nimbus, #accordion-section-fp-news,#accordion-section-fp-contact, #accordion-section-blog-settings, #accordion-panel-widgets, #accordion-section-static_front_page{display:none !important;}</style>', 'mksystem' ),
+    'label'        => __( 'Color del tema <style>#accordion-panel-dazzling_main_options,#accordion-section-dazzling_important_links, #accordion-section-setup, #accordion-section-general, #accordion-panel-banner_settings, #accordion-section-fp-social, #accordion-section-fp-action1, #accordion-section-fp-featured, #accordion-section-fp-about, #accordion-section-fp-action2, #accordion-section-fp-team, #accordion-section-fp-team,#customize-control-background_color, #widgets-right>div.wp-full-overlay-sidebar-content>a.button.button-primary.button-nimbus, #accordion-section-fp-news,#accordion-section-fp-contact, #accordion-section-blog-settings, #accordion-panel-widgets, #accordion-section-static_front_page{display:none !important;}</style>', 'mksystem' ),
     'section'    => 'mksystem_color',
     'settings'   => 'color_mksystem_theme',
   )));
@@ -686,14 +658,15 @@ add_action('wp_footer','mksystem_header_scripts', 100);
 
 
 /**
- * Mk system header styles
+ * Mk system header styles ... 
  *
  */
 function mksystem_header_styles() {
+    // usar para colocar el logo en un PRELOADER
 ?>
   <style>
     <?php if( get_header_image() != '' ) : ?>
-    #loader-logo{
+    #loader-logo{ 
       background: transparent url("<?php header_image(); ?>") no-repeat scroll 50% 40% / 150px 55px;
       height: 100%;
       position: absolute;
@@ -1015,11 +988,11 @@ function mksystem_categories_list_subcategoria(){
     $items = 0;
     $categories_html .= '<ul class="nav footer-nav clearfix">';
     foreach ($category_products as $category) {
-	
+  
       if($items <= 9){
         $categories_html .= '<li class="menu-item" style="display:block; align: left;"><a style="text-align:left;" href="'.$category['term_link'].'">'.$category['name'].'</a></li>';
       }//end if
-	  
+    
       $items++;
     }//end foreach
     $categories_html .= '</ul>';
@@ -1036,7 +1009,7 @@ function mksystem_categories_list_subcategoria_subsub(){
     $items = 0;
     $categories_html .= '<ul class="nav footer-nav clearfix">';
     foreach ($category_products as $category) {
-	
+  
       if($items <= 9){
         if($category['id'] == 41 || $category['id'] == 42){
           $categories_html .= '<li class="menu-item" style="display:block; align: left;"><a style="text-align:left;" href="'.$category['term_link'].'">'.$category['name'].'</a></li>';
@@ -1044,16 +1017,14 @@ function mksystem_categories_list_subcategoria_subsub(){
          
         
         }//end if
-	  
+    
       $items++;
     }//end foreach
     $categories_html .= '</ul>';
   }//end if
 
   echo $categories_html;
-}
-
-      
+}      
 
 function mksystem_header_menu() {
   // display the WordPress Custom Menu if available
@@ -1106,9 +1077,6 @@ function mksystem_secondary_menu_footer() {
 register_nav_menus(array(
   'secundary' => __('Menu Pie de página', 'mksystem')
   ));
-
-
-
 
 /**
  * Get all categories for footer
@@ -1181,7 +1149,7 @@ function mksystem_footer_info() {
   <?php echo esc_html__(" - Todos los derechos reservados");?> <?php echo date_i18n('Y'); ?>
   </div>
   <div class="mksystem-info col-md-6">
-    <div id="devit_author"></div>
+      <div id="devit_author"></div>
   </div>
 
 
@@ -1227,6 +1195,16 @@ function dazzling_sanitize_slidecat( $input ) {
     }
 }
 
+}
 
+
+//funcion añadir hoja de estilo
+
+function additional_custom_styles() {
+
+    /*Enqueue The Styles*/
+    wp_enqueue_style( 'mksystem', get_stylesheet_directory_uri() . '/inc/css/bootstrap.css' );
 
 }
+
+add_action( 'wp_enqueue_scripts', 'additional_custom_styles' );
