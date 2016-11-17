@@ -1,11 +1,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /prj_thicas/thicas/
+RewriteBase /jmaturrano/proyectos/web/prjthicas/thicas/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /prj_thicas/thicas/index.php [L]
+RewriteRule . /jmaturrano/proyectos/web/prjthicas/thicas/index.php [L]
 </IfModule>
 
 # END WordPress

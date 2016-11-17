@@ -159,7 +159,7 @@ function mksystem_customizer_register( $wp_customize ) {
   ));
   
   $wp_customize->add_control('nosotros_titulo2',array(
-    'label' => __('T�tulo 2','mksystem'),
+    'label' => __('Título 2','mksystem'),
     'section' => 'mksystem_nosotros',
     'setting' => 'nosotros_titulo2',
     'type'    => 'text'
@@ -171,7 +171,7 @@ function mksystem_customizer_register( $wp_customize ) {
   ));
   $wp_customize->add_control('nosotros_texto2',array(
 //    'label' => __('Texto 2','mksystem'),
-    'label' => __('Imagen 1' , 'mksystem'),
+    'label' => __('Texto 2' , 'mksystem'),
     'section' => 'mksystem_nosotros',
     'setting' => 'nosotros_texto2',
     'type'    => 'textarea'
@@ -193,7 +193,7 @@ function mksystem_customizer_register( $wp_customize ) {
   ));
   
   $wp_customize->add_control('nosotros_titulo3',array(
-    'label' => __('T�tulo 3','mksystem'),
+    'label' => __('Título 3','mksystem'),
     'section' => 'mksystem_nosotros',
     'setting' => 'nosotros_titulo3',
     'type'    => 'text'
@@ -242,7 +242,7 @@ function mksystem_customizer_register( $wp_customize ) {
   ));
   
   $wp_customize->add_control('video_titulo',array(
-    'label' => __('T�tulo del video','mksystem'),
+    'label' => __('Título del video','mksystem'),
     'section' => 'mksystem_video',
     'setting' => 'video_titulo',
     'type'    => 'text'
