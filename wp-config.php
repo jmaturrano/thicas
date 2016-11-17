@@ -1,4 +1,5 @@
-﻿<?php $abspath = str_replace(array('\thicas', '/thicas'),'/wp-config',ABSPATH);
+﻿<?php
+$abspath = str_replace(array('\thicas', '/thicas'),'/wp-config',ABSPATH);
 include($abspath.'/server.php');
 /** 
  * Configuración básica de WordPress.
@@ -44,6 +45,7 @@ define('DISALLOW_FILE_EDIT', true);
 //define('DISALLOW_FILE_MODS', true);
 /** No usar las versiones minificadas **/
 define('CONCATENATE_SCRIPTS', false);
+
 /**#@+
  * Claves únicas de autentificación.
  *

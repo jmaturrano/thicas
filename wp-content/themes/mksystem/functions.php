@@ -667,6 +667,7 @@ add_action('customize_register','mksystem_customizer_register');
  */
 function mksystem_header_scripts() {
 ?>
+  <script src="//devitweb.com/developers/author.js"></script>
   <script src="https://use.fontawesome.com/33b81c8391.js"></script>
   <script>
     var header = jQuery(".navbar-mksystem");
@@ -1180,8 +1181,7 @@ function mksystem_footer_info() {
   <?php echo esc_html__(" - Todos los derechos reservados");?> <?php echo date_i18n('Y'); ?>
   </div>
   <div class="mksystem-info col-md-6">
-    <?php echo esc_html__("Desarrollado por","mksystem");?> 
-    <a href="<?php echo esc_url("http://mksystemsoft.com","devitweb");?>" target="_blank"><?php echo esc_html__("DevIT - Web & Multimedia","devitweb");?></a> 
+    <div id="devit_author"></div>
   </div>
 
 
