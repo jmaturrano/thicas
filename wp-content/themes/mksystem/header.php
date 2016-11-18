@@ -53,17 +53,18 @@
             
 			<div class="container">
                                 <div class="gMenuBox">
-                                <?php mksystem_header_menu(); ?>
+                                    <?php mksystem_header_menu(); ?>
+                                    
                                 <div class="visible-xs">
-				<?php mksystem_header_menu2(); ?>
-                                    <button type="button" class="navbar-toggle bt" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-			    <span class="sr-only"><?php _e( 'Toggle navigation', 'mksystem' ); ?></span>
-			    <span class="icon-bar"></span>
-			    <span class="icon-bar"></span>
-			    <span class="icon-bar"></span>
-			  </button>
-                        </div>
-				
+                                    <?php mksystem_header_menu2(); ?>
+                                    <button type="button" class="navbar-toggle bt" data-toggle="collapse" data-target=".collapse-nav-menu">
+                                    <span class="sr-only"><?php _e( 'Toggle navigation', 'mksystem' ); ?></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                </div>	
 	</nav><!-- .site-navigation -->
 
 
