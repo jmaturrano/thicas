@@ -66,7 +66,7 @@
 
                         }else{$url= "#";}
                         ?>
-                   <a href="<?= $url;?>" class="btn btn-default  btn-animate-black" style="font-weight: bold;" ><span class="Glyphicons Halflings  glyphicon-map-marker"></span> Busca una tienda  </a>
+                   <a href="<?= $url;?>" class="btn btn-default  btn-animate-black" style="font-weight: bold;" ><i class="fa fa-check fa-lg"></i>Busca una tienda  </a>
                    <!--<a href="<?= $url;?>" class="btn btn-default btn_local-footer btn-animate-black" style="font-weight: bold;"><img class="youmover" src="<?= get_template_directory_child().'/inc/img/social/btn_local 13x17.png'; ?>" /> Busca una tienda </a>-->
                     </div>
                 </div>

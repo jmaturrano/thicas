@@ -97,49 +97,31 @@ Aqui empieza las modificaciones.
 
 
 .navbar.navbar-default.navbar-mksystem{
-
 	background: #000;
-
 }
 
 
 
 .navbar-mksystem .navbar-header {
-
 	background: #FFF;
-
 	width: 100%;
-
 	transition: all 500ms ease 0s;
-
     padding: 6px 0px 0px 0px;
-
 }
 
 
 
 .navbar-mksystem #logo a{
-
 	display: block;
-
 	margin: 0 auto;
-
 	width: 300px;
-
 }//fin
 
 .flex-caption{
-
 	display: none;
-
 }
-
-
-
  .navbar.navbar-default{
-
     border-bottom: 0px;
-
  }
 
 
@@ -166,6 +148,11 @@ Aqui empieza las modificaciones.
 
     background-color: #333333 !important;
 
+}
+/* para apegar el toggle*/
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
 }
 
 .cfa{
@@ -873,31 +860,7 @@ display: none !important;
     width: 435px;
 
 }
-
-
-
-/*para colocar al menu*/
-
-
-
-.gMenuBox {
-
-    height: 35px;
-
-    position: relative;
-
-}
-
-.gMarginTop13 {
-
-    margin-top: 13px;
-
-}
-
 /*icon*/
-
-
-
 .gLeft0 {
 
     left: 0px;
@@ -1273,5 +1236,27 @@ display: none !important;
     border: 0 !important;
     height: 6px;
 }
-
-
+/* MENU */
+.gFondoNegro {
+    background-color: #000;
+}
+.gMenuBox {
+    height: 34px;
+    position: relative;
+}
+.gMarginTop15 {
+    margin-top: 15px;
+}
+.gNavPrincipal {
+    background-color: #000;
+    border-radius: 0px;
+    display: none;
+    position: absolute;
+    right: 50px;
+    top: -1px;
+    width: 160px;
+}
+.navbar-toggle.bt{
+    padding: 3px 4px 2px 5px;
+    border-width: 0px;
+}
