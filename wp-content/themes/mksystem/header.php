@@ -29,7 +29,7 @@
 
 <div id="page" class="hfeed site ">
 
-	<nav class="navbar navbar-default navbar-mksystem" role="navigation">
+	<nav class="navbar navbar-default navbar-mksystem animate" role="navigation">
 			<div class="navbar-header ">
 			  
 
