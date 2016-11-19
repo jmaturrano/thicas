@@ -181,7 +181,7 @@
             
             <h4 class="favorito"> Favoritos de Thicas </h4>
             <hr class="gSeparator_barra gInlineBlock_barra gHeight3_barra gClaseTextoModelo">
-            <span class="favorito text-center">Encuentra tu prenda preferida aquí.</span>
+            <span class="favorito">Encuentra tu prenda preferida aquí.</span>
             <?php mksystem_section_categories_bloque3(); ?> 
         </div><!--.row-->
     </div><!--.container-->

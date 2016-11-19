@@ -36,11 +36,13 @@
             </div>   
             
              <!--<div class="entry-content col-md-9 maps-rigth" >-->
-                  <div class="gInlineBlock gMarginLeft4p gPositionRelative gBoxMapa" >
+                  <div class="gMarginLeft4p gPositionRelative gBoxMapa gInlineBlock maps" >
                  <?php the_content(); ?>
             </div>
         </div>    
     </div>
-
+    <div class="subline-title"></div>
+    <br>
+    
 
 </article><!-- #post-## -->

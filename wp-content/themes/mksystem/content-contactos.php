@@ -13,6 +13,9 @@
 
 	<div class="entry-content text-center">
 		<?php the_content(); ?>
+            <br>
+            <div class="subline-title"></div>
+            
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'dazzling' ),
