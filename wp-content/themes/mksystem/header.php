@@ -26,7 +26,7 @@
 
 <div id="page" class="hfeed site ">
 
-	<nav class="navbar navbar-default navbar-mksystem" role="navigation">
+	<nav class="navbar navbar-default navbar-mksystem animate" role="navigation">
 			<div class="navbar-header ">
 			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapse-nav-menu">
 			    <span class="sr-only"><?php _e( 'Toggle navigation', 'mksystem' ); ?></span>
