@@ -38,7 +38,7 @@ function mksystem_customizer_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_control( 'trabaja_nosotros' , array(
-            'label'    => __( 'Seleccione la pagina "Trabaja con nostros"', '' ),
+            'label'    => __( 'Seleccione la página "Trabaja con nosotros"', '' ),
             'section'  => 'mksystem_footer',
             'type'     => 'dropdown-pages'
     ) );
@@ -279,7 +279,7 @@ function mksystem_customizer_register( $wp_customize ) {
 
 
   $wp_customize->add_section('mksystem_slider_options', array(
-      'title' => 'Slider options',
+      'title' => 'Slider principal',
       'priority' => 31,
       'panel' => 'mksystem_main_options'
   ));
@@ -314,7 +314,7 @@ function mksystem_customizer_register( $wp_customize ) {
           'default' => 3
       ));
       $wp_customize->add_control('mksystem_slide_number', array(
-          'label' => 'Nusadsamero de items',
+          'label' => 'Número de items',
           'section' => 'mksystem_slider_options',
           'description' => 'Ingrese el numero de items en el slider',
           'type' => 'text',
@@ -325,8 +325,8 @@ function mksystem_customizer_register( $wp_customize ) {
   //****************** slider BLOQUE 2 //28
      */
     $wp_customize->add_section('mksystem_slider',array(
-            'title' => __('Slider 2 options', 'mksystem'),
-            'description'=> __('Tamaño de imagen recomendado: 1900x900', 'mksystem'),
+            'title' => __('Slider 2 home page', 'mksystem'),
+            'description'=> __('Tamaño de imagen recomendado: 435x435 px', 'mksystem'),
             'priority' => 100,
             'panel' => 'mksystem_main_options'
         )
@@ -388,8 +388,8 @@ function mksystem_customizer_register( $wp_customize ) {
         //****************** slider 3
      
     $wp_customize->add_section('mksystem_slider4',array(
-            'title' => __('Slider 3 options', 'mksystem'),
-            'description'=> __('Tamaño de imagen recomendado: 1900x900', 'mksystem'),
+            'title' => __('Slider 3 home page', 'mksystem'),
+            'description'=> __('Tamaño de imagen recomendado: 435x435 px', 'mksystem'),
             'priority' => 100,
             'panel' => 'mksystem_main_options'
         )
@@ -459,18 +459,6 @@ function mksystem_customizer_register( $wp_customize ) {
             'panel' => 'mksystem_main_options'
         )
     );
-  /* Para colocar numero de telefono */
-//  $wp_customize->add_setting('social_phone',array(
-//    'default' => __('123-45678','mksystem')
-// 
-//  ));
-//  $wp_customize->add_control('social_phone',array(
-//    'label' => __('Teléfono','mksystem'),
-//    'section' => 'mksystem_social',
-//    'setting' => 'social_phone',
-//    'type'    => 'text'
-//  ));
-   
   /* Colocar acceso de imagenes para : social*/
   $wp_customize->add_setting('social_facebook',array(
     'default' => __('http://facebook.com','mksystem')
@@ -594,25 +582,6 @@ function mksystem_customizer_register( $wp_customize ) {
   )));
     /* terminna */
 
-  
-  $wp_customize->add_section(
-        'mksystem_contacto',
-        array(
-            'title' => __('Página Contactos', 'mksystem'),
-            'description'=> __('Sus contactos', 'mksystem'),
-            'priority' => 100
-        )
-    );
-    
-      $wp_customize->add_setting('check_contactform',array(
-      'default' => true
-  ));
-  $wp_customize->add_control( 'check_contactform', array(
-       'settings' => 'check_contactform',
-       'section'   => 'mksystem_contacto',
-       'label'     => __('Ver Formulario contacto','mksystem'),
-       'type'      => 'checkbox'
-  ));
                     /* color de tema - para borrar cuztumer!! XD */
    $wp_customize->add_section('mksystem_color',array(
             'title' => __('Color', 'mksystem'),

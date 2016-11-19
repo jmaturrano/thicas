@@ -19,12 +19,48 @@
         <br>
         <h5 style="color: #000">Sígue nuestras redes sociales y descubre todo el detrás de escena de Thicas.</h5>
     	<div class="">
-            <a target="_blank" href="<?= get_theme_mod('social_facebook','');?>" ><img class="" src="<?= get_theme_mod('imagen_facebook',''); ?>"></a>
-            <a target="_blank" href="<?= get_theme_mod('social_twitter','');?>" ><img class="" src="<?= get_theme_mod('imagen_twitter',''); ?>"></a>
-            <a target="_blank" href="<?= get_theme_mod('social_pinterest','');?>" ><img class="" src="<?= get_theme_mod('imagen_pinterest',''); ?>"></a>
-            <a target="_blank" href="<?= get_theme_mod('social_youtube','');?>" ><img class="" src="<?= get_theme_mod('imagen_youtube',''); ?>"></a>
-            <a target="_blank" href="<?= get_theme_mod('social_vimeo','');?>" ><img class="" src="<?= get_theme_mod('imagen_vimeo',''); ?>"></a>
-            <a target="_blank" href="<?= get_theme_mod('social_linkedin','');?>" ><img class="" src="<?= get_theme_mod('imagen_linkedin',''); ?>"></a>
+            
+            <?php if(get_theme_mod('social_facebook','') != ''): ?>
+            <a href="<?= get_theme_mod('social_facebook','');?>" ><img class="" src="<?= get_theme_mod('imagen_facebook',''); ?>"></a>
+            <?php endif; ?>
+            <?php if(get_theme_mod('social_facebook','') == ''): ?>
+            <a href="javascript:void(0);" ><img class="" src="<?= get_theme_mod('imagen_facebook',''); ?>"></a>
+             <?php endif; ?>
+            
+            <?php if(get_theme_mod('social_twitter','') != ''): ?>
+            <a href="<?= get_theme_mod('social_twitter','');?>" ><img class="" src="<?= get_theme_mod('imagen_twitter',''); ?>"></a>
+             <?php endif; ?>
+            <?php if(get_theme_mod('social_twitter','') == ''): ?>
+            <a href="javascript:void(0);" ><img class="" src="<?= get_theme_mod('imagen_twitter',''); ?>"></a>
+             <?php endif; ?>
+            
+            <?php if(get_theme_mod('social_pinterest','') != ''): ?>
+            <a href="<?= get_theme_mod('social_pinterest','');?>" ><img class="" src="<?= get_theme_mod('imagen_pinterest',''); ?>"></a>
+             <?php endif; ?>
+             <?php if(get_theme_mod('social_pinterest','') == ''): ?>
+            <a href="javascript:void(0);" ><img class="" src="<?= get_theme_mod('imagen_pinterest',''); ?>"></a>
+             <?php endif; ?>
+           
+             <?php if(get_theme_mod('social_youtube','') != ''): ?>
+            <a href="<?= get_theme_mod('social_youtube','');?>" ><img class="" src="<?= get_theme_mod('imagen_youtube',''); ?>"></a>
+             <?php endif; ?>
+             <?php if(get_theme_mod('social_youtube','') == ''): ?>
+            <a href="javascript:void(0);" ><img class="" src="<?= get_theme_mod('imagen_youtube',''); ?>"></a>
+             <?php endif; ?>
+            
+            <?php if(get_theme_mod('social_vimeo','') != ''): ?>
+            <a href="<?= get_theme_mod('social_vimeo','');?>" ><img class="" src="<?= get_theme_mod('imagen_vimeo',''); ?>"></a>
+             <?php endif; ?>
+             <?php if(get_theme_mod('social_vimeo','') == ''): ?>
+            <a href="javascript:void(0);" ><img class="" src="<?= get_theme_mod('imagen_vimeo',''); ?>"></a>
+             <?php endif; ?>
+            
+                 <?php if(get_theme_mod('social_linkedin','') != ''): ?>
+            <a href="<?= get_theme_mod('social_linkedin','');?>" ><img class="" src="<?= get_theme_mod('imagen_linkedin',''); ?>"></a>
+             <?php endif; ?>
+             <?php if(get_theme_mod('social_linkedin','') == ''): ?>
+            <a href="javascript:void(0);" ><img class="" src="<?= get_theme_mod('imagen_linkedin',''); ?>"></a>
+             <?php endif; ?>
         </div>
     </div>  
 </div>
