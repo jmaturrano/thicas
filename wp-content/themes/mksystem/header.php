@@ -42,9 +42,11 @@
                                 <?php endif; // header image was removed ?>
 
                             <?php if( !get_header_image() ) : ?>
-                            <div >
-                               <span class="site-title"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-                            </div><!-- end of #logo -->
+                            <div>
+                                <h1 class="text-center">
+                                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                                </h1>
+                            </div>
                                     <?php $description = get_bloginfo( 'description', 'display' );
                                      if ( $description || is_customize_preview() ) : ?>
                                          <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
@@ -57,15 +59,15 @@
                                 <div class="gMenuBox">
                                     <?php mksystem_header_menu(); ?>
                                     
-                                <div class="visible-xs">
-                                    <?php mksystem_header_menu2(); ?>
-                                    <button type="button" class="navbar-toggle bt" data-toggle="collapse" data-target=".collapse-nav-menu">
-                                    <span class="sr-only"><?php _e( 'Toggle navigation', 'mksystem' ); ?></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    </button>
-                                </div>
+                                    <div class="visible-xs">
+                                        <?php mksystem_header_menu2(); ?>
+                                        <button type="button" class="navbar-toggle bt" data-toggle="collapse" data-target=".collapse-nav-menu">
+                                        <span class="sr-only"><?php _e( 'Toggle navigation', 'mksystem' ); ?></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        </button>
+                                    </div>
                                 </div>	
 	</nav><!-- .site-navigation -->
 
