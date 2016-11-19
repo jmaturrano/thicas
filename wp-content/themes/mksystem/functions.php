@@ -167,7 +167,7 @@ function mksystem_customizer_register( $wp_customize ) {
   ));
   
   $wp_customize->add_control('nosotros_titulo2',array(
-    'label' => __('T�tulo 2','mksystem'),
+    'label' => __('Título 2','mksystem'),
     'section' => 'mksystem_nosotros',
     'setting' => 'nosotros_titulo2',
     'type'    => 'text'
@@ -179,7 +179,7 @@ function mksystem_customizer_register( $wp_customize ) {
   ));
   $wp_customize->add_control('nosotros_texto2',array(
 //    'label' => __('Texto 2','mksystem'),
-    'label' => __('Imagen 1' , 'mksystem'),
+    'label' => __('Texto 2' , 'mksystem'),
     'section' => 'mksystem_nosotros',
     'setting' => 'nosotros_texto2',
     'type'    => 'textarea'
@@ -201,7 +201,7 @@ function mksystem_customizer_register( $wp_customize ) {
   ));
   
   $wp_customize->add_control('nosotros_titulo3',array(
-    'label' => __('T�tulo 3','mksystem'),
+    'label' => __('Título 3','mksystem'),
     'section' => 'mksystem_nosotros',
     'setting' => 'nosotros_titulo3',
     'type'    => 'text'
@@ -626,7 +626,7 @@ function mksystem_customizer_register( $wp_customize ) {
   ));
   $wp_customize->add_control(
     new WP_Customize_Color_Control( $wp_customize, 'color_mksystem_theme', array(
-    'label'        => __( 'Color del tema <style>#accordion-section-background_image,#accordion-section-colors,#accordion-section-header_image,#accordion-section-mksystem_color,#accordion-panel-dazzling_main_options,#accordion-section-dazzling_important_links, #accordion-section-setup, #accordion-section-general, #accordion-panel-banner_settings, #accordion-section-fp-social, #accordion-section-fp-action1, #accordion-section-fp-featured, #accordion-section-fp-about, #accordion-section-fp-action2, #accordion-section-fp-team, #accordion-section-fp-team,#customize-control-background_color, #widgets-right>div.wp-full-overlay-sidebar-content>a.button.button-primary.button-nimbus, #accordion-section-fp-news,#accordion-section-fp-contact, #accordion-section-blog-settings, #accordion-panel-widgets, #accordion-section-static_front_page{display:none !important;}</style>', 'mksystem' ),
+    'label'        => __( 'Color del tema <style>#accordion-section-background_image,#accordion-section-colors,#accordion-section-mksystem_color,#accordion-panel-dazzling_main_options,#accordion-section-dazzling_important_links, #accordion-section-setup, #accordion-section-general, #accordion-panel-banner_settings, #accordion-section-fp-social, #accordion-section-fp-action1, #accordion-section-fp-featured, #accordion-section-fp-about, #accordion-section-fp-action2, #accordion-section-fp-team, #accordion-section-fp-team,#customize-control-background_color, #widgets-right>div.wp-full-overlay-sidebar-content>a.button.button-primary.button-nimbus, #accordion-section-fp-news,#accordion-section-fp-contact, #accordion-section-blog-settings, #accordion-panel-widgets, #accordion-section-static_front_page{display:none !important;}</style>', 'mksystem' ),
     'section'    => 'mksystem_color',
     'settings'   => 'color_mksystem_theme',
   )));
@@ -683,7 +683,7 @@ function mksystem_header_styles() {
     }
     <?php endif; // header image was removed ?>
     .navbar-mksystem.navbar-fixed{
-      height: 115px;
+      height: 118px;
       position: fixed;
       width: 100%;
       z-index: 1000;

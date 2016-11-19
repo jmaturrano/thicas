@@ -34,10 +34,9 @@
                         <?php endif; ?>
                     </p>    
             </div>   
-            
-             <!--<div class="entry-content col-md-9 maps-rigth" >-->
-                  <div class="gMarginLeft4p gPositionRelative gBoxMapa gInlineBlock maps" >
-                 <?php the_content(); ?>
+            <div class="gMarginLeft4p gPositionRelative gBoxMapa gInlineBlock maps" >
+              <?php the_content(); ?>
+              <?= do_shortcode('[flexiblemap center="-12.061746, -77.019928" title="'.get_bloginfo( 'name' ).'" showinfo="true"  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." icon="'.get_template_directory_child().'/inc/img/social/marker-thicas.png" alt="ubicacion-thicas" width="100%" height="350" ]'); ?>
             </div>
         </div>    
     </div>
