@@ -6,6 +6,8 @@
  *
  * @package dazzling
  */
+
+// acarrasco
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
