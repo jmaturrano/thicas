@@ -688,6 +688,7 @@ function mksystem_header_styles() {
 ?>
   <style>
     <?php if( get_header_image() != '' ) : ?>
+    
     #loader-logo{ 
       background: transparent url("<?php header_image(); ?>") no-repeat scroll 50% 40% / 150px 55px;
       height: 100%;
@@ -696,6 +697,7 @@ function mksystem_header_styles() {
       z-index: 100000;
     }
     <?php endif; // header image was removed ?>
+   
     .navbar-mksystem.navbar-fixed{
       height: 118px;
       position: fixed;
@@ -709,14 +711,22 @@ function mksystem_header_styles() {
     .animate{
       transition: all 500ms ease 0s;
     }
+    .lineaFooter #menu-menu-pie-de-pagina li a {
+    border-bottom: 3px solid transparent;
+    color: white;
+    font-size: 17px;
+    padding-bottom: 0px;
+    display:inline-block;
+    text-decoration: none;
+    }
+    .lineaFooter #menu-menu-pie-de-pagina li a:hover  {
+    border-color: #d1d1d1;
+    color: #fff;    
+    }
   </style>
 <?php
 }
 add_action( 'wp_enqueue_scripts', 'mksystem_header_styles' );
-
-
-
-
 
 /**
  * Mk system slider
@@ -1081,8 +1091,8 @@ function mksystem_header_menu2() {
  */
  function mksystem_footer_menu() {
    wp_nav_menu(array(
-     'container'       => '',                              // remove nav container
-     'container_class' => 'footer-links clearfix',   // class of container (should you choose to use it)
+     'container'       => 'div',                              // remove nav container
+     'container_class' => 'footer-links clearfix lineaFooter',   // class of container (should you choose to use it)
      'menu'            => __( 'Footer Links', 'dazzling' ),   // nav name
      'menu_class'      => 'nav footer-nav clearfix',      // adding custom nav class
      'theme_location'  => 'footer-links',             // where it's located in the theme
@@ -1100,19 +1110,19 @@ function mksystem_secondary_menu_footer() {
   wp_nav_menu(array(
     'menu'              => 'secondary',
     'theme_location'    => 'secondary',
-    'menu_class'        => 'nav footer-nav clearfix',
+    'menu_class'        => 'nav footer-nav clearfix navbar-default',
     'depth'             => 2,
     'container'         => '',
     'container_class'   => ''
   ));
-  /**
+  
+} /* end header menu */
+/**
     *registrando menu secundario
     */
     register_nav_menus(array(
      'secundary' => __('Menu Pie de página', 'mksystem')
   ));
-} /* end header menu */
-
 
 
 /**
