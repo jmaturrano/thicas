@@ -27,31 +27,76 @@ function mksystem_customizer_register( $wp_customize ) {
 	*
 	*/
    $wp_customize->add_section('mksystem_footer',array(
-            'title' => __('Página Footer', 'mksystem'),
+            'title' => __('Botones Footer', 'mksystem'),
             'priority' => 100,
        
         )
     );
    /* pagina trabaja con nostros */
-    $wp_customize->add_setting( 'trabaja_nosotros' , array(
+    $wp_customize->add_setting( 'btn_trabaja_nosotros' , array(
             'default'           => ''
     ) );
 
-    $wp_customize->add_control( 'trabaja_nosotros' , array(
+    $wp_customize->add_control( 'btn_trabaja_nosotros' , array(
             'label'    => __( 'Seleccione la página "Trabaja con nosotros"', '' ),
             'section'  => 'mksystem_footer',
             'type'     => 'dropdown-pages'
     ) );
+    /* colocar titulo del boton*/
+     $wp_customize->add_setting('btn_trabaja_titulo1',array(
+    'default' => __('','mksystem')
+    ));
+
+    $wp_customize->add_control('btn_trabaja_titulo1',array(
+    'label' => __('Editar título "Trabaja con nosotros"','mksystem'),
+    'section' => 'mksystem_footer',
+    'setting' => 'btn_trabaja_titulo1',
+    'type'    => 'text'
+    ));
+    /* nombre del btn*/
+    $wp_customize->add_setting('btn_trabaja_text1',array(
+    'default' => __('','mksystem')
+    ));
+
+    $wp_customize->add_control('btn_trabaja_text1',array(
+    'label' => __('Editar boton "Trabaja con nosotros"','mksystem'),
+    'section' => 'mksystem_footer',
+    'setting' => 'btn_trabaja_titulo1',
+    'type'    => 'text'
+    ));
+    
     /* pagina ubicanos */
-     $wp_customize->add_setting( 'ubicanos' , array(
+     $wp_customize->add_setting( 'btn_ubicanos' , array(
             'default'           => ''
     ) );
 
-    $wp_customize->add_control( 'ubicanos' , array(
+    $wp_customize->add_control( 'btn_ubicanos' , array(
             'label'    => __( 'Seleccione la pagina "Quieres comprar"', '' ),
             'section'  => 'mksystem_footer',
             'type'     => 'dropdown-pages'
     ) );
+    /* titulo del boton */
+     $wp_customize->add_setting('btn_trabaja_titulo2',array(
+    'default' => __('','mksystem')
+    ));
+
+    $wp_customize->add_control('btn_trabaja_titulo2',array(
+    'label' => __('Editar Título "Trabaja con nosotros"','mksystem'),
+    'section' => 'mksystem_footer',
+    'setting' => 'btn_trabaja_titulo2',
+    'type'    => 'text'
+    ));
+    /* nombre del btn*/
+     $wp_customize->add_setting('btn_ubicanos_text2',array(
+    'default' => __('','mksystem')
+    ));
+
+    $wp_customize->add_control('btn_ubicanos_text2',array(
+    'label' => __('Editar boton " Ubicanos"','mksystem'),
+    'section' => 'mksystem_footer',
+    'setting' => 'btn_ubicanos_titulo2',
+    'type'    => 'text'
+    ));
     /*
      * LOCAL
      *       */
