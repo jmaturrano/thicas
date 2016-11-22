@@ -86,19 +86,20 @@
                 ?>
                  <!--<a href="<?= $url;?>" class="btn btn-default " ><span class="icon-heart"></span> Postula Aqui </a>--> 
                  <!--Redireccional con barra box ;-->
-                 <!--<a href="<?= $url;?>" class="btn btn-default btn-animate-black" style="font-weight: bold;" ><span class="glyphicon glyphicon-cloud">♥</span> <?php // echo get_theme_mod('btn_trabaja_text1'); ?> </a>-->
+                 <a href="<?= $url;?>" class="btn btn-default btn-animate-black" style="font-weight: bold;" ><span class="icon-heart"></span><?php echo get_theme_mod('btn_trabaja_text1'); ?> </a>
+                
                  <!--enviar directo a la pagina trabaja con nosotros-->
                  <!--<a href="<?php // echo esc_url( home_url( '/' ) ); ?>" ><span class="glyphicon glyphicon-cloud">♥</span> Postula Aqui </a>-->
                  
-                <a href="<?= $url;?>" class="btn btn-default btn-animate-black" style="font-weight: bold;" >
-                <img class="youmover btn_heart-footer" src="<?= get_template_directory_child().'/inc/img/social/btn_heart 17x15.png'; ?>" /> <?php echo get_theme_mod('btn_trabaja_text1'); ?>
-                </a>
+<!--                <a href="<?= $url;?>" class="btn btn-default btn-animate-black" style="font-weight: bold;" >
+                <img class="youmover btn_heart-footer" src="<?= get_template_directory_child().'/inc/img/social/btn_heart 17x15.png'; ?>" /> <?php // echo get_theme_mod('btn_trabaja_text1'); ?>
+                </a>-->
             </div>
                     <div class="col-md-3 col-sm-3 col-xs-4 text-center ">
                         <h5 style="font-weight: bold;"> <?php echo get_theme_mod('btn_trabaja_titulo2'); ?> </h5>
                         <hr class="gSeparator gSeparatorTrans">
                         <?php 
-                        $aboutusquery2 = new wp_query('page_id='.get_theme_mod('ubicanos',true)); 
+                        $aboutusquery2 = new wp_query('page_id='.get_theme_mod('btn_ubicanos',true)); 
                          if( $aboutusquery2->have_posts() ) {  
                          //while( $aboutusquery2->have_posts() ) {
                          $url=$aboutusquery2->post->guid;
@@ -106,10 +107,11 @@
 
                         }else{$url= "#";}
                         ?>
-                   <!--<a href="<?= $url;?>" class="btn btn-default  btn-animate-black" style="font-weight: bold;" ><i class="fa fa-check fa-lg"></i><?php // echo get_theme_mod('btn_ubicanos_text2'); ?>  </a>-->
-                   <a href="<?= $url;?>" class="btn btn-default btn_local-footer btn-animate-black" style="font-weight: bold;">
-                       <img class="youmover" src="<?= get_template_directory_child().'/inc/img/social/btn_local 13x17.png'; ?>" /> <?php echo get_theme_mod('btn_ubicanos_text2'); ?> 
-                   </a>
+                   <a href="<?= $url;?>" class="btn btn-default  btn-animate-black" style="font-weight: bold;" ><i class="icon-location-outline" ></i>
+<?php echo get_theme_mod('btn_ubicanos_text2'); ?>  </a>
+                   <!--<a href="<?= $url;?>" class="btn btn-default btn_local-footer btn-animate-black" style="font-weight: bold;">-->
+<!--                       <img class="youmover " src="<?= get_template_directory_child().'/inc/img/social/btn_local.png'; ?>" /> <?php // echo get_theme_mod('btn_ubicanos_text2'); ?> -->
+                   <!--</a>-->
                     </div>
                 </div>
             <div>

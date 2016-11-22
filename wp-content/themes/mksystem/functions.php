@@ -724,6 +724,47 @@ function mksystem_header_styles() {
     border-color: #d1d1d1;
     color: #fff;    
     }
+    /*iconos */
+@font-face {
+  font-family: 'mksystem';
+  src:  url('fonts/mksystem.eot?2rku0w');
+  src:  url('fonts/mksystem.eot?2rku0w#iefix') format('embedded-opentype'),
+    url('fonts/mksystem.ttf?2rku0w') format('truetype'),
+    url('fonts/mksystem.woff?2rku0w') format('woff'),
+    url('fonts/mksystem.svg?2rku0w#mksystem') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'mksystem' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-location:before {
+  content: "\e900";
+}
+.icon-heart:before {
+  content: "\2764";
+}
+.icon-location-outline:before {
+  content: "\2763";
+}
+.icon-heart-outline:before {
+  content: "\e902";
+}
+
+
   </style>
 <?php
 }

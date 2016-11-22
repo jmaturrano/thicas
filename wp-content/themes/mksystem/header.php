@@ -13,9 +13,7 @@
     <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<meta charset="UTF-8"> 
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <?php wp_head(); ?>
 
@@ -30,7 +28,8 @@
 <div id="page" class="hfeed site ">
 
 	<nav class="navbar navbar-default navbar-mksystem animate" role="navigation">
-			<div class="navbar-header ">
+        
+			<div class="navbar-header">
 			  
 
 				<?php if( get_header_image() != '' ) : ?>
