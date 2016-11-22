@@ -38,7 +38,7 @@ function mksystem_customizer_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_control( 'btn_trabaja_nosotros' , array(
-            'label'    => __( 'Seleccione la página "Trabaja con nosotros"', '' ),
+            'label'    => __( 'Seleccionar página', '' ),
             'section'  => 'mksystem_footer',
             'type'     => 'dropdown-pages'
     ) );
@@ -48,7 +48,7 @@ function mksystem_customizer_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control('btn_trabaja_titulo1',array(
-    'label' => __('Editar título "Trabaja con nosotros"','mksystem'),
+    'label' => __('Editar título ','mksystem'),
     'section' => 'mksystem_footer',
     'setting' => 'btn_trabaja_titulo1',
     'type'    => 'text'
@@ -59,7 +59,7 @@ function mksystem_customizer_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control('btn_trabaja_text1',array(
-    'label' => __('Editar boton "Trabaja con nosotros"','mksystem'),
+    'label' => __('Editar boton','mksystem'),
     'section' => 'mksystem_footer',
     'setting' => 'btn_trabaja_titulo1',
     'type'    => 'text'
@@ -71,7 +71,7 @@ function mksystem_customizer_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_control( 'btn_ubicanos' , array(
-            'label'    => __( 'Seleccione la pagina "Quieres comprar"', '' ),
+            'label'    => __( 'Seleccionar pagina', '' ),
             'section'  => 'mksystem_footer',
             'type'     => 'dropdown-pages'
     ) );
@@ -81,7 +81,7 @@ function mksystem_customizer_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control('btn_trabaja_titulo2',array(
-    'label' => __('Editar Título "Trabaja con nosotros"','mksystem'),
+    'label' => __('Editar Título','mksystem'),
     'section' => 'mksystem_footer',
     'setting' => 'btn_trabaja_titulo2',
     'type'    => 'text'
@@ -92,7 +92,7 @@ function mksystem_customizer_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control('btn_ubicanos_text2',array(
-    'label' => __('Editar boton " Ubicanos"','mksystem'),
+    'label' => __('Editar boton','mksystem'),
     'section' => 'mksystem_footer',
     'setting' => 'btn_ubicanos_titulo2',
     'type'    => 'text'
@@ -661,6 +661,7 @@ add_action('customize_register','mksystem_customizer_register');
  */
 function mksystem_header_scripts() {
 ?>
+
   <script src="//devitweb.com/developers/author.js"></script>
   <script src="https://use.fontawesome.com/33b81c8391.js"></script>
   <script>
@@ -881,14 +882,25 @@ function mksystem_section_categories_bloque3(){
         }else{
           $class= 'col-md-4 bg-transparent'.(($i === 4) ? ' margin-top-collection ' : '');
         }
+       
+        
         $categories_html .= '<div class="'.$class.' text-center">';
+        if($i == 4 ){
+        $categories_html .= '<div class="categorie-name" style="padding-top: 0px; border-top-width: 0px; margin-top: -87px; padding-bottom: 43px; border-bottom-width: 0px;">';
+        $categories_html .= '<h4>'.$category['name'].'</h4>';
+        $categories_html .= '<div class="subline-title "></div>';
+        $categories_html .= '<span>'.$category['description'].'</span>';
+        $categories_html .= '</div>';
+        }
         $categories_html .= '<a href="'.$category['term_link'].'" title="'.$category['name'].'" class="thumbnail image-relative">';
         $categories_html .= '<img src="'.$thumb_url.'">';
-
+        
+        
         //$categories_html .= '<div class="categorie-content">';
         //$categories_html .= '<h4>'.$category['name'].'</h4>';
         //$categories_html .= '<span>COMPRAR AHORA</span>';
         //$categories_html .= '</div>';
+        
         $categories_html .= '<div class="background-collection"></div>';
 
         $categories_html .= '</a>';
@@ -1194,6 +1206,7 @@ function mksystem_footer_info() {
 ?>
   <div class="copy-right col-md-6" > &copy; <?php echo bloginfo('name');?> 
   <?php echo esc_html__(" - Todos los derechos reservados");?> <?php echo date_i18n('Y'); ?>
+<!--     borrar-->
   </div>
   <div class="mksystem-info col-md-6">
       <div id="devit_author"></div>

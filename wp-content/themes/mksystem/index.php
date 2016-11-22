@@ -179,9 +179,12 @@
     <div class="container2">
         <div class="row2">
             
-            <h4 class="favorito"> Favoritos de Thicas </h4>
-            <hr class="gSeparator_barra gInlineBlock_barra gHeight3_barra gClaseTextoModelo">
-            <span class="favorito">Encuentra tu prenda preferida aquí.</span>
+<!--            <h4 class="favorito"> Favoritos de Thicas </h4>
+            <hr class="gSeparator_barra gInlineBlock_barra gHeight3_barra gClaseTextoModelo">-->
+<!--            <span class="favorito">
+
+
+</span>-->
             <?php mksystem_section_categories_bloque3(); ?> 
         </div><!--.row-->
     </div><!--.container-->

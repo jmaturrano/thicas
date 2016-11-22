@@ -1308,22 +1308,6 @@ a{
 .navbar-mksystem.navbar-fixed{
         position: relative;
 }
-
-/* darle estilo al footer evento-hover*/
-
-/*.lineaFooter li a {
-    border-bottom: 3px solid transparent;
-    color: white;
-    font-size: 17px;
-    padding-bottom: 0px;
-    display:inline-block;
-    text-decoration: none;
+.posicioncategory{
+    padding-top: 0px; border-top-width: 0px; margin-top: -87px; padding-bottom: 14px; border-bottom-width: 0px;    
 }
-.lineaFooter li a:hover {
-    border-color: #d1d1d1;
-    color: #fff;
-}
-.lineaFooter li {
-    margin-bottom: 10px;
-    width: 30%;
-}*/
