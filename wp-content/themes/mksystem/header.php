@@ -31,7 +31,6 @@
         
 			<div class="navbar-header">
 			  
-
 				<?php if( get_header_image() != '' ) : ?>
                             <div id="logo" >
                                 <a class="text-center" href="<?php echo esc_url( home_url( '/' ) ); ?>">

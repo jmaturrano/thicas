@@ -91,5 +91,7 @@
            <?php endif; ?>
         </div>
     </div>
+    
 
 </article><!-- #post-## -->
+<div class="subline-title hidden-xs"></div>

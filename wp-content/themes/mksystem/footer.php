@@ -14,8 +14,8 @@
 </div><!-- close .site-content -->
 
 <div class="">
-    <div class="footer-content text-center">
-        <div class="subline-title"></div>
+    <div class="footer-content text-center">   
+        <div class="subline-title visible-xs"></div>
         <br>
         <h5 style="color: #000">Sígue nuestras redes sociales y descubre todo el detrás de escena de Thicas.</h5>
     	<div class="">

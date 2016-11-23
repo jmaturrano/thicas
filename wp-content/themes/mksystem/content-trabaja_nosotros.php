@@ -15,7 +15,7 @@
 		<?php the_content(); ?>
 	
         <br>
-        <div class="subline-title"></div>
+        <div class="subline-title hidden-xs"></div>
         
    
 </article><!-- #post-## -->

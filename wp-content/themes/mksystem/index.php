@@ -348,12 +348,12 @@
         
                  </div>
             </div>
-            
+           
         </div><!--.row-->
           
     </div><!--.container-->
             
 
         
-
-<?php get_footer(); ?>
+        <div class="subline-title hidden-xs"></div>
+ <?php get_footer(); ?>

@@ -14,7 +14,8 @@
 	<div class="entry-content text-center">
 		<?php the_content(); ?>
             <br>
-            <div class="subline-title"></div>
+           <div class="subline-title hidden-xs"></div>
+    <br>
             
 		<?php
 			wp_link_pages( array(
