@@ -1253,7 +1253,7 @@ display: none !important;
     padding: 0;
    
 }
-.nav > li {
+.nav.listapadding > li {
     padding: 10px 15px
 }
 
