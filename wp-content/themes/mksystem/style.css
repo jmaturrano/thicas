@@ -1248,6 +1248,15 @@ display: none !important;
     border-width: 0px;
 }
 
+.nav.border > li > a {
+    
+    padding: 0;
+   
+}
+.nav > li {
+    padding: 10px 15px
+}
+
 /* MENU */
 .gFondoNegro {
     background-color: #000;
@@ -1312,4 +1321,9 @@ a{
     padding-top: 0px; border-top-width: 0px; margin-top: -87px; padding-bottom: 14px; border-bottom-width: 0px;    
 }
 
+.nav.border > li > a {
+    display: block;
+    padding: 7px 0;
+    position: relative;
+}
 /* Full iconos*/
