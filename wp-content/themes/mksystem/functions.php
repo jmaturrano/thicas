@@ -724,6 +724,11 @@ function mksystem_header_styles() {
     border-color: #d1d1d1;
     color: #fff;    
     }
+    
+    .magytop-header {
+    top: 0px; margin-top: 0px;
+    }
+
     /*iconos */
 @font-face {
   font-family: 'mksystem';
