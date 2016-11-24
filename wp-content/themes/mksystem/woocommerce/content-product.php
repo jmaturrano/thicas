@@ -70,3 +70,4 @@ global $product;
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
 </li>
+       

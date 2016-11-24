@@ -127,5 +127,6 @@ get_header( 'shop' );
 </div>
 
 
-
+        <br>
+        <div class="subline-title hidden-xs"></div>
 <?php get_footer( 'shop' ); ?>
