@@ -3,6 +3,7 @@
  * mksystem functions and definitions
  *
  * @package mksystem
+
  */
 
 
@@ -1192,7 +1193,7 @@ function mksystem_categories_list_footer(){
   $category_products = mksystem_product_categories('catalog');
   if(count($category_products) > 0){
     $items = 0;
-    $categories_html .= '<li class="nav footer-nav clearfix">';
+    $categories_html .= '<li class="nav footer-nav clearfix col-md-4 text-center">';
     foreach ($category_products as $category) {
       if($items <= 2){
            $categories_html .= '<ul class="menu-item"><a href="'.$category['term_link'].'">'.$category['name'].'</a></ul>';

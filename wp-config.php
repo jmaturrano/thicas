@@ -29,7 +29,7 @@ define('DB_CHARSET', 'utf8mb4');
 /** Cotejamiento de la base de datos. No lo modifiques si tienes dudas. */
 define('DB_COLLATE', '');
 /** Lenguaje de wordpress **/
-define('WPLANG', 'es_PE');
+define('WPLANG', 'es_Es');
 /** Revisiones de POSTS **/
 define('WP_POST_REVISIONS', 5);
 /** Auto guardado de POSTS **/

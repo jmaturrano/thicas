@@ -31,10 +31,10 @@ get_header( 'shop' );
 
 		<?php endif; ?>
 
-<div class="row col-me-12 text-center">
+<div class="row col-me-12">
 
 
-		<div class="container-subcategory col-md-4">
+		<div class="container-subcategory">
 			<div>
 				<?php mksystem_categories_list_footer();  ?>
 			</div>
