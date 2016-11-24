@@ -19,13 +19,20 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
+    
 wc_print_notices();
-
+            
 do_action( 'woocommerce_before_cart' ); ?>
 
-<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+    <?php if ( apply_filters( 'woocommerce_the_title', true ) ) : ?>
 
+			<h1 class="page-title text-center"><?php the_title(); ?></h1>
+
+		<?php endif; ?>
+    
+
+<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+        
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
 <table class="shop_table shop_table_responsive cart" cellspacing="0">
@@ -162,5 +169,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<?php do_action( 'woocommerce_cart_collaterals' ); ?>
 
 </div>
-
+                        
+    <br>
+    <div class="subline-title"></div>
 <?php do_action( 'woocommerce_after_cart' ); ?>
