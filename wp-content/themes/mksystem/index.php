@@ -86,7 +86,7 @@
                                     </div>
                                 </div>-->
                                 <?php if(get_theme_mod('slider_mksystem_1','')!=''){ ?>
-                                    <a href="<?php echo esc_url( home_url( '/product-category/catalogo/prendas' ) ); ?>">
+                                    <a href="<?php echo esc_url( home_url( '/accesorios/catalogo/prendas' ) ); ?>">
                                         <img src="<?php echo get_theme_mod('slider_mksystem_1'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                     </a>
                                 <?php } else { ?>
@@ -101,7 +101,7 @@
                                       <p>&nbsp;</p>
                                     </div>
                                 </div>-->
-                                <a href="<?php echo esc_url( home_url( '/product-category/catalogo/prendas' ) ); ?>">
+                                <a href="<?php echo esc_url( home_url( '/accesorios/catalogo/prendas' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_2'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
                             </div>
@@ -114,7 +114,7 @@
                                       <p>&nbsp;</p>
                                     </div>
                                 </div>-->
-                                <a href="<?php echo esc_url( home_url( '/product-category/catalogo/prendas' ) ); ?>">
+                                <a href="<?php echo esc_url( home_url( '/accesorios/catalogo/prendas' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_3'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
                             </div>
@@ -127,7 +127,7 @@
                                       <p>&nbsp;</p>
                                     </div>
                                 </div>-->
-                                <a href="<?php echo esc_url( home_url( '/product-category/catalogo/prendas' ) ); ?>">
+                                <a href="<?php echo esc_url( home_url( '/accesorios/catalogo/prendas' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_4'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
                             </div>
@@ -140,7 +140,7 @@
                                       <p>&nbsp;</p>
                                     </div>
                                 </div>-->
-                                <a href="<?php echo esc_url( home_url( '/product-category/catalogo/prendas' ) ); ?>">
+                                <a href="<?php echo esc_url( home_url( '/accesorios/catalogo/prendas' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_5'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
                             </div>
@@ -153,7 +153,7 @@
                                       <p>&nbsp;</p>
                                     </div>
                                 </div>-->
-                                <a href="<?php echo esc_url( home_url( '/product-category/catalogo/prendas' ) ); ?>">
+                                <a href="<?php echo esc_url( home_url( '/accesorios/catalogo/prendas' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_6'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
                             </div>

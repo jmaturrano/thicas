@@ -62,7 +62,7 @@ add_action('woocommerce_before_main_content', 'dazzling_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'dazzling_wrapper_end', 10);
 
 function dazzling_wrapper_start() {
-  echo '<div id="primary" class="content-area col-sm-12 col-md-8 ">';
+  echo '<div id="primary" class="content-area col-sm-12 col-md-12 ">';
   echo '<main id="main" class="site-main" role="main">';
 }
 

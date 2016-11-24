@@ -19,6 +19,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 get_header( 'shop' ); ?>
+		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+
+			<h1 class="page-title text-center"><?php woocommerce_page_title(); ?></h1>
+
+		<?php endif; ?>
+
+            <div class="row col-me-12">
+
+
+		<div class="container-subcategory">
+			<div>
+				<?php mksystem_categories_list_footer();  ?>
+			</div>
+		</div>
+                 
+        
+        
+	<div class="col-md-8 text-center">
+
+            
 
 	<?php
 		/**
@@ -53,5 +73,10 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_sidebar' );
 	?>
-
+        </div>
+    </div>  
+                        
+    <br>
+    <div class="subline-title"></div>
 <?php get_footer( 'shop' ); ?>
+            
