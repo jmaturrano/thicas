@@ -160,12 +160,20 @@ function mksystem_customizer_register( $wp_customize ) {
     'setting' => 'local_horario',
     'type'    => 'text'
   ));
-
+    
+     $wp_customize->add_setting('local_dirrecion',array(
+    'default' => __('','mksystem')
+  ));
+    $wp_customize->add_control('local_dirrecion',array(      
+    'label' => __('Direccion de la tienda','mksystem'),
+    'section' => 'mksystem_local',
+    'setting' => 'local_dirrecion',
+    'type'    => 'text'
+  ));
      $wp_customize->add_setting('local_description',array(
     'default' => __('','mksystem')
   ));
-    $wp_customize->add_control('local_description',array(
-     'label' => __('Editor del Mapa','mksystem'),    
+    $wp_customize->add_control('local_description',array(    
     'label' => __('Descripción de la tienda','mksystem'),
     'section' => 'mksystem_local',
     'setting' => 'local_description',

@@ -36,7 +36,7 @@
             </div>   
             <div class="gMarginLeft4p gPositionRelative gBoxMapa gInlineBlock maps" >
               <?php the_content(); ?>
-              <?= do_shortcode('[flexiblemap center="-12.061746, -77.019928" title="'.get_bloginfo( 'name' ).'" showinfo="true"  description="'.get_theme_mod('local_description','').'" icon="'.get_theme_mod('local_marker','').'" alt="ubicacion-thicas" width="100%" height="350" ]'); ?>
+              <?= do_shortcode('[flexiblemap center="'.get_theme_mod('local_dirrecion','').'" title="'.get_bloginfo( 'name' ).'" showinfo="true"  description="'.get_theme_mod('local_description','').'" icon="'.get_theme_mod('local_marker','').'" alt="ubicacion-thicas" width="100%" height="350" ]'); ?>
             </div>
         </div>    
     </div>
