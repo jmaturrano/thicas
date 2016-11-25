@@ -2921,7 +2921,7 @@ msgstr "Los widgets son secciones independientes de contenido que pueden ser col
 #. translators: %s: header width in pixels
 #: wp-includes/customize/class-wp-customize-header-image-control.php:178
 msgid "While you can crop images to your liking after clicking <strong>Add new image</strong>, your theme recommends a header width of %s pixels."
-msgstr "Aunque puedes recortar imágenes a tu gusto tras hacer clic en <strong>Añadir nueva imagen</strong>, tu tema recomienda una cabecera de <strong>%s</strong> pixels de ancho. "
+msgstr "Aunque puedes recortar imágenes a tu gusto tras hacer clic en <strong>Añadir nueva imagen</strong>, tu tema recomienda una cabecera de <strong>%</strong> pixels de ancho. "
 
 #. translators: %s: header height in pixels
 #: wp-includes/customize/class-wp-customize-header-image-control.php:183

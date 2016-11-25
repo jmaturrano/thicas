@@ -633,6 +633,7 @@ function mksystem_customizer_register( $wp_customize ) {
     'settings' => 'imagen_vimeo'
   )));
     /* terminna */
+  $wp_customize->remove_panel('header_image');
   
   $wp_customize->add_setting('social_linkedin',array(
     'default' => __('http://linkedin.com','mksystem')
@@ -677,7 +678,16 @@ function mksystem_customizer_register( $wp_customize ) {
 
 add_action('customize_register','mksystem_customizer_register');
 
-
+function devit_custom_header_setup() {
+  add_theme_support( 'custom-header', array(
+    'default-image'          => '',
+    'default-text-color'     => '000000',
+    'width'                  => 900,
+    'height'                 => 300,
+    'flex-height'            => true
+  ) );
+}
+add_action( 'after_setup_theme', 'devit_custom_header_setup' );
 
 
 
