@@ -160,7 +160,26 @@ function mksystem_customizer_register( $wp_customize ) {
     'setting' => 'local_horario',
     'type'    => 'text'
   ));
+
+     $wp_customize->add_setting('local_description',array(
+    'default' => __('','mksystem')
+  ));
+    $wp_customize->add_control('local_description',array(
+     'label' => __('Editor del Mapa','mksystem'),    
+    'label' => __('Descripción de la tienda','mksystem'),
+    'section' => 'mksystem_local',
+    'setting' => 'local_description',
+    'type'    => 'text'
+  ));
     
+  $wp_customize->add_setting('local_marker',array(
+    'default' => ''
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'local_marker' , array(
+    'label' => __('Icon - se recomienda un tamaño de 35x45' , 'mksystem'),
+    'section' => 'mksystem_local',
+    'settings' => 'local_marker'
+  )));  
 /*
   *
 

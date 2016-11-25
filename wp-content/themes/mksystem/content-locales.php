@@ -32,15 +32,15 @@
                         <?php if(get_theme_mod('local_horario','') != '') :?>
                         <span class="">Horario: <?= get_theme_mod('local_horario'); ?> </span>
                         <?php endif; ?>
-                    </p>    
+                    </p>   
             </div>   
             <div class="gMarginLeft4p gPositionRelative gBoxMapa gInlineBlock maps" >
               <?php the_content(); ?>
-              <?= do_shortcode('[flexiblemap center="-12.061746, -77.019928" title="'.get_bloginfo( 'name' ).'" showinfo="true"  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." icon="'.get_template_directory_child().'/inc/img/social/marker-thicas.png" alt="ubicacion-thicas" width="100%" height="350" ]'); ?>
+              <?= do_shortcode('[flexiblemap center="-12.061746, -77.019928" title="'.get_bloginfo( 'name' ).'" showinfo="true"  description="'.get_theme_mod('local_description','').'" icon="'.get_theme_mod('local_marker','').'" alt="ubicacion-thicas" width="100%" height="350" ]'); ?>
             </div>
         </div>    
     </div>
-     
+      <!--.get_template_directory_child().'/inc/img/social/marker-thicas.png-->
     <div class="subline-title hidden-xs"></div>
     <br>
     
