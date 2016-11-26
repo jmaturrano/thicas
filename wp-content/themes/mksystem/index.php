@@ -8,13 +8,15 @@
 ?>
 
 
+    
 <div class="top-section">
         <?php mksystem_featured_slider(); ?>
 </div>
-<div id="content" class="site-content container">
 
-    <div class="container main-content-area"><?php
-
+<div id="content" class="site-conten" style=" bgcolor:'#FFFFFF'; scroll:'no';">
+    <div class="container main-content-area">
+        
+        <?php
         global $post;
         if( get_post_meta($post->ID, 'site_layout', true) ){
                 $layout_class = get_post_meta($post->ID, 'site_layout', true);
@@ -49,7 +51,7 @@
     <div class="container">
         <div class="row">
             <?php mksystem_section_categories_bloque2(); ?>
-                    <div class="entry-content col-md-6">
+            <div class="entry-content col-md-6" style="float: center; ">
                        <div data-ride="carousel" class="carousel slide carousel-fade" id="slideshow2">
                         <!-- Indicators -->
                         <div class="carousel-indicators-block">
@@ -86,7 +88,7 @@
                                     </div>
                                 </div>-->
                                 <?php if(get_theme_mod('slider_mksystem_1','')!=''){ ?>
-                                    <a href="<?php echo esc_url( home_url( '/accesorios/catalogo/prendas' ) ); ?>">
+                                    <a href="<?php echo esc_url( home_url( 'colecciones/catalogo/prendas/' ) ); ?>">
                                         <img src="<?php echo get_theme_mod('slider_mksystem_1'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                     </a>
                                 <?php } else { ?>
@@ -101,7 +103,7 @@
                                       <p>&nbsp;</p>
                                     </div>
                                 </div>-->
-                                <a href="<?php echo esc_url( home_url( '/accesorios/catalogo/prendas' ) ); ?>">
+                                <a href="<?php echo esc_url( home_url( 'colecciones/catalogo/prendas/' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_2'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
                             </div>
@@ -114,7 +116,7 @@
                                       <p>&nbsp;</p>
                                     </div>
                                 </div>-->
-                                <a href="<?php echo esc_url( home_url( '/accesorios/catalogo/prendas' ) ); ?>">
+                                <a href="<?php echo esc_url( home_url( 'colecciones/catalogo/prendas/' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_3'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
                             </div>
@@ -127,7 +129,7 @@
                                       <p>&nbsp;</p>
                                     </div>
                                 </div>-->
-                                <a href="<?php echo esc_url( home_url( '/accesorios/catalogo/prendas' ) ); ?>">
+                                <a href="<?php echo esc_url( home_url( 'colecciones/catalogo/prendas/' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_4'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
                             </div>
@@ -140,7 +142,7 @@
                                       <p>&nbsp;</p>
                                     </div>
                                 </div>-->
-                                <a href="<?php echo esc_url( home_url( '/accesorios/catalogo/prendas' ) ); ?>">
+                                <a href="<?php echo esc_url( home_url( 'colecciones/catalogo/prendas/' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_5'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
                             </div>
@@ -153,7 +155,7 @@
                                       <p>&nbsp;</p>
                                     </div>
                                 </div>-->
-                                <a href="<?php echo esc_url( home_url( '/accesorios/catalogo/prendas' ) ); ?>">
+                                <a href="<?php echo esc_url( home_url( 'colecciones/catalogo/prendas/' ) ); ?>">
                                     <img src="<?php echo get_theme_mod('slider_mksystem_6'); ?>" alt="<?php bloginfo( 'name' ); ?>"/>
                                 </a>
                             </div>
@@ -174,7 +176,7 @@
                 </div><!--.carousel.slide-->
         </div><!--.row-->
     </div><!--.container-->
-</div>
+
 <div>
     <div class="container2">
         <div class="row2">
@@ -199,7 +201,7 @@
             
             <!--video colocado--> 
             <?php if(get_theme_mod('video','') != ''): ?>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-md-6 col-sm-6 col-xs-12 text-left">
                         
                         <h1 style="color: black; font-family: Advent Pro;"><?= get_theme_mod('video_titulo','') ;?></h1>
                         <!--<hr class="gSeparator gSeparatorTrans" style="display: none;">-->
@@ -208,7 +210,7 @@
                         </div>
                         <hr class="gSeparator gSeparatorTrans">
                         <div class="text-video-subfooter">
-                            <h4 style="color: black"> <?= get_theme_mod('video_texto',''); ?></h4>
+                            <h4 style="color: black" class="text-left"> <?= get_theme_mod('video_texto',''); ?></h4>
                             <!--ojo usar para indicar una imagen-->
                             <img class="youmover" src="<?= get_template_directory_child().'/inc/img/social/youtube_47x47.png'; ?>" />
                         </div>
@@ -352,8 +354,7 @@
         </div><!--.row-->
           
     </div><!--.container-->
-            
-
-        
-        <div class="subline-title hidden-xs"></div>
+</div>
+ 
+    <div class="subline-title hidden-xs"></div>
  <?php get_footer(); ?>

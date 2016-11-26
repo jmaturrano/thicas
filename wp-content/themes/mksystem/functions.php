@@ -819,7 +819,7 @@ add_action( 'wp_enqueue_scripts', 'mksystem_header_styles' );
  */
 function mksystem_featured_slider() {
     if ( get_theme_mod('mksystem_slider_checkbox') == TRUE ) {
-      echo '<div class="flexslider">';
+      echo '<div class="flexslider ">';
         echo '<ul class="slides">';
 
           $count = get_theme_mod('mksystem_slide_number');
@@ -832,6 +832,7 @@ function mksystem_featured_slider() {
               while ($query->have_posts()) : $query->the_post();
 
               echo '<li>';
+         
                 if ( has_post_thumbnail() ) { // Check if the post has a featured image assigned to it.
                   the_post_thumbnail();
                 }

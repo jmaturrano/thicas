@@ -1320,9 +1320,23 @@ a{
 .posicioncategory{
     padding-top: 0px; border-top-width: 0px; margin-top: -87px; padding-bottom: 14px; border-bottom-width: 0px;    
 }
-
+}
 .nav.border > li > a {
     display: block;
     padding: 7px 0;
     position: relative;
+}
+
+
+@media screen and (max-width: 765px){
+.flex-nav-prev a{
+     display: none !important;
+ }
+ .flex-nav-next a{
+     display: none !important;
+ } 
+}
+// desactivar el scroll horizontal
+html{
+    overflow-x:hidden;
 }
