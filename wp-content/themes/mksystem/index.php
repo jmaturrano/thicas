@@ -13,7 +13,7 @@
         <?php mksystem_featured_slider(); ?>
 </div>
 
-<div id="content" class="site-conten" style=" bgcolor:'#FFFFFF'; scroll:'no';">
+<div id="content" class="site-conten">
     <div class="container main-content-area">
         
         <?php
@@ -51,7 +51,7 @@
     <div class="container">
         <div class="row">
             <?php mksystem_section_categories_bloque2(); ?>
-            <div class="entry-content col-md-6" style="float: center; ">
+            <div class="entry-content col-md-6 col-sm-5">
                        <div data-ride="carousel" class="carousel slide carousel-fade" id="slideshow2">
                         <!-- Indicators -->
                         <div class="carousel-indicators-block">
@@ -175,7 +175,7 @@
                       </div>
                 </div><!--.carousel.slide-->
         </div><!--.row-->
-    </div><!--.container-->
+    
 
 <div>
     <div class="container2">
@@ -351,10 +351,10 @@
                  </div>
             </div>
            
-        </div><!--.row-->
-          
+            </div><!--.div-->
+          </div><!--row-->
     </div><!--.container-->
-</div>
+</div><!--content-->
  
     <div class="subline-title hidden-xs"></div>
  <?php get_footer(); ?>

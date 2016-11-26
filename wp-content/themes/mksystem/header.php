@@ -21,10 +21,14 @@
 </head>
 
 <body <?php body_class(); ?>>    
-    
-<div id="loader-logo"></div>
-<div id="wptime-plugin-preloader"></div>
-
+    <div class="content">    
+        <div class="conteiner">
+            <div class="row">
+                <div id="loader-logo"></div>
+                <div id="wptime-plugin-preloader"></div>
+            </div>
+        </div>
+    </div>
 <div id="page" class="hfeed site ">
 
 	<nav class="navbar navbar-default navbar-mksystem animate magytop-header" role="navigation">

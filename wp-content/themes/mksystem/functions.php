@@ -807,8 +807,9 @@ function mksystem_header_styles() {
   content: "\e902";
 }
 
-
-
+html{
+    overflow-x:hidden;
+}
   </style>
 <?php
 }
@@ -890,11 +891,11 @@ function mksystem_section_categories_bloque1(){
         if($i == 0){
           $class= 'col-md-8 col-sm-6 col-xs-12';
         }if ($i == 1) {
-          $class= 'col-md-4';
+          $class= 'col-sm-4';
         }else{
           $class= 'col-md-8';
         }
-        $categories_html .= '<div class="'.$class.' text-center">';
+        $categories_html .= '<div class="'.$class.' text-center col-sm-8">';
         $categories_html .= '<a href="'.$category['term_link'].'" title="'.$category['name'].'" class="thumbnail image-relative">';
         $categories_html .= '<img src="'.$thumb_url.'">';
 
@@ -931,7 +932,7 @@ function mksystem_section_categories_bloque2(){
           $class= 'col-md-6';
         }
 
-        $categories_html .= '<div class="'.$class.' text-center">';
+        $categories_html .= '<div class="'.$class.' text-center col-sm-7">';
         $categories_html .= '<a href="'.$category['term_link'].'" title="'.$category['name'].'" class="thumbnail image-relative">';
         $categories_html .= '<img src="'.$thumb_url.'">';
 
@@ -962,7 +963,7 @@ function mksystem_section_categories_bloque3(){
         $thumb_url = ($category['thumb_url'] == '') ? get_template_directory_child().'/inc/img/categorias/default_400x400.jpg' : $category['thumb_url'];
 
         if($i == 0){
-          $class= 'col-md-4 col-sm-6 col-xs-12';
+          $class= 'col-md-4 col-sm-6 col-xs-12 col-sm-7';
         }if ($i ==1 ){
           $class= 'col-md-4';
         }else{
@@ -970,9 +971,9 @@ function mksystem_section_categories_bloque3(){
         }
        
         
-        $categories_html .= '<div class="'.$class.' text-center">';
+        $categories_html .= '<div class="'.$class.' text-center ">';
         if($i == 4 ){
-        $categories_html .= '<div class="categorie-name" style="padding-top: 0px; border-top-width: 0px; margin-top: -87px; padding-bottom: 43px; border-bottom-width: 0px;">';
+        $categories_html .= '<div class="categorie-name " style="padding-top: 0px; border-top-width: 0px; margin-top: -87px; padding-bottom: 43px; border-bottom-width: 0px;">';
         $categories_html .= '<h4>'.$category['name'].'</h4>';
         $categories_html .= '<div class="subline-title "></div>';
         $categories_html .= '<span>'.$category['description'].'</span>';
