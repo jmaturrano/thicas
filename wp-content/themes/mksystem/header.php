@@ -13,21 +13,23 @@
     <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
 
-
-    <?php wp_head(); ?>
+<?php wp_head(); ?>
 
 
 </head>
 
-<body <?php body_class(); ?>>    
-    <div class="content">    
+<body <?php body_class(); ?>>  
+    <div class="content " >
         <div class="conteiner">
             <div class="row">
-                <div id="loader-logo"></div>
-                <div id="wptime-plugin-preloader"></div>
+                <div id="loader-logo" class="col-xs-12 col-sm-6 col-md-8" ></div>
+                <div id="wptime-plugin-preloader" class="col-xs-6 col-md-4"></div>
             </div>
-        </div>
+            </div>
+            </div>
+        </div> 
     </div>
 <div id="page" class="hfeed site ">
 
@@ -72,5 +74,7 @@
                                     </div>
                                 </div>	
 	</nav><!-- .site-navigation -->
-
+        
+</div>
+            
 
