@@ -21,17 +21,17 @@
 </head>
 
 <body <?php body_class(); ?>>  
-    <div class="content " >
+<!--
         <div class="conteiner">
-            <div class="row">
-                <div id="loader-logo" class="col-xs-12 col-sm-6 col-md-8" ></div>
-                <div class="row">
+            <div class="row">-->
+                <div id="loader-logo" class="col-xs-12 col-sm-12 col-md-12" ></div>
+<!--                <div class="row">-->
                 <div class="clearfix visible-xs-block"></div>
-                <div id="wptime-plugin-preloader" class="col-xs-6 col-md-4"></div>
-                </div>
-                </div>
-            </div>
-    </div>
+                <div id="wptime-plugin-preloader" class="col-xs-12  col-sm-12 col-md-12"></div>
+<!--                </div>
+                </div>-->
+            
+
 <div id="page" class="hfeed site ">
 
 	<nav class="navbar navbar-default navbar-mksystem animate magytop-header" role="navigation">

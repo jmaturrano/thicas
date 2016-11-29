@@ -810,6 +810,11 @@ function mksystem_header_styles() {
 html{
     overflow-x:hidden;
 }
+
+.te{
+ padding-left: 442px; border-right-width: 0px; margin-right: 50px;
+}
+
   </style>
 <?php
 }

@@ -33,7 +33,7 @@ get_header( 'shop' );
 	<div class="row">
             <div class="">
 		<?php mksystem_categories_list_footer();  ?>
-            </div>
+            </div>    
 	<div class="col-md-8 text-center">
 
             

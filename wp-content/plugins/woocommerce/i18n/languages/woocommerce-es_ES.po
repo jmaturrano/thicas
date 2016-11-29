@@ -58,7 +58,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
 "POT-Creation-Date: 2015-08-24 16:25:50+00:00\n"
-"PO-Revision-Date: 2016-11-24 15:53-0500\n"
+"PO-Revision-Date: 2016-11-29 15:32-0500\n"
 "Last-Translator: David Perez <david@closemarketing.es>\n"
 "Language-Team: Spanish (Spain) (http://www.transifex.com/woothemes/woocommerce/language/es_ES/)\n"
 "MIME-Version: 1.0\n"
@@ -5192,7 +5192,7 @@ msgstr "CVV"
 #: includes/class-wc-product-simple.php:47
 #: includes/class-wc-product-variation.php:187
 msgid "Add to cart"
-msgstr "Añadir al carrito de compras"
+msgstr "Comprar"
 
 #: includes/abstracts/abstract-wc-product.php:546
 msgid "Read more"
