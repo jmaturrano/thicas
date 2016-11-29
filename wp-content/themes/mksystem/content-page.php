@@ -4,15 +4,28 @@
  *
  * @package dazzling
  */
+
  ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header page-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 sm-12">
+	<header class="entry-header page-header entry-title text-center">
+		<h1 class="page-title entry-title "><?php the_title(); ?></h1>
+	</header>  
+            </div>
+        </div>
+	<div class="entry-content text-center">
+           
+                <div class="row">
+                    <div class="">
 		<?php the_content(); ?>
+                    </div>
+                </div>
+        </div>
+        
+    </div>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'dazzling' ),

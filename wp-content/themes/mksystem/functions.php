@@ -1291,8 +1291,8 @@ function mksystem_social_links(){
  */
 function mksystem_footer_info() {
 ?>
-  <div class="copy-right col-md-6" > &copy; <?php echo bloginfo('name');?> 
-  <?php echo esc_html__(" - Todos los derechos reservados");?> <?php echo date_i18n('Y'); ?>
+  <div class="copy-right col-md-6" > &copy; <?php  echo bloginfo('name');?> 
+  <?php echo esc_html__(" - Todos los derechos reservados ");?> <?php echo date_i18n('Y'); ?>
 <!--     borrar-->
   </div>
   <div class="mksystem-info col-md-6">

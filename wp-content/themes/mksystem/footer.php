@@ -13,7 +13,10 @@
     </div><!-- close .container -->
 </div><!-- close .site-content -->
 
-<div class="">
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+ 
     <div class="footer-content text-center">   
         <div class="subline-title visible-xs"></div>
         <br>
@@ -61,9 +64,11 @@
              <?php if(get_theme_mod('social_linkedin','') == ''): ?>
             <a href="javascript:void(0);" ><img class="" src="<?= get_theme_mod('imagen_linkedin',''); ?>"></a>
              <?php endif; ?>
+                </div>
+            </div>
         </div>
-    </div>  
-</div>
+    </div>
+
 
 <div class="site-info">
     <div class="container">

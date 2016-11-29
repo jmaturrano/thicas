@@ -25,21 +25,15 @@ get_header( 'shop' );
 
 ?>
 <!--include (mksystem(__DIR__) . '/functions.php');-->
-		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+    <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+        <h1 class="page-title text-center"><?php woocommerce_page_title(); ?></h1>
+    <?php endif; ?>
 
-			<h1 class="page-title text-center"><?php woocommerce_page_title(); ?></h1>
-
-		<?php endif; ?>
-
-<div class="row col-me-12">
-
-
-		<div class="container-subcategory">
-			<div>
-				<?php mksystem_categories_list_footer();  ?>
-			</div>
-		</div>
-
+<div class="container">
+	<div class="row">
+            <div class="">
+		<?php mksystem_categories_list_footer();  ?>
+            </div>
 	<div class="col-md-8 text-center">
 
             
@@ -123,7 +117,8 @@ get_header( 'shop' );
 		do_action( 'woocommerce_sidebar' );
 	?>
         
-</div>
+        </div>
+    </div>
 </div>
 
 
