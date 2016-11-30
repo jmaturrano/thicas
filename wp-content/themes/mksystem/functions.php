@@ -1344,3 +1344,5 @@ function dazzling_sanitize_slidecat( $input ) {
 }
 
 }
+
+
