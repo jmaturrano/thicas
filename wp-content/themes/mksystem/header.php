@@ -24,10 +24,10 @@
 <!--
         <div class="conteiner">
             <div class="row">-->
-                <div id="loader-logo" class="col-xs-12 col-sm-12 col-md-12" ></div>
+                <div id="loader-logo" class="" style="margin-top: -50px;"></div>
 <!--                <div class="row">-->
                 <div class="clearfix visible-xs-block"></div>
-                <div id="wptime-plugin-preloader" class="col-xs-12  col-sm-12 col-md-12"></div>
+                <div id="wptime-plugin-preloader" class=""></div>
 <!--                </div>
                 </div>-->
             
