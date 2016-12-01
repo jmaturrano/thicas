@@ -199,8 +199,10 @@
         <div class="row2">
            
             
-            <!--video colocado--> 
+            <!--video colocado y responsive-->
+            <div class="embed-responsive embed-responsive-16by9"> 
             <?php if(get_theme_mod('video','') != ''): ?>
+            </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 text-left">
                         
                         <h1 style="color: black; font-family: Advent Pro;"><?= get_theme_mod('video_titulo','') ;?></h1>
