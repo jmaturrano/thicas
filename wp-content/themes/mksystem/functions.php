@@ -980,7 +980,7 @@ function mksystem_section_categories_bloque3(){
         
         $categories_html .= '<div class="'.$class.' text-center ">';
         if($i == 4 ){
-        $categories_html .= '<div class="categorie-name " style="padding-top: 0px; border-top-width: 0px; margin-top: -87px; padding-bottom: 43px; border-bottom-width: 0px;">';
+        $categories_html .= '<div class="categorie-name favoritothicas fvthicas ">';
         $categories_html .= '<h4>'.$category['name'].'</h4>';
         $categories_html .= '<div class="subline-title "></div>';
         $categories_html .= '<span>'.$category['description'].'</span>';
@@ -989,7 +989,13 @@ function mksystem_section_categories_bloque3(){
         $categories_html .= '<a href="'.$category['term_link'].'" title="'.$category['name'].'" class="thumbnail image-relative">';
         $categories_html .= '<img src="'.$thumb_url.'">';
         
-        
+        if($i == 4 ){
+        $categories_html .= '<div class="categorie-name fvthicas2">';
+        $categories_html .= '<h4>'.$category['name'].'</h4>';
+        $categories_html .= '<div class="subline-title "></div>';
+        $categories_html .= '<span>'.$category['description'].'</span>';
+        $categories_html .= '</div>';
+        }
         //$categories_html .= '<div class="categorie-content">';
         //$categories_html .= '<h4>'.$category['name'].'</h4>';
         //$categories_html .= '<span>COMPRAR AHORA</span>';

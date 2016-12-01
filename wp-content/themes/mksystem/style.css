@@ -1345,3 +1345,16 @@ a{
  
 }
 
+@media screen and (max-width: 991px){
+.fvthicas{
+    display: none;  
+ }
+}
+@media screen and (min-width: 992px){
+.fvthicas2{
+    display: none;  
+ }
+.favoritothicas{
+    margin-top: -87px; 
+    padding-bottom: 43px;
+}
