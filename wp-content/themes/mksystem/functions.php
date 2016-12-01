@@ -815,6 +815,8 @@ html{
  padding-left: 442px; border-right-width: 0px; margin-right: 50px;
 }
 
+ 
+
   </style>
 <?php
 }

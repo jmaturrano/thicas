@@ -1338,4 +1338,9 @@ a{
 }
 // desactivar el scroll horizontal
 
-
+@media screen and (max-width: 768px){
+.categorie-content  h4{
+    font-weight: 500 !important;   
+ }
+ 
+}
