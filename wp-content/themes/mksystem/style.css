@@ -1345,16 +1345,28 @@ a{
  
 }
 
-@media screen and (max-width: 991px){
+@media screen and (max-width: 767px){
 .fvthicas{
     display: none;  
  }
 }
-@media screen and (min-width: 992px){
+@media screen and (min-width: 768px){
 .fvthicas2{
     display: none;  
  }
+ }
+ 
 .favoritothicas{
     margin-top: -87px; 
     padding-bottom: 43px;
 }
+
+.posicionslider3{
+     margin-top: 87px;
+}
+
+@media (min-width: 550px) and (max-width: 768px) {
+.posicion-imagen-slider3{
+    margin-left: 112px; 
+ }
+ }

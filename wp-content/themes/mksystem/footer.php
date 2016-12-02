@@ -83,10 +83,10 @@
 <div class="site-info">
     <div class="container">
 	<div class="row">
-            <div class="col-md-6 col-sm-4 col-xs-12">
+            <div class="col-md-6 col-sm-6 col-xs-12">
 		<?php mksystem_footer_menu(); ?>
             </div>
-            <div class="col-md-3 col-sm-8 col-xs-12 text-center">
+            <div class="col-md-3 col-sm-6 col-xs-12 text-center">
 		<h5 style="font-weight: bold;"><?php echo get_theme_mod('btn_trabaja_titulo1'); ?>  </h5>
                  <hr class="gSeparator gSeparatorTrans">
                  
@@ -110,7 +110,7 @@
                 <img class="youmover btn_heart-footer" src="<?= get_template_directory_child().'/inc/img/social/btn_heart 17x15.png'; ?>" /> <?php // echo get_theme_mod('btn_trabaja_text1'); ?>
                 </a>-->
             </div>
-                    <div class="col-md-3 col-sm-8 col-xs-12 text-center ">
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center ">
                         <h5 style="font-weight: bold;"> <?php echo get_theme_mod('btn_trabaja_titulo2'); ?> </h5>
                         <hr class="gSeparator gSeparatorTrans">
                         <?php 

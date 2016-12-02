@@ -974,7 +974,7 @@ function mksystem_section_categories_bloque3(){
         }if ($i ==1 ){
           $class= 'col-md-4';
         }else{
-          $class= 'col-md-4 bg-transparent'.(($i === 4) ? ' margin-top-collection ' : '');
+          $class= 'col-md-4 col-sm-4 bg-transparent'.(($i === 4) ? ' margin-top-collection ' : '');
         }
        
         

@@ -37,11 +37,11 @@
         </div><!--.row-->
     <div class="row">
         <?php mksystem_section_categories_bloque2(); ?>
-    <div class="entry-content col-md-6 col-sm-5">
+    <div class="col-md-6 col-sm-5 col-xs-12 ">
         <div data-ride="carousel" class="carousel slide carousel-fade" id="slideshow2">
 <!-- Indicators -->
             <div class="carousel-indicators-block">
-                <ol class="carousel-indicators text-right">
+                <ol class="carousel-indicators">
                     <li data-target="#slideshow" data-slide-to="0" class="active"></li>
                     <?php if(get_theme_mod('slider_mksystem_2','')!=''){ ?>                                        
                         <li data-target="#slideshow2" data-slide-to="1"></li>
@@ -61,7 +61,8 @@
                 </ol>
             </div>
 <!-- Wrapper for slides -->
-            <div class="carousel-inner slider2" role="listbox" style="width: 465px; height: 377px; margin: -20px auto;">
+<!--style="width: 465px; height: 377px; margin: -20px auto;"-->
+            <div class="carousel-inner slider2" role="listbox" >
             <div class="item active">
             <?php if(get_theme_mod('slider_mksystem_1','')!=''){ ?>
                 <a href="<?php echo esc_url( home_url( 'colecciones/catalogo/prendas/' ) ); ?>">
@@ -129,6 +130,7 @@
         <div class="row">
             <?php mksystem_section_categories_bloque3(); ?> 
         </div>  
+
         <div class="row">
             <!--video colocado y responsive-->
             <?php if(get_theme_mod('video','') != ''): ?>
@@ -149,11 +151,11 @@
         
 <?php endif; ?>
 <!--termina video -->
-<div class="entry-content col-md-6 col-sm-6 col-xs-12">
-<div data-ride="carousel1" class="carousel slide carousel-fade" id="slideshow3"
+<div class="col-md-6 col-sm-6 col-xs-12 text-center posicionslider3" >
+    <div data-ride="carousel1" class="carousel slide carousel-fade" id="slideshow3">
 <!-- Indicators -->
     <div class="carousel-indicators-block">
-        <ol class="carousel-indicators text-right">
+        <ol class="carousel-indicators">
             <li data-target="#slideshow3" data-slide-to="0" class="active"></li>
             <?php if(get_theme_mod('slider_mksystem_2_b','')!=''){ ?>
             <li data-target="#slideshow3" data-slide-to="1"></li>
@@ -174,8 +176,8 @@
         <!-- </div> -->
         <!-- </div> -->
     </div>
-
-<div class="carousel-inner" role="listbox" style="width: 435px; height: 355px; margin: auto;">
+<!--style="width: 435px; height: 355px; margin: auto;"-->
+<div class="carousel-inner posicion-imagen-slider3" role="listbox" >
         <div class="item active">                           
         <?php if(get_theme_mod('slider_mksystem_1_b','')!=''){ ?>
 <!--<a href="<?php echo esc_url( home_url( '/' ) ); ?>">-->
