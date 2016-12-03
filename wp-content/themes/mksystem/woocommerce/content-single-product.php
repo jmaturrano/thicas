@@ -63,15 +63,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 * @hooked woocommerce_template_single_sharing - 50
 			 */
 			do_action( 'woocommerce_single_product_summary' );
+                        /** ojo para editar esto debes ir al do_action wc-template-hooks.php
+                         * woocommerce_after_single_product_summary hook.
+                         *
+                         * @hooked woocommerce_output_product_data_tabs - 10
+                         */
+                        do_action( 'woocommerce_after_single_product_summary_tabs' );
+                       
 		?>
-
+            
 	</div><!-- .summary -->
 
 	<?php
 		/**
 		 * woocommerce_after_single_product_summary hook.
 		 *
-		 * @hooked woocommerce_output_product_data_tabs - 10
+		 *
 		 * @hooked woocommerce_upsell_display - 15
 		 * @hooked woocommerce_output_related_products - 20
 		 */
