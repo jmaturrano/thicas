@@ -23,7 +23,9 @@
         <h5 style="color: #000">Sígue nuestras redes sociales y descubre todo el detrás de escena de Thicas.</h5>
     </div>
     </div>
-    <div class="row">    
+</div>
+<div class="row social-link">    
+ 
     <div class="col-md-2 col-xs-4">
         <?php if(get_theme_mod('social_facebook','') != ''): ?>
         <a href="<?= get_theme_mod('social_facebook','');?>" ><img class="" src="<?= get_theme_mod('imagen_facebook',''); ?>"></a>
@@ -75,7 +77,8 @@
     </div>
 <!--            </div>-->
     </div>
-</div>
+  
+
       
 
 
